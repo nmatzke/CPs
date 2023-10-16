@@ -36,17 +36,17 @@ plot(tr)
 
 ##From here undated
 tr2B = tr
-plot(tr2B, cex=0.7)
 
-title("Nepenthaceae phylogeny from Murphy et al (2020), Fig. 4")
-trfn = "Murphy_2020_Fig4_Nepenthaceae_digitized_v1.newick"
-write.tree(tr2B, file=trfn)
-
-pdffn = "tr2B.pdf"
+pdffn = "Sen_2020_Fig1_Droceraceae_not_ultrametricized.pdf"
 pdf(file=pdffn, width=7.5, height=9)
+
+plot(tr2B, cex=0.7)
+axisPhylo()
+title("Droseraceae phylogeny from Sen et al (2020), Fig. 1")
+
 dev.off()
 cmdstr = paste0("open ", pdffn)
-
+system(cmdstr)
 
 ## From here dated trees
 # Flatten the tips
@@ -73,12 +73,29 @@ is.ultrametric(tr)
 is.ultrametric(tr2)
 
 
+pdffn = "Sen_2020_Fig1_Droceraceae_digitized_v1.pdf"
+pdf(file=pdffn, width=7.5, height=9)
 
-# Scale the tree
+plot(tr2, cex=0.7)
+axisPhylo()
+
+title("Droseraceae phylogeny from Sen et al (2020), Fig. 1")
+trfn = "Sen_2020_Fig1_Droceraceae_digitized_v1.newick"
+write.tree(tr2, file=trfn)
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+
+
+# Scale the tree (if needed)
+
 xmin = 0.0
-xmax = 87.8372100
+xmax = 51.299124
 digitized_distance = xmax - xmin
-actual_distance = 88 	# million years
+actual_distance = 51.299124 	# million years
 multiply_branches_by = actual_distance / digitized_distance
 tr3 = tr2
 tr3$edge.length = tr3$edge.length * multiply_branches_by
