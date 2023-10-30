@@ -811,11 +811,13 @@ r8s_nexus_fn = "Pinguicula2_r8s_nexus_fn.nex"
 r8s_logfile_fn = "Pinguicula2_r8s_nexus_fn.log"
 run_r8s_1calib(tr=Pinguicula2_tr, calibration_node_tip_specifiers=calibration_node_tip_specifiers, r8s_method="LF", addl_cmd="", calibration_age=calibration_age, nsites=1000, tmpwd=getwd(), r8s_nexus_fn=r8s_nexus_fn, r8s_logfile_fn=r8s_logfile_fn, r8s_path="/Applications/r8s")
 
+file.remove(r8s_logfile_fn)
+
+
 # Manually edit r8s NEXUS file for 11 calibrations
 r8s_nexus_fn = "Pinguicula2_r8s_nexus_fn_v2.nex"
 r8s_logfile_fn = "Pinguicula2_r8s_nexus_fn_v2.nex.log"
 
-file.remove(r8s_logfile_fn)
 Pinguicula2_tr_dated = extract_tree_from_r8slog(logfn=r8s_logfile_fn, delimiter=" = ", printall=TRUE)
 Pinguicula2_tr_rates = extract_rates_from_r8slog(logfn=r8s_logfile_fn)
 
@@ -826,4 +828,58 @@ axisPhylo()
 # Drop this:
 # "Pinguicula_caerulea"
 
+
+#######################################################
+# Get the time-scaled Pinguicula tree, add to the main tree
+#######################################################
+# Just do linear scaling, as it's ultrametric
+
+# Subset to remove Nepenthes
+TF = grepl(pattern="Pinguicula", x=gbotb_tr8$tip.label)
+sum(TF)
+tips_to_drop = gbotb_tr8$tip.label[TF]
+gbotb_tr9 = drop.tip(phy=gbotb_tr8, tip=tips_to_drop, trim.internal=TRUE, subtree=TRUE)
+length(gbotb_tr8$tip.label)
+length(gbotb_tr9$tip.label)
+is.ultrametric(gbotb_tr8)
+is.ultrametric(gbotb_tr9)
+
+# Branch length multiplier
+calibration_age = 1
+multiplier = calibration_age / 1
+
+gbotb_tr10 = gbotb_tr9
+gbotb_tr10$edge.length = gbotb_tr9$edge.length * multiplier
+
+# Add to main tree
+TF = grepl(pattern="\\[", x=gbotb_tr9$tip.label)
+tipnum = (1:length(gbotb_tr9$tip.label))[TF]
+newtip = gbotb_tr9$tip.label[TF]
+newtip
+
+# New tip is "[14_tips]"
+gbotb_tr10 = bind.tree(x=gbotb_tr9, y=Pinguicula2_tr_dated, where=tipnum)
+
+length(gbotb_tr8$tip.label)
+length(gbotb_tr9$tip.label)
+length(gbotb_tr10$tip.label)
+
+is.ultrametric(gbotb_tr8)
+is.ultrametric(gbotb_tr9)
+is.ultrametric(gbotb_tr10)
+
+
+
+#######################################################
+# Do Genlisea & Utricularia
+#######################################################
+
+plot(Genlisea_tr)
+plot(Utricularia_tr)
+
+Genlisea_tr1 = drop.tip(Genlisea_tr, "Utricularia_multifida")
+Utricularia_tr1 = drop.tip(Utricularia_tr, "Outgroup")
+
+plot(Genlisea_tr1)
+plot(Utricularia_tr1)
 

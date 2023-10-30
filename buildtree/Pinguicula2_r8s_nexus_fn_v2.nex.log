@@ -1,0 +1,544 @@
+r8s version 1.81 (Oct 20 2019)
+Reading tree Rtree
+Defining clade name: calib1
+Defining clade name: calib2
+Defining clade name: calib3
+Defining clade name: calib5
+Defining clade name: calib6
+Defining clade name: calib7
+Defining clade name: calib10
+Defining clade name: calib11
+Executing blformat command...
+Branch lengths assumed to be in units of numbers of substitutions per site
+Number of sites in sequences set to 100
+All branch lengths multipled by the 100 sites in the sequence
+Branch lengths rounded to nearest integer
+(This may not be a good idea when using CALIBRATE on ultrametric user supplied input trees. Use ROUND=NO then)
+0 zero-length branches collapsed
+Fixing age of calib1 at 11.982966
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 1)
+Fixing age of calib2 at 11.808213
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 2)
+Fixing age of calib3 at 1.523166
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 3)
+Fixing age of calib5 at 10.252553
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 4)
+Fixing age of calib6 at 9.840748
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 5)
+Fixing age of calib7 at 6.083312
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 6)
+Fixing age of calib11 at 2.006593
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 7)
+
+
+----------------------------------------
+
+
+LINEAGE RATE/TIME ANALYSIS FOR TREE Rtree
+
+Method = Langley and Fitch
+Optimization via Truncated-Newton (TN) method with bound constraints
+
+----------------------------------------
+Substitution Model
+	Rates are equal across sites
+Global/Local Search Parameters
+	Number of searches from random starts = 1
+	Number of restarts after each search = 1
+	Local perturbation on restarts = 0.01
+	Local fractional tolerance after restarts = 0.01
+Optimization parameters set automatically by TN routine
+Length of tree input =  2058
+Number of taxa  =  69
+Number of sites in sequences =  100
+
+----------------------------------------
+Starting optimization (random starting point 1)
+...Checking the starting point...(for some barrier constant)...
+...Passed...now optimizing...
+...Initial solution=404.906507
+......starting perturbation 1
+......solution for perturbation 1=404.906507...best=404.906507
+*** Using analytical formula for gradient in check gradient step ***
+...checking gradient of the solution...
+
+	Norm for free parameters in gradient (0.000000) should be less than cutoff (0.879885)
+	Checking active constraints for node times only (activeEpsilon=0.001000 and window [actEps*rootage]=0.011983)
+	Param	Estimate	Gradient	Active*	Taxon
+	[1]	8.822648	-0.000000	0	
+	[2]	7.818132	-0.000000	0	
+	[3]	5.635340	-0.000000	0	calib10
+	[4]	5.127495	0.000000	0	
+	[5]	4.525667	-0.000000	0	
+	[6]	3.720519	-0.000000	0	
+	[7]	2.944975	-0.000000	0	
+	[8]	2.109174	0.000000	0	
+	[9]	1.250643	-0.000000	0	
+	[10]	1.205783	0.000000	0	
+	[11]	2.952265	0.000000	0	
+	[12]	2.053763	-0.000000	0	
+	[13]	1.226781	0.000000	0	
+	[14]	2.825384	0.000000	0	
+	[15]	2.045941	-0.000000	0	
+	[16]	1.223373	0.000000	0	
+	[17]	4.376189	0.000000	0	
+	[18]	3.703820	0.000000	0	
+	[19]	2.871312	0.000000	0	
+	[20]	2.070488	0.000000	0	
+	[21]	1.234036	-0.000000	0	
+	[22]	1.164249	0.000000	0	
+	[23]	3.542149	-0.000000	0	
+	[24]	2.788133	-0.000000	0	
+	[25]	2.025790	-0.000000	0	
+	[26]	1.214547	-0.000000	0	
+	[27]	1.169301	-0.000000	0	
+	[28]	5.682935	-0.000000	0	
+	[29]	4.989214	-0.000000	0	
+	[30]	4.140330	-0.000000	0	
+	[31]	3.151487	0.000000	0	
+	[32]	2.150963	-0.000000	0	
+	[33]	1.268313	0.000000	0	
+	[34]	1.263228	-0.000000	0	
+	[35]	2.613842	0.000000	0	
+	[36]	1.445932	-0.000000	0	
+	[37]	1.222648	0.000000	0	
+	[38]	9.966666	-0.000000	0	
+	[39]	8.642176	0.000000	0	
+	[40]	7.270792	-0.000000	0	
+	[41]	6.124626	-0.000000	0	
+	[42]	4.814954	-0.000000	0	
+	[43]	3.396327	0.000000	0	
+	[44]	1.189246	0.000000	0	
+	[45]	0.789277	-0.000000	0	
+	[46]	0.740585	-0.000000	0	
+	[47]	1.137730	-0.000000	0	
+	[48]	2.282638	-0.000000	0	
+	[49]	1.322182	-0.000000	0	
+	[50]	10.574793	0.000000	0	
+	[51]	6.555340	-0.000000	0	
+	[52]	4.828116	-0.000000	0	
+	[53]	3.437529	-0.000000	0	
+	[54]	2.329690	-0.000000	0	
+	[55]	1.340774	-0.000000	0	
+	[56]	1.340774	-0.000000	0	
+	[57]	2.384355	0.000000	0	
+	[58]	1.361946	-0.000000	0	
+	[59]	1.633064	-0.000000	0	
+	[60]	2.596198	-0.000000	0	
+	[61]	1.439749	0.000000	0	
+
+	Gradients for rate parameters (if any)
+	Param	Estimate	Gradient
+	[62]	7.838303	0.000000
+------------------------------------------------------------------------------
+*Key
+	+1 = maximum age constraint is reached (gradient may not be 0)
+	-1 = minimum age constraint is reached (gradient may not be 0)
+	 0 = no constraint present or constraint not reached (gradient should be 0)
+
+	 (note that small gradient values (< |0.000088|) are not examined with respect to active constraints to avoid spurious roundoff issues)
+
+*** Gradient check passed ***
+
+Using optimization from starting point 1 as best estimate
+Test of molecular clock on soln. 1 (best): Chi squared = 317.198142 (df=68)
+
+
+Parameter estimates:
+
+	       1  
+
+Times
+p[ 1]	  0.0882  
+p[ 2]	  0.0782  
+p[ 3]	  0.0564  
+p[ 4]	  0.0513  
+p[ 5]	  0.0453  
+p[ 6]	  0.0372  
+p[ 7]	  0.0294  
+p[ 8]	  0.0211  
+p[ 9]	  0.0125  
+p[10]	  0.0121  
+p[11]	  0.0295  
+p[12]	  0.0205  
+p[13]	  0.0123  
+p[14]	  0.0283  
+p[15]	  0.0205  
+p[16]	  0.0122  
+p[17]	  0.0438  
+p[18]	   0.037  
+p[19]	  0.0287  
+p[20]	  0.0207  
+p[21]	  0.0123  
+p[22]	  0.0116  
+p[23]	  0.0354  
+p[24]	  0.0279  
+p[25]	  0.0203  
+p[26]	  0.0121  
+p[27]	  0.0117  
+p[28]	  0.0568  
+p[29]	  0.0499  
+p[30]	  0.0414  
+p[31]	  0.0315  
+p[32]	  0.0215  
+p[33]	  0.0127  
+p[34]	  0.0126  
+p[35]	  0.0261  
+p[36]	  0.0145  
+p[37]	  0.0122  
+p[38]	  0.0997  
+p[39]	  0.0864  
+p[40]	  0.0727  
+p[41]	  0.0612  
+p[42]	  0.0481  
+p[43]	   0.034  
+p[44]	  0.0119  
+p[45]	 0.00789  
+p[46]	 0.00741  
+p[47]	  0.0114  
+p[48]	  0.0228  
+p[49]	  0.0132  
+p[50]	   0.106  
+p[51]	  0.0656  
+p[52]	  0.0483  
+p[53]	  0.0344  
+p[54]	  0.0233  
+p[55]	  0.0134  
+p[56]	  0.0134  
+p[57]	  0.0238  
+p[58]	  0.0136  
+p[59]	  0.0163  
+p[60]	   0.026  
+p[61]	  0.0144  
+
+Rates (substitutions per site per unit time)
+p[62]	  0.0784  
+
+	  PASSED  
+__________________
+Result codes:
+PASSED = OK
+FAILED(1) = Optimization routine returned error
+FAILED(2) = Solution's gradient was not 0
+__________________
+
+
+Obj->	-404.907  
+[Printing tree 1]
+
+[CHRONOGRAM of tree Rtree]
+Tree is so large that it has been compressed horizontally and resolution may be lost: WINWIDTH=98 treeWidth=47
+        +--------------------------------------Pinguicula_alpina
+        |
+        |   +----------------------------------Pinguicula_elongata
+        |   |
+        |   |                     +------------Pinguicula_mirandae
+        |   |                  +--+12
+        |   |                  |  |  +---------Pinguicula_hemiepiphytica
+        |   |                  |  +--+14
+        |   |                  |     |   +-----Pinguicula_laueana
+        |   |               +--+11   +---+16
+        |   |               |  |         +-----Pinguicula_moranensis
+        |   |               |  |
+        |   |               |  |         +-----Pinguicula_conzattiin
+        |   |             +-+10+---------+19
++-------+calib6           | |            +-----Pinguicula_medusina
+|       |   |             | |
+|       |   |             | |     +------------Pinguicula_crassifolia
+|       |   |             | +-----+22
+|       |   |             |       |   +--------Pinguicula_emarginata
+|       |   |           +-+9      +---+24
+|       |   |           | |           |  +-----Pinguicula_rectifolia
+|       |   |           | |           +--+26
+|       |   |           | |              +-----Pinguicula_zecheri
+|       |   |           | |
+|       |   |           | |        +-----------Pinguicula_acuminata
+|       |   |           | +--------+29
+|       |   |           |          |  +--------Pinguicula_moctezumae
+|       |   |           |          +--+31
+|       +---+4        +-+calib10      |  +-----Pinguicula_colimensis
+|           |         | |             +--+33
+|           |         | |                +-----Pinguicula_oblongiloba
+|           |         | |
+|           |         | |      +---------------Pinguicula_reticulata
+|           |         | |    +-+37
+|           |         | |    | |  +------------Pinguicula_gypsicola
+|           |         | |    | +--+39
+|           |         | |    |    |   +--------Pinguicula_agnata
+|           |         | |    |    +---+41
+|           |  +------+calib7+36      |  +-----Pinguicula_gigantea
+|           |  |      |      |        +--+43
+|           |  |      |      |           +-----Pinguicula_ibarrae
+|           |  |      |      |
+|           |  |      |      |           +-----Pinguicula_lilacina
+|           |  |      |      +-----------+46
+|           |  |      |                  +-----Pinguicula_sharpii
+|           |  |      |
+|           |  |      |         +--------------Pinguicula_cyclosecta
+|           |  |      |         |
+|           |  |      |         |     +--------Pinguicula_ehlersiae
+|           |  |      +---------+49+--+52
+|           |  |                |  |  |  +-----Pinguicula_dertosensis
+|           |  |                |  |  +--+54
+|           |  |                +--+51   +-----Pinguicula_debbertiana
+|           |  |                   |
+|           |  |                   |     +-----Pinguicula_jaumavensis
+|           +--+6                  +-----+57
+|              |                         +-----Pinguicula_esseriana
+|              |
+|              |                 +-------------Pinguicula_jackiivar_parviflora
+|              |              +--+63
+|              |              |  |   +---------Pinguicula_filifolia
+|              |              |  +---+65
++calib1        |              |      |   +-----Pinguicula_cubensis
+|              |          +---+62    +---+67
+|              |          |   |          +-----Pinguicula_albida
+|              |          |   |
+|              |          |   |          +-----Pinguicula_bissei
+|              |          |   +----------+70
+|              |        +-+61            +-----Pinguicula_benedicta
+|              |        | |
+|              |        | |           +--------Pinguicula_rotundiflora
+|              |        | |        +--+calib11
+|              |        | |        |  +--------Pinguicula_gracilis
+|              +--------+60--------+73
+|                       |          |    +------Pinguicula_nivalis
+|                       |          +----+77
+|                       |               +------Pinguicula_immaculata
+|                       |
+|                       |                +-----Pinguicula_macrophylla
+|                       +----------------+80
+|                                        +-----Pinguicula_potosiensis
+|
+|           +----------------------------------Pinguicula_corsica
+|           |
+|      +----+85   +----------------------------Pinguicula_vallisneriifolia
+|      |    |     |
+|      |    +-----+87 +------------------------Pinguicula_longifolia_subsp_longifolia
+|      |          |   |
+|      |          |   |    +-------------------Pinguicula_nevadensis
+|      |          +---+89  |
+|      |              |    |             +-----Pinguicula_mundi
+|      |              |    |            ++95
+|      |              +----+91          ||+----Pinguicula_fiorii
+|      |                   |            |++97
++------+84                 |    +-------+calib3Pinguicula_vulgaris
+|      |                   |    |       |
+|      |                   |    |       |  +---Pinguicula_grandiflora
+|      |                   +----+93     +--+100
+|      |                        |          +---Pinguicula_bohemica
+|      |                        |
+|      |                        |        +-----Pinguicula_macroceras
+|      |                        +--------+103
+|      |                                 +-----Pinguicula_longifolia_subsp_caussensis
+|      |
+|      |                             +---------Pinguicula_poldini
+|      +-----------------------------+106
+|                                    |  +------Pinguicula_longifolia_subsp_reichenbachiana
+|                                    +--+108
+|                                       +------Pinguicula_leptoceras
+|
++calib2             +--------------------------Pinguicula_antarctica
+|                   |
+|                   |           +--------------Pinguicula_pumila
+|                   |           |
+|     +-------------+113   +----+116    +------Pinguicula_ionantha
+|     |             |      |    |    +--+119
+|     |             |      |    |    |  +------Pinguicula_planifolia
+|     |             |      |    +----+118
+|     |             +------+115      |  +------Pinguicula_lutea
+|     |                    |         +--+122
+|     |                    |            +------Pinguicula_primuliflora
+|    ++calib5              |
+|    ||                    |        +----------Pinguicula_calyptrata
+|    ||                    +--------+125
+|    ||                             |   +------Pinguicula_involuta
+|    ||                             +---+127
+|    ||                                 +------Pinguicula_chuquisacensis
++----+111
+     ||                                +-------Pinguicula_hirtiflora
+     |+--------------------------------+130
+     |                                 +-------Pinguicula_lusitanica
+     |
+     |                              +----------Pinguicula_variegata
+     +------------------------------+133
+                                    |   +------Pinguicula_ramosa
+                                    +---+135
+                                        +------Pinguicula_villosa
+
+[Printing tree 1]
+
+[TREE DESCRIPTION of tree Rtree]
+
+tree Rtree = ((Pinguicula_alpina:9.840748,(Pinguicula_elongata:8.822648,(((((((Pinguicula_mirandae:2.944975,(Pinguicula_hemiepiphytica:2.109174,(Pinguicula_laueana:1.250643,Pinguicula_moranensis:1.250643):0.858530):0.835802):0.775544,(Pinguicula_conzattiin:1.205783,Pinguicula_medusina:1.205783):2.514736):0.805148,(Pinguicula_crassifolia:2.952265,(Pinguicula_emarginata:2.053763,(Pinguicula_rectifolia:1.226781,Pinguicula_zecheri:1.226781):0.826981):0.898502):1.573403):0.601828,(Pinguicula_acuminata:2.825384,(Pinguicula_moctezumae:2.045941,(Pinguicula_colimensis:1.223373,Pinguicula_oblongiloba:1.223373):0.822568):0.779443):2.302112):0.507844,((Pinguicula_reticulata:3.703820,(Pinguicula_gypsicola:2.871312,(Pinguicula_agnata:2.070488,(Pinguicula_gigantea:1.234036,Pinguicula_ibarrae:1.234036):0.836452):0.800824):0.832508):0.672369,(Pinguicula_lilacina:1.164249,Pinguicula_sharpii:1.164249):3.211940):1.259151)calib10:0.447972,(Pinguicula_cyclosecta:3.542149,((Pinguicula_ehlersiae:2.025790,(Pinguicula_dertosensis:1.214547,Pinguicula_debbertiana:1.214547):0.811243):0.762343,(Pinguicula_jaumavensis:1.169301,Pinguicula_esseriana:1.169301):1.618832):0.754016):2.541163)calib7:1.734820,((((Pinguicula_jackiivar_parviflora:3.151487,(Pinguicula_filifolia:2.150963,(Pinguicula_cubensis:1.268313,Pinguicula_albida:1.268313):0.882649):1.000525):0.988843,(Pinguicula_bissei:1.263228,Pinguicula_benedicta:1.263228):2.877102):0.848884,((Pinguicula_rotundiflora:2.006593,Pinguicula_gracilis:2.006593)calib11:0.607249,(Pinguicula_nivalis:1.445932,Pinguicula_immaculata:1.445932):1.167911):2.375372):0.693721,(Pinguicula_macrophylla:1.222648,Pinguicula_potosiensis:1.222648):4.460287):2.135197):1.004515):1.018100)calib6:2.142218,(((Pinguicula_corsica:8.642176,(Pinguicula_vallisneriifolia:7.270792,(Pinguicula_longifolia_subsp_longifolia:6.124626,(Pinguicula_nevadensis:4.814954,(((Pinguicula_mundi:1.189246,(Pinguicula_fiorii:0.789277,Pinguicula_vulgaris:0.789277):0.399969):0.333920,(Pinguicula_grandiflora:0.740585,Pinguicula_bohemica:0.740585):0.782581)calib3:1.873161,(Pinguicula_macroceras:1.137730,Pinguicula_longifolia_subsp_caussensis:1.137730):2.258597):1.418627):1.309671):1.146167):1.371384):1.324490,(Pinguicula_poldini:2.282638,(Pinguicula_longifolia_subsp_reichenbachiana:1.322182,Pinguicula_leptoceras:1.322182):0.960456):7.684028):1.841547,(((Pinguicula_antarctica:6.555340,((Pinguicula_pumila:3.437529,((Pinguicula_ionantha:1.340774,Pinguicula_planifolia:1.340774):0.988916,(Pinguicula_lutea:1.340774,Pinguicula_primuliflora:1.340774):0.988916):1.107839):1.390586,(Pinguicula_calyptrata:2.384355,(Pinguicula_involuta:1.361946,Pinguicula_chuquisacensis:1.361946):1.022409):2.443761):1.727224):3.697213,(Pinguicula_hirtiflora:1.633064,Pinguicula_lusitanica:1.633064):8.619489)calib5:0.322240,(Pinguicula_variegata:2.596198,(Pinguicula_ramosa:1.439749,Pinguicula_villosa:1.439749):1.156449):7.978595):1.233420)calib2:0.174753)calib1;
+-----------------------------------------------------------------------------------------
+Estimated ages and substitution rates for tree Rtree
+
+Reconstruction method: Langley-Fitch (clock)
+Named internal nodes indicated by [*]
+Rates are for branches subtending indicated node
+Rates are in units of substitutions per site per unit time
+
+				  Constraints				Rates
+	Node	   Fix [Mod]	  Min	  Max	  Age		Estimated	Local
+-----------------------------------------------------------------------------------------
+ [*]  calib1	     * [0] 	   --      --	  11.98		
+ [*]  calib6	     * [0] 	   --      --	   9.84		7.8383e-02	3.2676e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.6376e-02
+     (4)	       [0] 	   --      --	   8.82		7.8383e-02	7.8578e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.7275e-02
+     (6)	       [0] 	   --      --	   7.82		7.8383e-02	6.9685e-02
+ [*]  calib7	     * [0] 	   --      --	   6.08		7.8383e-02	4.0350e-02
+ [*]  calib10	       [0] 	   --      --	   5.64		7.8383e-02	1.7858e-01
+     (9)	       [0] 	   --      --	   5.13		7.8383e-02	1.3784e-01
+     (10)	       [0] 	   --      --	   4.53		7.8383e-02	1.1631e-01
+     (11)	       [0] 	   --      --	   3.72		7.8383e-02	9.9361e-02
+     (12)	       [0] 	   --      --	   2.94		7.8383e-02	9.0259e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.4890e-02
+     (14)	       [0] 	   --      --	   2.11		7.8383e-02	8.3752e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.0600e-02
+     (16)	       [0] 	   --      --	   1.25		7.8383e-02	8.1535e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.9959e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.9959e-02
+     (19)	       [0] 	   --      --	   1.21		7.8383e-02	8.7484e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.2934e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.2934e-02
+     (22)	       [0] 	   --      --	   2.95		7.8383e-02	9.5335e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.4681e-02
+     (24)	       [0] 	   --      --	   2.05		7.8383e-02	8.9037e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.2775e-02
+     (26)	       [0] 	   --      --	   1.23		7.8383e-02	8.4645e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1514e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1514e-02
+     (29)	       [0] 	   --      --	   2.83		7.8383e-02	9.9908e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.8484e-02
+     (31)	       [0] 	   --      --	   2.05		7.8383e-02	8.9808e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.3091e-02
+     (33)	       [0] 	   --      --	   1.22		7.8383e-02	8.5099e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1741e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1741e-02
+     (36)	       [0] 	   --      --	   4.38		7.8383e-02	1.1913e-01
+     (37)	       [0] 	   --      --	   3.70		7.8383e-02	1.0411e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.6397e-02
+     (39)	       [0] 	   --      --	   2.87		7.8383e-02	9.6095e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.7068e-02
+     (41)	       [0] 	   --      --	   2.07		7.8383e-02	8.7410e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.2106e-02
+     (43)	       [0] 	   --      --	   1.23		7.8383e-02	8.3687e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1035e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1035e-02
+     (46)	       [0] 	   --      --	   1.16		7.8383e-02	9.3402e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.5892e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.5892e-02
+     (49)	       [0] 	   --      --	   3.54		7.8383e-02	1.1806e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	9.0341e-02
+     (51)	       [0] 	   --      --	   2.79		7.8383e-02	1.0610e-01
+     (52)	       [0] 	   --      --	   2.03		7.8383e-02	9.1822e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.3918e-02
+     (54)	       [0] 	   --      --	   1.21		7.8383e-02	8.6287e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.2335e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.2335e-02
+     (57)	       [0] 	   --      --	   1.17		7.8383e-02	9.2659e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.5521e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.5521e-02
+     (60)	       [0] 	   --      --	   5.68		7.8383e-02	1.0772e-01
+     (61)	       [0] 	   --      --	   4.99		7.8383e-02	1.0091e-01
+     (62)	       [0] 	   --      --	   4.14		7.8383e-02	8.2461e-02
+     (63)	       [0] 	   --      --	   3.15		7.8383e-02	8.0903e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.9328e-02
+     (65)	       [0] 	   --      --	   2.15		7.8383e-02	7.9958e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.9034e-02
+     (67)	       [0] 	   --      --	   1.27		7.8383e-02	7.9307e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.8845e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.8845e-02
+     (70)	       [0] 	   --      --	   1.26		7.8383e-02	7.9942e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.9162e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.9162e-02
+     (73)	       [0] 	   --      --	   2.61		7.8383e-02	9.6827e-02
+ [*]  calib11	     * [0] 	   --      --	   2.01		7.8383e-02	1.1527e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	4.9836e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	4.9836e-02
+     (77)	       [0] 	   --      --	   1.45		7.8383e-02	5.9936e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.9160e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.9160e-02
+     (80)	       [0] 	   --      --	   1.22		7.8383e-02	8.5196e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1790e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.1790e-02
+ [*]  calib2	     * [0] 	   --      --	  11.81		7.8383e-02	8.5835e-01
+     (84)	       [0] 	   --      --	   9.97		7.8383e-02	4.3442e-02
+     (85)	       [0] 	   --      --	   8.64		7.8383e-02	5.2851e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.2898e-02
+     (87)	       [0] 	   --      --	   7.27		7.8383e-02	5.8335e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.5645e-02
+     (89)	       [0] 	   --      --	   6.12		7.8383e-02	6.1073e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.8372e-02
+     (91)	       [0] 	   --      --	   4.81		7.8383e-02	6.1084e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.3075e-02
+     (93)	       [0] 	   --      --	   3.40		7.8383e-02	5.6393e-02
+ [*]  calib3	     * [0] 	   --      --	   1.52		7.8383e-02	3.7370e-02
+     (95)	       [0] 	   --      --	   1.19		7.8383e-02	2.3958e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	1.4295e-01
+     (97)	       [0] 	   --      --	   0.79		7.8383e-02	1.7501e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	1.2670e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	1.2670e-01
+     (100)	       [0] 	   --      --	   0.74		7.8383e-02	1.9167e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	1.3503e-01
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	1.3503e-01
+     (103)	       [0] 	   --      --	   1.14		7.8383e-02	9.7406e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.7894e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	8.7894e-02
+     (106)	       [0] 	   --      --	   2.28		7.8383e-02	6.8974e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.4475e-02
+     (108)	       [0] 	   --      --	   1.32		7.8383e-02	7.2882e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.5633e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.5633e-02
+     (111)	       [0] 	   --      --	  10.57		7.8383e-02	1.8647e-01
+ [*]  calib5	     * [0] 	   --      --	  10.25		7.8383e-02	2.1723e-01
+     (113)	       [0] 	   --      --	   6.56		7.8383e-02	2.1638e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	5.9493e-02
+     (115)	       [0] 	   --      --	   4.83		7.8383e-02	4.0527e-02
+     (116)	       [0] 	   --      --	   3.44		7.8383e-02	5.7530e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.2727e-02
+     (118)	       [0] 	   --      --	   2.33		7.8383e-02	6.3186e-02
+     (119)	       [0] 	   --      --	   1.34		7.8383e-02	7.0785e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.4584e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.4584e-02
+     (122)	       [0] 	   --      --	   1.34		7.8383e-02	7.0785e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.4584e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.4584e-02
+     (125)	       [0] 	   --      --	   2.38		7.8383e-02	6.1381e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.1298e-02
+     (127)	       [0] 	   --      --	   1.36		7.8383e-02	6.8466e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.3424e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	7.3424e-02
+     (130)	       [0] 	   --      --	   1.63		7.8383e-02	4.4086e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.1235e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.1235e-02
+     (133)	       [0] 	   --      --	   2.60		7.8383e-02	4.7627e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.5480e-02
+     (135)	       [0] 	   --      --	   1.44		7.8383e-02	6.0530e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.9457e-02
+      Pinguicu	     * [0] 	   --      --	   0.00		7.8383e-02	6.9457e-02
+-----------------------------------------------------------------------------------------
+
+Summary of rate variation (substitutions per site per unit time)
+  Mean    = 0.07838
+  Std Dev = 8.786e-08
+  Min     = 0.07838
+  Max     = 0.07838
+  Range   = 0
+  Ratio   =  1

@@ -2,7 +2,7 @@
 [ Running r8s via Langley-Fitch, from R.             ]
 [  (using an R function by Nick Matzke, Feb. 2011)   ]
 [ To run:                                            ] 
-[ /Applications/r8s -v -f /Users/nmat471/HD/GitHub/CPs/buildtree/Pinguicula2_r8s_nexus_fn_v2.nex >> /Users/nmat471/HD/GitHub/CPs/buildtree/Pinguicula2_r8s_nexus_fn_v2.nex.log     ] 
+[ /Applications/r8s -v -f /Users/nmat471/HD/GitHub/CPs/buildtree/Pinguicula2_r8s_nexus_fn_v2.nex > /Users/nmat471/HD/GitHub/CPs/buildtree/Pinguicula2_r8s_nexus_fn_v2.nex.log     ] 
 
 begin trees;
 [Note: This tree was output from R.]
@@ -12,17 +12,17 @@ end;
 
 begin r8s;
 MRCA calib1 Pinguicula_agnata Pinguicula_vulgaris;
-MRCA calib2 Pinguicula_grandiflora Pinguicula_lusitanica;
-MRCA calib3 Pinguicula_leptoceras Pinguicula_vulgaris;
-MRCA calib4 Pinguicula_leptoceras Pinguicula_vulgaris;
+MRCA calib2 Pinguicula_vulgaris Pinguicula_lusitanica;
+MRCA calib3 Pinguicula_vulgaris Pinguicula_grandiflora;
+[MRCA calib4 Pinguicula_leptoceras Pinguicula_vulgaris;]
 MRCA calib5 Pinguicula_lusitanica Pinguicula_pumila;
 MRCA calib6 Pinguicula_agnata Pinguicula_alpina;
 MRCA calib7 Pinguicula_agnata Pinguicula_ehlersiae;
-MRCA calib8 Pinguicula_agnata Pinguicula_gracilis;
-MRCA calib9 Pinguicula_agnata Pinguicula_gypsicola;
+[ MRCA calib8 Pinguicula_agnata Pinguicula_gracilis; ]
+[ MRCA calib9 Pinguicula_agnata Pinguicula_gypsicola; ]
 MRCA calib10 Pinguicula_agnata Pinguicula_moranensis;
 MRCA calib11 Pinguicula_gracilis Pinguicula_rotundiflora;
-blformat lengths=persite ultrametric=no round=no nsites=1000;
+blformat lengths=persite ultrametric=no round=yes nsites=100;
 collapse;
 [ lengths=persite means that the branch length is in						]
 [     changes per site not total number of changes							]
@@ -33,13 +33,13 @@ collapse;
 fixage taxon=calib1 age=11.982966;
 fixage taxon=calib2 age=11.808213;
 fixage taxon=calib3 age=1.523166;
-fixage taxon=calib4 age=0.633571;
+[fixage taxon=calib4 age=0.633571;]
 fixage taxon=calib5 age=10.252553;
 fixage taxon=calib6 age=9.840748;
 fixage taxon=calib7 age=6.083312;
-fixage taxon=calib8 age=6.069975;
+[ fixage taxon=calib8 age=6.069975; ]
 fixage taxon=calib9 age=4.455787;
-fixage taxon=calib10 age=3.343594;
+[ fixage taxon=calib10 age=3.343594; ]
 fixage taxon=calib11 age=2.006593;
 
 [ constrain taxon=node2 min_age=200 max_age=300 							]
