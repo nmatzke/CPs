@@ -1,0 +1,661 @@
+r8s version 1.81 (Oct 20 2019)
+Reading tree Rtree
+********************* WARNING **********************
+
+MRCA COMMAND: Num nodes less than num labels: You probably have misspelled a taxon name!
+
+****************************************************
+********************* WARNING **********************
+
+MRCA is overwriting an existing node name
+
+****************************************************
+[** The overwritten node is Dionaea_muscipula **]
+Defining clade name: calib1
+Executing blformat command...
+Branch lengths assumed to be in units of numbers of substitutions per site
+Number of sites in sequences set to 1000
+All branch lengths multipled by the 1000 sites in the sequence
+Branch lengths rounded to nearest integer
+(This may not be a good idea when using CALIBRATE on ultrametric user supplied input trees. Use ROUND=NO then)
+Tree is assumed to be ultrametric (Use CALIBRATE command to scale it)
+0 zero-length branches collapsed
+********************* WARNING **********************
+
+Can't SETAGE on ultrametric trees; use CALIBRATE command instead!
+
+****************************************************
+********************* WARNING **********************
+
+You are trying to estimate the age of the root
+but with the given constraints it is possible that a range of solutions exist
+
+****************************************************
+
+
+----------------------------------------
+
+
+LINEAGE RATE/TIME ANALYSIS FOR TREE Rtree
+
+Method = Langley and Fitch
+Optimization via Truncated-Newton (TN) method with bound constraints
+
+----------------------------------------
+Substitution Model
+	Rates are equal across sites
+Global/Local Search Parameters
+	Number of searches from random starts = 1
+	Number of restarts after each search = 1
+	Local perturbation on restarts = 0.01
+	Local fractional tolerance after restarts = 0.01
+Optimization parameters set automatically by TN routine
+Length of tree input =  753586
+Number of taxa  =  87
+Number of sites in sequences =  1000
+
+----------------------------------------
+Starting optimization (random starting point 1)
+...Checking the starting point...(for some barrier constant)...
+...Passed...now optimizing...
+...Initial solution=955.408458
+......starting perturbation 1
+......solution for perturbation 1=955.408458...best=955.408458
+*** Using analytical formula for gradient in check gradient step ***
+...checking gradient of the solution...
+
+	Norm for free parameters in gradient (0.584164) should be less than cutoff (2.073211)
+	Checking active constraints for node times only (activeEpsilon=0.001000 and window [actEps*rootage]=0.103542)
+	Param	Estimate	Gradient	Active*	Taxon
+	[1]	103.541926	0.000003	0	
+	[2]	89.025154	-0.000001	0	
+	[3]	85.489323	0.000002	0	
+	[4]	75.890798	0.000004	0	
+	[5]	70.143673	0.000008	0	
+	[6]	61.645952	0.000001	0	
+	[7]	51.637755	0.000003	0	
+	[8]	37.669397	-0.000003	0	
+	[9]	31.688050	0.000007	0	
+	[10]	25.855671	-0.000006	0	
+	[11]	18.817113	0.000003	0	
+	[12]	15.452915	0.000009	0	
+	[13]	17.902375	0.000006	0	
+	[14]	13.056020	-0.000007	0	
+	[15]	10.141333	0.000017	0	
+	[16]	7.775513	-0.000011	0	
+	[17]	50.882699	-0.000009	0	
+	[18]	34.993186	0.000009	0	
+	[19]	31.760245	-0.000002	0	
+	[20]	26.306894	0.000000	0	
+	[21]	22.914792	0.000006	0	
+	[22]	19.961203	-0.000007	0	
+	[23]	17.012628	0.000010	0	
+	[24]	9.800530	-0.000011	0	
+	[25]	6.548468	0.000008	0	
+	[26]	16.654085	0.000001	0	
+	[27]	14.751836	0.000004	0	
+	[28]	9.606901	0.000002	0	
+	[29]	7.031632	0.000000	0	
+	[30]	6.172561	0.000002	0	
+	[31]	26.107484	-0.000002	0	
+	[32]	21.326152	0.000004	0	
+	[33]	16.164399	0.000003	0	
+	[34]	11.385740	-0.000000	0	
+	[35]	7.180593	-0.000002	0	
+	[36]	4.600952	0.000014	0	
+	[37]	59.799762	-0.000002	0	
+	[38]	42.173084	0.000003	0	
+	[39]	36.055513	-0.000002	0	
+	[40]	31.284513	-0.000004	0	
+	[41]	26.433695	-0.000012	0	
+	[42]	24.101663	-0.000003	0	
+	[43]	21.000915	0.000003	0	
+	[44]	17.708700	0.000000	0	
+	[45]	15.864311	0.000006	0	
+	[46]	12.262845	0.000001	0	
+	[47]	9.885806	-0.000007	0	
+	[48]	11.755647	0.000014	0	
+	[49]	9.159860	-0.000001	0	
+	[50]	6.813218	0.000001	0	
+	[51]	3.475050	-0.000001	0	
+	[52]	2.537282	-0.000016	0	
+	[53]	3.470161	0.000001	0	
+	[54]	3.949069	-0.000010	0	
+	[55]	5.574785	-0.000013	0	
+	[56]	3.587904	0.000007	0	
+	[57]	3.587904	0.000002	0	
+	[58]	23.066692	-0.000007	0	
+	[59]	22.324509	-0.000008	0	
+	[60]	19.676784	-0.000014	0	
+	[61]	14.939218	-0.000005	0	
+	[62]	10.512107	-0.000001	0	
+	[63]	3.127652	0.000002	0	
+	[64]	14.541784	-0.000007	0	
+	[65]	13.093617	-0.000010	0	
+	[66]	11.844234	-0.000008	0	
+	[67]	10.307827	0.000000	0	
+	[68]	4.370899	-0.000007	0	
+	[69]	4.947667	0.000006	0	
+	[70]	16.527991	-0.000005	0	
+	[71]	13.440044	0.000008	0	
+	[72]	11.593440	-0.000009	0	
+	[73]	10.564444	0.000009	0	
+	[74]	8.338547	0.000004	0	
+	[75]	6.600298	0.000006	0	
+	[76]	9.945684	0.000017	0	
+	[77]	8.399417	-0.000009	0	
+	[78]	6.101073	0.000007	0	
+	[79]	6.703994	-0.000009	0	
+	[80]	3.840384	0.000008	0	
+	[81]	14.801476	0.000002	0	
+	[82]	34.971699	0.000003	0	
+	[83]	21.617520	0.000000	0	
+	[84]	5.568274	-0.000001	0	
+	[85]	4.682234	0.000001	0	
+	[86]	74.302467	-0.000003	0	
+
+	Gradients for rate parameters (if any)
+	Param	Estimate	Gradient
+	[87]	419.104216	-0.584164
+------------------------------------------------------------------------------
+*Key
+	+1 = maximum age constraint is reached (gradient may not be 0)
+	-1 = minimum age constraint is reached (gradient may not be 0)
+	 0 = no constraint present or constraint not reached (gradient should be 0)
+
+	 (note that small gradient values (< |0.000207|) are not examined with respect to active constraints to avoid spurious roundoff issues)
+
+*** Gradient check passed ***
+********************* WARNING **********************
+
+Warning: An estimated rate crashed into the imposed lower bound on rates (see MINRATEFACTOR)
+You may be extrapolating too deep in tree for too low a smoothing value
+
+
+****************************************************
+
+Using optimization from starting point 1 as best estimate
+Test of molecular clock on soln. 1 (best): Chi squared = 244.241849 (df=86)
+
+
+Parameter estimates:
+
+	       1  
+
+Times
+p[ 1]	   0.104  
+p[ 2]	   0.089  
+p[ 3]	  0.0855  
+p[ 4]	  0.0759  
+p[ 5]	  0.0701  
+p[ 6]	  0.0616  
+p[ 7]	  0.0516  
+p[ 8]	  0.0377  
+p[ 9]	  0.0317  
+p[10]	  0.0259  
+p[11]	  0.0188  
+p[12]	  0.0155  
+p[13]	  0.0179  
+p[14]	  0.0131  
+p[15]	  0.0101  
+p[16]	 0.00778  
+p[17]	  0.0509  
+p[18]	   0.035  
+p[19]	  0.0318  
+p[20]	  0.0263  
+p[21]	  0.0229  
+p[22]	    0.02  
+p[23]	   0.017  
+p[24]	  0.0098  
+p[25]	 0.00655  
+p[26]	  0.0167  
+p[27]	  0.0148  
+p[28]	 0.00961  
+p[29]	 0.00703  
+p[30]	 0.00617  
+p[31]	  0.0261  
+p[32]	  0.0213  
+p[33]	  0.0162  
+p[34]	  0.0114  
+p[35]	 0.00718  
+p[36]	  0.0046  
+p[37]	  0.0598  
+p[38]	  0.0422  
+p[39]	  0.0361  
+p[40]	  0.0313  
+p[41]	  0.0264  
+p[42]	  0.0241  
+p[43]	   0.021  
+p[44]	  0.0177  
+p[45]	  0.0159  
+p[46]	  0.0123  
+p[47]	 0.00989  
+p[48]	  0.0118  
+p[49]	 0.00916  
+p[50]	 0.00681  
+p[51]	 0.00348  
+p[52]	 0.00254  
+p[53]	 0.00347  
+p[54]	 0.00395  
+p[55]	 0.00557  
+p[56]	 0.00359  
+p[57]	 0.00359  
+p[58]	  0.0231  
+p[59]	  0.0223  
+p[60]	  0.0197  
+p[61]	  0.0149  
+p[62]	  0.0105  
+p[63]	 0.00313  
+p[64]	  0.0145  
+p[65]	  0.0131  
+p[66]	  0.0118  
+p[67]	  0.0103  
+p[68]	 0.00437  
+p[69]	 0.00495  
+p[70]	  0.0165  
+p[71]	  0.0134  
+p[72]	  0.0116  
+p[73]	  0.0106  
+p[74]	 0.00834  
+p[75]	  0.0066  
+p[76]	 0.00995  
+p[77]	  0.0084  
+p[78]	  0.0061  
+p[79]	  0.0067  
+p[80]	 0.00384  
+p[81]	  0.0148  
+p[82]	   0.035  
+p[83]	  0.0216  
+p[84]	 0.00557  
+p[85]	 0.00468  
+p[86]	  0.0743  
+
+Rates (substitutions per site per unit time)
+p[87]	   0.419  
+
+	  PASSED  
+__________________
+Result codes:
+PASSED = OK
+FAILED(1) = Optimization routine returned error
+FAILED(2) = Solution's gradient was not 0
+__________________
+
+
+Obj->	-955.408  
+[Printing tree 1]
+
+[CHRONOGRAM of tree Rtree]
+Tree is so large that it has been compressed horizontally and resolution may be lost: WINWIDTH=109 treeWidth=69
+         +----------------------------------------------------------Drosera_regia
+         |
+         | +--------------------------------------------------------Drosera_arcturi
+         | |
+         | |         +----------------------------------------------Drosera_glanduligera
+         | |         |
+         | |         |            +---------------------------------Drosera_binata_var_dichotoma
+         | |         |            |
+         | |         |            |        +-----------------------Drosera_gigantea
+         | |         |     +------+10      |
+         | |         |     |      |        |           +-----------Drosera_peltata
+         | |         |     |      |        |       +---+16
+         | |         |     |      +--------+12     |   +-----------Drosera_auriculata
+         | |         |     |               |   +---+15
+         | |         |     |               |   |   |     +---------Drosera_menziesii
+         | |      +--+7    |               |   |   +-----+19
+         | |      |  |     |               +---+14       +---------Drosera_macrantha_ssp_planchonii
+         | |      |  |     |                   |
+         | |      |  |     |                   |        +----------Drosera_rosulata
+         | |      |  |     |                   +--------+22
++--------+2|      |  |     |                            |  +-------Drosera_stolonifera
+|        | |      |  |     |                            +--+24
+|        | |      |  |     |                               | +-----Drosera_platypoda
+|        | |      |  |     |                               +-+26
+|        | |      |  |     |                                 |+----Drosera_prostratoscaposa
+|        | |      |  |     |                                 ++28
+|        | |      |  +-----+9                                 +----Drosera_aberrans
+|        | |      |        |
+|        | |      |        |                 +---------------------Drosera_dichrosepala
+|        | |      |        |                 |
+|        | |      |        |      +----------+32-------------------Drosera_meristocaulis
+|        | |      |        |      |          | |
+|        | |      |        |      |          | |  +----------------Drosera_roseana
+|        | |      |        |      |          +-+34|
+|        | |      |        |      |            |  |   +------------Drosera_helodes
+|        | |      |        |      |            |  | +-+39
+|        | |      |        |      |            +--+36 | +----------Drosera_scorpioides
+|        | |      |        |      |               | | +-+41
+|        | |      |        |      |               | |   |    +-----Drosera_sewelliae
+|        | |      |        |      |               | |   +----+43
+|        | |      |        |      |               | |        | +--Drosera_leucoblasta
+|        +-+4     |        |      |               +-+38      +-+45
+|          |      |        |      |                 |          +--Drosera_barbigera
+|          |      |        +------+31               |
+|          |      |               |                 |    +---------Drosera_pulchella
+|          |      |               |                 |    |
+|          |      |               |                 |    |   +-----Drosera_allantostigma
+|          |      |               |                 +----+48-+51
+|          |      |               |                      ||  | +---Drosera_nitidula
+|          |      |               |                      ||  +-+53
+|          |      |               |                      ++50  +---Drosera_omissa
+|          |      |               |                       |
+|          |      |               |                       |    +---Drosera_pygmaea
+|          |      |               |                       +----+56
+|          |      |               |                            +---Drosera_occidentalis
+|          |      |               |
+|          |      |               |               +----------------Drosera_paradoxa
+|          |      |               +---------------+59
+|          |      |                               |  +-------------Drosera_caduca
+|          |      |                               +--+61
+|          |      |                                  |   +---------Drosera_petiolaris
+|          |      |                                  +---+63
+|          |      |                                      |  +------Drosera_lanata
+|          |      |                                      +--+65
+|          |      |                                         |  +---Drosera_ordensis
+|          |      |                                         +--+67
+|          |      |                                            |+--Drosera_dilatatopetiolaris
+|          |      |                                            ++69
+|          |      |                                             +--Drosera_falconeri
+|          |      |
+|          |      |                         +-----------------------Drosera_indica
+|          |      |                         |
+|          |      |                         |       +---------------Drosera_spathulata
+|          |      |                         |       |
+|          |      |                         |     +-+78-------------Drosera_neocaledonica
+|          |      |                         |     | | |
+|          |      |                         |     | | | +-----------Drosera_brevifolia
+|          |      |                         |     | +-+80
+|          |      |                         |     |   | |  +--------Drosera_felix
+|          |      |                         |     |   | |+-+85
+|          |      |                         |     |   | || | +------Drosera_kaieteurensis
+|          +------+6                        |     |   +-+82+-+87
+|                 |                         |     |     ||   +------Drosera_hirtella
+|                 |                         |     |     ||
+|                 |                         |     |     ||       +--Drosera_biflora
+|                 |                         |     |     ||     +-+93
+|                 |                         |     |     ||     | |+-Drosera_esmeraldae
+|                 |                         |     |     ++84   | ++95
+|                 |                         |     |      |   +-+92+-Drosera_capillaris
+|                 |                         |     |      |   | |
+|                 |                         |     |      |   | | +--Drosera_tracyi
+|                 |                         |     |      |  ++91-+98
+|                 |                         |     |      |  ||   +--Drosera_filiformis
+|                 |                         |     |      |  ||
+|                 |                         |  +--+77    |  ||   +---Drosera_rotundifolia
++1                |                         |  |  |      |  |+---+101
+|                 |                         |  |  |      +--+90  +---Drosera_tokaiensis
+|                 |                     +---+74|  |         |
+|                 |                     |   |  |  |         |    +--Drosera_communis
+|                 |                     |   |  |  |         |   ++105
+|                 |                     |   |  |  |         |   |+--Drosera_intermedia
+|                 |                     |   |  |  |         +---+104
+|                 |                     |   |  |  |             |+--Drosera_linearis
+|                 |                     |   |  |  |             ++108
+|                 |                     |   |  |  |              +--Drosera_anglica
+|                 |                     |   |  |  |
+|                 |                     |   |  |  | +---------------Drosera_slackii
+|                 |                     |   |  |  | |
+|                 |                     |   |  |  | |     +---------Drosera_collinsiae
+|                 |                     |   |  |  | |  +--+115
+|                 |                     |   |  |  | |  |  |  +------Drosera_peleacea
+|                 |                     |   |  |  | |  |  +--+117
+|                 |                     |   |  |  | |  |     |   +--Drosera_aliciae
+|                 |                     |   |  |  | |  |     +---+119
+|                 |                     |   |  |  | |  |         +--Drosera_capensis
+|                 |                     |   |  |  +-+111114
+|                 |                     |   |  |    || |   +--------Drosera_montana_var_schwackei
+|                 |                     |   |  |    || |  ++123
+|                 |                     |   |  |    || |  ||+-------Drosera_graomogolensis
+|                 |                     |   |  |    || |  |++125
+|                 |                     |   |  |    || |  | |+------Drosera_villosa
+|                 |                     |   |  |    || |  | ++127
+|                 |                     |   |  |    || +--+122   +--Drosera_montana_var_tomentosa
+|                 |                     |   |  |    ||    |  +---+129
+|                 |                     |   +--+76  ++113 |      +--Drosera_tomentosa
+|                 |                     |      |     |    |
+|                 |                     |      |     |    |     +---Drosera_graminifolia
+|                 |                     |      |     |    +-----+132
+|                 |         +-----------+73    |     |          +---Drosera_chrysolepis
+|                 |         |           |      |     |
+|                 |         |           |      |     |   +---------Drosera_dilesiana
+|                 |         |           |      |     |   |
+|                 |         |           |      |     |   | +-------Drosera_natalensis
+|                 |         |           |      |     +---+135
+|                 |         |           |      |         | | +-----Drosera_alba
+|                 |         |           |      |         | |++140
+|                 |         |           |      |         +-+137----Drosera_cistiflora
+|                 |         |           |      |           ||++142
+|                 |         |           |      |           || |+---Drosera_pauciflora
+|                 |         |           |      |           || ++144
+|                 |         |           |      |           ++139---Drosera_trinervia
+|                 |         |           |      |            |
+|                 |         |           |      |            | +-----Drosera_hilaris
+|                 |         |           |      |            |++148
+|                 |         |           |      |            |||+----Drosera_venusta
+|                 |         |           |      |            ||++150
+|                 |         |           |      |            ++147---Drosera_cuneifolia
+|                 +---------+72         |      |             |
+|                           |           |      |             | +----Drosera_burkeana
+|                           |           |      |             +-+153
+|                           |           |      |               | +--Drosera_nidiformis
+|                           |           |      |               +-+155
+|                           |           |      |                 +--Drosera_madagascariensis
+|                           |           |      |
+|                           |           |      |          +---------Drosera_stenopetala
+|                           |           |      +----------+158
+|                           |           |                 +---------Drosera_uniflora
+|                           |           |
+|                           |           |    +----------------------Drosera_hamiltonii
+|                           |           +----+161
+|                           |                |       +--------------Drosera_prolifera
+|                           |                +-------+163
+|                           |                        |          +----Drosera_schizandra
+|                           |                        +----------+165
+|                           |                                   +----Drosera_adelae
+|                           |
+|                           |                                   +--Drosera_burmannii
+|                           +-----------------------------------+168
+|                                                               +--Drosera_sessilifolia
+|
+|                  +-----------------------------------------------Aldrovanda_vesiculosa
++------------------+171
+                   +-----------------------------------------------calib1
+
+[Printing tree 1]
+
+[TREE DESCRIPTION of tree Rtree]
+
+tree Rtree = ((Drosera_regia:88.025154,(Drosera_arcturi:84.489323,((Drosera_glanduligera:69.143673,((Drosera_binata_var_dichotoma:50.637755,(Drosera_gigantea:35.669397,(((Drosera_peltata:16.817113,Drosera_auriculata:16.817113):7.038558,(Drosera_menziesii:13.452915,Drosera_macrantha_ssp_planchonii:13.452915):10.402756):5.832379,(Drosera_rosulata:14.902375,(Drosera_stolonifera:10.056020,(Drosera_platypoda:7.141333,(Drosera_prostratoscaposa:4.775513,Drosera_aberrans:4.775513):2.365821):2.914687):4.846354):13.785676):5.981346):13.968358):10.008197,((Drosera_dichrosepala:32.993186,(Drosera_meristocaulis:29.760245,(Drosera_roseana:23.306894,((Drosera_helodes:16.961203,(Drosera_scorpioides:14.012628,(Drosera_sewelliae:6.800530,(Drosera_leucoblasta:2.548468,Drosera_barbigera:2.548468):3.252062):7.212098):2.948575):2.953589,(Drosera_pulchella:13.654085,((Drosera_allantostigma:6.606901,(Drosera_nitidula:4.031632,Drosera_omissa:4.031632):2.575269):5.144935,(Drosera_pygmaea:3.172561,Drosera_occidentalis:3.172561):8.579275):1.902249):6.260707):3.392102):5.453350):3.232941):15.889513,(Drosera_paradoxa:24.107484,(Drosera_caduca:19.326152,(Drosera_petiolaris:14.164399,(Drosera_lanata:9.385740,(Drosera_ordensis:5.180593,(Drosera_dilatatopetiolaris:2.600952,Drosera_falconeri:2.600952):2.579641):4.205147):4.778659):5.161752):4.781332):24.775215):10.763253):8.497721):5.747125,(((Drosera_indica:35.055513,(((Drosera_spathulata:23.101663,(Drosera_neocaledonica:20.000915,(Drosera_brevifolia:16.708700,((Drosera_felix:11.262845,(Drosera_kaieteurensis:8.885806,Drosera_hirtella:8.885806):2.377039):3.601466,((((Drosera_biflora:2.475050,(Drosera_esmeraldae:1.537282,Drosera_capillaris:1.537282):0.937769):3.338167,(Drosera_tracyi:2.470161,Drosera_filiformis:2.470161):3.343056):2.346643,(Drosera_rotundifolia:3.949069,Drosera_tokaiensis:3.949069):5.210791):2.595786,((Drosera_communis:2.587904,Drosera_intermedia:2.587904):1.986882,(Drosera_linearis:2.587904,Drosera_anglica:2.587904):1.986882):6.180861):4.108664):1.844389):3.292215):3.100748):2.332032,(Drosera_slackii:22.066692,(((Drosera_collinsiae:13.939218,(Drosera_peleacea:9.512107,(Drosera_aliciae:2.127652,Drosera_capensis:2.127652):7.384455):4.427111):4.737565,((Drosera_montana_var_schwackei:12.093617,(Drosera_graomogolensis:10.844234,(Drosera_villosa:9.307827,(Drosera_montana_var_tomentosa:3.370899,Drosera_tomentosa:3.370899):5.936929):1.536407):1.249383):1.448166,(Drosera_graminifolia:3.947667,Drosera_chrysolepis:3.947667):9.594116):5.135000):2.647725,(Drosera_dilesiana:14.527991,(Drosera_natalensis:11.440044,((Drosera_alba:8.564444,(Drosera_cistiflora:6.338547,(Drosera_pauciflora:4.600298,Drosera_trinervia:4.600298):1.738249):2.225897):1.028996,((Drosera_hilaris:7.399417,(Drosera_venusta:5.101073,Drosera_cuneifolia:5.101073):2.298344):1.546266,(Drosera_burkeana:5.703994,(Drosera_nidiformis:2.840384,Drosera_madagascariensis:2.840384):2.863611):3.241689):1.647757):1.846604):3.087947):5.796517):0.742183):3.367003):4.850818,(Drosera_stenopetala:13.801476,Drosera_uniflora:13.801476):16.483037):4.771000):6.117570,(Drosera_hamiltonii:33.971699,(Drosera_prolifera:20.617520,(Drosera_schizandra:5.568274,Drosera_adelae:5.568274):16.049246):13.354179):7.201385):17.626678,(Drosera_burmannii:2.682234,Drosera_sessilifolia:2.682234):55.117528):16.091036):9.598525):3.535831):14.516771,(Aldrovanda_vesiculosa:72.302467,calib1:72.302467):29.239459);
+-----------------------------------------------------------------------------------------
+Estimated ages and substitution rates for tree Rtree
+
+Reconstruction method: Langley-Fitch (clock)
+Named internal nodes indicated by [*]
+Rates are for branches subtending indicated node
+Rates are in units of substitutions per site per unit time
+
+				  Constraints				Rates
+	Node	   Fix [Mod]	  Min	  Max	  Age		Estimated	Local
+-----------------------------------------------------------------------------------------
+     (1)	       [0] 	   --      --	 103.54		
+     (2)	       [0] 	   --      --	  89.03		4.1910e-01	4.1648e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1673e-01
+     (4)	       [0] 	   --      --	  85.49		4.1910e-01	4.1885e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1664e-01
+     (6)	       [0] 	   --      --	  75.89		4.1910e-01	4.2131e-01
+     (7)	       [0] 	   --      --	  70.14		4.1910e-01	4.2491e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1531e-01
+     (9)	       [0] 	   --      --	  61.65		4.1910e-01	4.2870e-01
+     (10)	       [0] 	   --      --	  51.64		4.1910e-01	4.2006e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1212e-01
+     (12)	       [0] 	   --      --	  37.67		4.1910e-01	4.2704e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1781e-01
+     (14)	       [0] 	   --      --	  31.69		4.1910e-01	4.2833e-01
+     (15)	       [0] 	   --      --	  25.86		4.1910e-01	4.1184e-01
+     (16)	       [0] 	   --      --	  18.82		4.1910e-01	4.1528e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1719e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1719e-01
+     (19)	       [0] 	   --      --	  15.45		4.1910e-01	4.1566e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1738e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1738e-01
+     (22)	       [0] 	   --      --	  17.90		4.1910e-01	4.3560e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2510e-01
+     (24)	       [0] 	   --      --	  13.06		4.1910e-01	4.2960e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2293e-01
+     (26)	       [0] 	   --      --	  10.14		4.1910e-01	4.2577e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2177e-01
+     (28)	       [0] 	   --      --	   7.78		4.1910e-01	4.2311e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2111e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2111e-01
+     (31)	       [0] 	   --      --	  50.88		4.1910e-01	4.2775e-01
+     (32)	       [0] 	   --      --	  34.99		4.1910e-01	4.2833e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1409e-01
+     (34)	       [0] 	   --      --	  31.76		4.1910e-01	4.3335e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1199e-01
+     (36)	       [0] 	   --      --	  26.31		4.1910e-01	4.4046e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2296e-01
+     (38)	       [0] 	   --      --	  22.91		4.1910e-01	4.3660e-01
+     (39)	       [0] 	   --      --	  19.96		4.1910e-01	4.3371e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1837e-01
+     (41)	       [0] 	   --      --	  17.01		4.1910e-01	4.3445e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1498e-01
+     (43)	       [0] 	   --      --	   9.80		4.1910e-01	4.3857e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	3.8997e-01
+     (45)	       [0] 	   --      --	   6.55		4.1910e-01	4.6770e-01
+      Drosera_	     * [0] 	   --      --	   4.00		4.1910e-01	4.4340e-01
+      Drosera_	     * [0] 	   --      --	   4.00		4.1910e-01	4.4340e-01
+     (48)	       [0] 	   --      --	  16.65		4.1910e-01	4.2200e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.2002e-01
+     (50)	       [0] 	   --      --	  14.75		4.1910e-01	4.2108e-01
+     (51)	       [0] 	   --      --	   9.61		4.1910e-01	4.2022e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1956e-01
+     (53)	       [0] 	   --      --	   7.03		4.1910e-01	4.1976e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1943e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1943e-01
+     (56)	       [0] 	   --      --	   6.17		4.1910e-01	4.1997e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1953e-01
+      Drosera_	     * [0] 	   --      --	   3.00		4.1910e-01	4.1953e-01
+     (59)	       [0] 	   --      --	  26.11		4.1910e-01	4.1852e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1892e-01
+     (61)	       [0] 	   --      --	  21.33		4.1910e-01	4.1871e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1897e-01
+     (63)	       [0] 	   --      --	  16.16		4.1910e-01	4.1885e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1901e-01
+     (65)	       [0] 	   --      --	  11.39		4.1910e-01	4.1895e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1904e-01
+     (67)	       [0] 	   --      --	   7.18		4.1910e-01	4.1901e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1906e-01
+     (69)	       [0] 	   --      --	   4.60		4.1910e-01	4.1905e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1908e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.1908e-01
+     (72)	       [0] 	   --      --	  59.80		4.1910e-01	4.1551e-01
+     (73)	       [0] 	   --      --	  42.17		4.1910e-01	4.1114e-01
+     (74)	       [0] 	   --      --	  36.06		4.1910e-01	4.1879e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1828e-01
+     (76)	       [0] 	   --      --	  31.28		4.1910e-01	4.1962e-01
+     (77)	       [0] 	   --      --	  26.43		4.1910e-01	4.2096e-01
+     (78)	       [0] 	   --      --	  24.10		4.1910e-01	4.1209e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1807e-01
+     (80)	       [0] 	   --      --	  21.00		4.1910e-01	4.1313e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1883e-01
+     (82)	       [0] 	   --      --	  17.71		4.1910e-01	4.1340e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1990e-01
+     (84)	       [0] 	   --      --	  15.86		4.1910e-01	4.1260e-01
+     (85)	       [0] 	   --      --	  12.26		4.1910e-01	4.2233e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2032e-01
+     (87)	       [0] 	   --      --	   9.89		4.1910e-01	4.2111e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2011e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2011e-01
+     (90)	       [0] 	   --      --	  11.76		4.1910e-01	4.0938e-01
+     (91)	       [0] 	   --      --	   9.16		4.1910e-01	4.0103e-01
+     (92)	       [0] 	   --      --	   6.81		4.1910e-01	4.4361e-01
+     (93)	       [0] 	   --      --	   3.48		4.1910e-01	4.3167e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2423e-01
+     (95)	       [0] 	   --      --	   2.54		4.1910e-01	4.2654e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2282e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2282e-01
+     (98)	       [0] 	   --      --	   3.47		4.1910e-01	4.3104e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2507e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2507e-01
+     (101)	       [0] 	   --      --	   3.95		4.1910e-01	3.7653e-01
+      Drosera_	     * [0] 	   --      --	   0.00		4.1910e-01	3.9782e-01
+      Drosera_	     * [0] 	   --      --	   0.00		4.1910e-01	3.9782e-01
+     (104)	       [0] 	   --      --	   5.57		4.1910e-01	4.2745e-01
+     (105)	       [0] 	   --      --	   3.59		4.1910e-01	4.2328e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2119e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2119e-01
+     (108)	       [0] 	   --      --	   3.59		4.1910e-01	4.2328e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2119e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2119e-01
+     (111)	       [0] 	   --      --	  23.07		4.1910e-01	4.2798e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1592e-01
+     (113)	       [0] 	   --      --	  22.32		4.1910e-01	4.3116e-01
+     (114)	       [0] 	   --      --	  19.68		4.1910e-01	4.0828e-01
+     (115)	       [0] 	   --      --	  14.94		4.1910e-01	4.1414e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1717e-01
+     (117)	       [0] 	   --      --	  10.51		4.1910e-01	4.1607e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1768e-01
+     (119)	       [0] 	   --      --	   3.13		4.1910e-01	4.1750e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1830e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1830e-01
+     (122)	       [0] 	   --      --	  14.54		4.1910e-01	4.1324e-01
+     (123)	       [0] 	   --      --	  13.09		4.1910e-01	4.1501e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1791e-01
+     (125)	       [0] 	   --      --	  11.84		4.1910e-01	4.1621e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1810e-01
+     (127)	       [0] 	   --      --	  10.31		4.1910e-01	4.1721e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1825e-01
+     (129)	       [0] 	   --      --	   4.37		4.1910e-01	4.1806e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1858e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1858e-01
+     (132)	       [0] 	   --      --	   4.95		4.1910e-01	4.1734e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1822e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1822e-01
+     (135)	       [0] 	   --      --	  16.53		4.1910e-01	4.4199e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.3330e-01
+     (137)	       [0] 	   --      --	  13.44		4.1910e-01	4.2779e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.3479e-01
+     (139)	       [0] 	   --      --	  11.59		4.1910e-01	4.1211e-01
+     (140)	       [0] 	   --      --	  10.56		4.1910e-01	4.6647e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.3587e-01
+     (142)	       [0] 	   --      --	   8.34		4.1910e-01	4.4971e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.3101e-01
+     (144)	       [0] 	   --      --	   6.60		4.1910e-01	4.3780e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.2845e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.2845e-01
+     (147)	       [0] 	   --      --	   9.95		4.1910e-01	3.6474e-01
+     (148)	       [0] 	   --      --	   8.40		4.1910e-01	3.8868e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.0706e-01
+     (150)	       [0] 	   --      --	   6.10		4.1910e-01	4.0072e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.0991e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.0991e-01
+     (153)	       [0] 	   --      --	   6.70		4.1910e-01	3.9516e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.0884e-01
+     (155)	       [0] 	   --      --	   3.84		4.1910e-01	4.0543e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1227e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1227e-01
+     (158)	       [0] 	   --      --	  14.80		4.1910e-01	4.1776e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1843e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1843e-01
+     (161)	       [0] 	   --      --	  34.97		4.1910e-01	4.1145e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.1982e-01
+     (163)	       [0] 	   --      --	  21.62		4.1910e-01	4.1073e-01
+      Drosera_	     * [0] 	   --      --	   1.00		4.1910e-01	4.2571e-01
+     (165)	       [0] 	   --      --	   5.57		4.1910e-01	4.0413e-01
+      Drosera_	     * [0] 	   --      --	   0.00		4.1910e-01	4.1162e-01
+      Drosera_	     * [0] 	   --      --	   0.00		4.1910e-01	4.1162e-01
+     (168)	       [0] 	   --      --	   4.68		4.1910e-01	4.2348e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.2129e-01
+      Drosera_	     * [0] 	   --      --	   2.00		4.1910e-01	4.2129e-01
+     (171)	       [0] 	   --      --	  74.30		4.1910e-01	4.2172e-01
+      Aldrovan	     * [0] 	   --      --	   2.00		4.1910e-01	4.2041e-01
+      calib1	     * [0] 	   --      --	   2.00		4.1910e-01	4.2041e-01
+-----------------------------------------------------------------------------------------
+
+Summary of rate variation (substitutions per site per unit time)
+  Mean    = 0.4191
+  Std Dev = 2.155e-07
+  Min     = 0.4191
+  Max     = 0.4191
+  Range   = 0
+  Ratio   =  1

@@ -1,0 +1,1005 @@
+r8s version 1.81 (Oct 20 2019)
+Reading tree Rtree
+Defining clade name: calib1
+Executing blformat command...
+Branch lengths assumed to be in units of numbers of substitutions per site
+Number of sites in sequences set to 1000
+All branch lengths multipled by the 1000 sites in the sequence
+Branch lengths rounded to nearest integer
+(This may not be a good idea when using CALIBRATE on ultrametric user supplied input trees. Use ROUND=NO then)
+0 zero-length branches collapsed
+Fixing age of calib1 at 25.701614
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 1)
+
+
+----------------------------------------
+
+
+LINEAGE RATE/TIME ANALYSIS FOR TREE Rtree
+
+Method = Langley and Fitch
+Optimization via Truncated-Newton (TN) method with bound constraints
+
+----------------------------------------
+Substitution Model
+	Rates are equal across sites
+Global/Local Search Parameters
+	Number of searches from random starts = 1
+	Number of restarts after each search = 1
+	Local perturbation on restarts = 0.01
+	Local fractional tolerance after restarts = 0.01
+Optimization parameters set automatically by TN routine
+Length of tree input =  9875
+Number of taxa  =  149
+Number of sites in sequences =  1000
+
+----------------------------------------
+Starting optimization (random starting point 1)
+...Checking the starting point...(for some barrier constant)...
+...Passed...now optimizing...
+...Initial solution=4214.380575
+......starting perturbation 1
+......solution for perturbation 1=4214.380575...best=4214.380575
+*** Using analytical formula for gradient in check gradient step ***
+...checking gradient of the solution...
+
+	Norm for free parameters in gradient (0.000039) should be less than cutoff (9.137698)
+	Checking active constraints for node times only (activeEpsilon=0.001000 and window [actEps*rootage]=0.025702)
+	Param	Estimate	Gradient	Active*	Taxon
+	[1]	25.040424	0.000000	0	
+	[2]	19.947741	-0.000002	0	
+	[3]	2.085757	0.000000	0	
+	[4]	18.290394	0.000000	0	
+	[5]	14.753660	-0.000000	0	
+	[6]	13.588086	-0.000000	0	
+	[7]	12.548059	-0.000002	0	
+	[8]	12.428616	-0.000004	0	
+	[9]	11.949030	-0.000001	0	
+	[10]	10.851832	-0.000000	0	
+	[11]	8.941986	-0.000000	0	
+	[12]	6.765386	0.000000	0	
+	[13]	5.402040	-0.000000	0	
+	[14]	5.114673	0.000000	0	
+	[15]	4.162982	-0.000000	0	
+	[16]	3.610233	-0.000000	0	
+	[17]	0.843165	0.000000	0	
+	[18]	10.566554	0.000000	0	
+	[19]	9.351216	-0.000001	0	
+	[20]	6.755273	0.000000	0	
+	[21]	2.955600	-0.000000	0	
+	[22]	0.909146	0.000000	0	
+	[23]	4.167653	0.000000	0	
+	[24]	13.894263	-0.000002	0	
+	[25]	13.279539	0.000002	0	
+	[26]	12.948176	-0.000001	0	
+	[27]	12.237252	-0.000001	0	
+	[28]	12.009046	-0.000001	0	
+	[29]	10.802704	-0.000001	0	
+	[30]	10.200238	-0.000001	0	
+	[31]	9.630916	0.000001	0	
+	[32]	9.345582	-0.000003	0	
+	[33]	9.121483	0.000003	0	
+	[34]	9.009029	-0.000007	0	
+	[35]	6.280884	0.000000	0	
+	[36]	4.336621	-0.000000	0	
+	[37]	2.669381	-0.000001	0	
+	[38]	2.296603	-0.000002	0	
+	[39]	1.359190	0.000000	0	
+	[40]	1.559365	-0.000001	0	
+	[41]	1.279572	0.000000	0	
+	[42]	4.254415	-0.000000	0	
+	[43]	3.208125	0.000002	0	
+	[44]	2.681318	-0.000000	0	
+	[45]	0.925773	0.000000	0	
+	[46]	4.137123	-0.000000	0	
+	[47]	3.437325	-0.000001	0	
+	[48]	3.219102	0.000003	0	
+	[49]	2.953736	0.000000	0	
+	[50]	1.520650	-0.000000	0	
+	[51]	1.225945	0.000000	0	
+	[52]	0.762274	-0.000001	0	
+	[53]	0.840437	0.000000	0	
+	[54]	1.490833	0.000000	0	
+	[55]	2.473159	-0.000000	0	
+	[56]	2.225076	0.000000	0	
+	[57]	1.906408	-0.000006	0	
+	[58]	1.550055	-0.000002	0	
+	[59]	0.806192	0.000000	0	
+	[60]	0.915260	0.000000	0	
+	[61]	8.797745	-0.000002	0	
+	[62]	4.749376	0.000000	0	
+	[63]	1.693411	-0.000000	0	
+	[64]	0.745668	0.000000	0	
+	[65]	4.014313	0.000001	0	
+	[66]	3.741258	0.000002	0	
+	[67]	3.455825	0.000012	0	
+	[68]	3.343079	0.000010	0	
+	[69]	3.192716	0.000004	0	
+	[70]	3.096153	0.000007	0	
+	[71]	2.982819	-0.000012	0	
+	[72]	2.941527	0.000014	0	
+	[73]	2.830165	0.000010	0	
+	[74]	2.794440	0.000014	0	
+	[75]	1.749079	-0.000003	0	
+	[76]	1.310092	-0.000008	0	
+	[77]	1.092866	-0.000004	0	
+	[78]	0.680264	-0.000012	0	
+	[79]	1.810208	-0.000000	0	
+	[80]	1.092947	-0.000000	0	
+	[81]	2.224976	-0.000000	0	
+	[82]	1.043912	-0.000004	0	
+	[83]	2.043946	0.000000	0	
+	[84]	9.055709	0.000002	0	
+	[85]	8.780619	-0.000002	0	
+	[86]	6.907073	0.000000	0	
+	[87]	4.137103	0.000000	0	
+	[88]	1.761883	-0.000000	0	
+	[89]	1.384844	0.000000	0	
+	[90]	1.015430	-0.000000	0	
+	[91]	1.081072	-0.000000	0	
+	[92]	5.727511	0.000003	0	
+	[93]	5.584181	-0.000000	0	
+	[94]	4.411365	0.000001	0	
+	[95]	3.168843	-0.000001	0	
+	[96]	1.459164	0.000001	0	
+	[97]	1.005380	0.000001	0	
+	[98]	2.050229	-0.000000	0	
+	[99]	1.126521	-0.000001	0	
+	[100]	6.048109	-0.000001	0	
+	[101]	5.797714	-0.000001	0	
+	[102]	5.515615	-0.000000	0	
+	[103]	5.233839	-0.000002	0	
+	[104]	4.670825	-0.000004	0	
+	[105]	4.561191	-0.000001	0	
+	[106]	4.419983	-0.000003	0	
+	[107]	2.736283	0.000000	0	
+	[108]	2.007064	0.000002	0	
+	[109]	0.985518	0.000000	0	
+	[110]	0.860165	-0.000000	0	
+	[111]	3.029754	-0.000003	0	
+	[112]	2.660155	-0.000002	0	
+	[113]	1.818604	0.000002	0	
+	[114]	2.304648	0.000000	0	
+	[115]	2.156837	0.000003	0	
+	[116]	2.006415	0.000002	0	
+	[117]	0.573356	0.000000	0	
+	[118]	2.131699	-0.000000	0	
+	[119]	1.631365	-0.000000	0	
+	[120]	1.016331	-0.000000	0	
+	[121]	3.456225	0.000000	0	
+	[122]	1.192212	-0.000000	0	
+	[123]	3.784651	-0.000001	0	
+	[124]	3.410458	0.000001	0	
+	[125]	2.553425	0.000000	0	
+	[126]	2.181302	0.000001	0	
+	[127]	1.834983	-0.000000	0	
+	[128]	1.439073	-0.000000	0	
+	[129]	0.779882	-0.000001	0	
+	[130]	8.159631	-0.000000	0	
+	[131]	1.235541	0.000000	0	
+	[132]	7.233108	-0.000000	0	
+	[133]	6.155599	-0.000000	0	
+	[134]	2.916547	-0.000000	0	
+	[135]	1.669944	-0.000000	0	
+	[136]	0.891472	-0.000000	0	
+	[137]	0.717177	0.000000	0	
+	[138]	3.301560	-0.000000	0	
+	[139]	0.745161	0.000000	0	
+	[140]	6.719891	0.000000	0	
+	[141]	5.651745	-0.000001	0	
+	[142]	4.725746	0.000000	0	
+	[143]	3.547877	-0.000002	0	
+	[144]	3.189050	0.000001	0	
+	[145]	0.814442	0.000000	0	
+	[146]	1.307513	-0.000000	0	
+	[147]	1.175367	-0.000002	0	
+
+	Gradients for rate parameters (if any)
+	Param	Estimate	Gradient
+	[148]	13.942530	0.000001
+------------------------------------------------------------------------------
+*Key
+	+1 = maximum age constraint is reached (gradient may not be 0)
+	-1 = minimum age constraint is reached (gradient may not be 0)
+	 0 = no constraint present or constraint not reached (gradient should be 0)
+
+	 (note that small gradient values (< |0.000914|) are not examined with respect to active constraints to avoid spurious roundoff issues)
+
+*** Gradient check passed ***
+
+Using optimization from starting point 1 as best estimate
+Test of molecular clock on soln. 1 (best): Chi squared = 7193.616976 (df=148)
+
+
+Parameter estimates:
+
+	       1  
+
+Times
+p[ 1]	   0.025  
+p[ 2]	  0.0199  
+p[ 3]	 0.00209  
+p[ 4]	  0.0183  
+p[ 5]	  0.0148  
+p[ 6]	  0.0136  
+p[ 7]	  0.0125  
+p[ 8]	  0.0124  
+p[ 9]	  0.0119  
+p[10]	  0.0109  
+p[11]	 0.00894  
+p[12]	 0.00677  
+p[13]	  0.0054  
+p[14]	 0.00511  
+p[15]	 0.00416  
+p[16]	 0.00361  
+p[17]	 0.000843  
+p[18]	  0.0106  
+p[19]	 0.00935  
+p[20]	 0.00676  
+p[21]	 0.00296  
+p[22]	 0.000909  
+p[23]	 0.00417  
+p[24]	  0.0139  
+p[25]	  0.0133  
+p[26]	  0.0129  
+p[27]	  0.0122  
+p[28]	   0.012  
+p[29]	  0.0108  
+p[30]	  0.0102  
+p[31]	 0.00963  
+p[32]	 0.00935  
+p[33]	 0.00912  
+p[34]	 0.00901  
+p[35]	 0.00628  
+p[36]	 0.00434  
+p[37]	 0.00267  
+p[38]	  0.0023  
+p[39]	 0.00136  
+p[40]	 0.00156  
+p[41]	 0.00128  
+p[42]	 0.00425  
+p[43]	 0.00321  
+p[44]	 0.00268  
+p[45]	 0.000926  
+p[46]	 0.00414  
+p[47]	 0.00344  
+p[48]	 0.00322  
+p[49]	 0.00295  
+p[50]	 0.00152  
+p[51]	 0.00123  
+p[52]	 0.000762  
+p[53]	 0.00084  
+p[54]	 0.00149  
+p[55]	 0.00247  
+p[56]	 0.00223  
+p[57]	 0.00191  
+p[58]	 0.00155  
+p[59]	 0.000806  
+p[60]	 0.000915  
+p[61]	  0.0088  
+p[62]	 0.00475  
+p[63]	 0.00169  
+p[64]	 0.000746  
+p[65]	 0.00401  
+p[66]	 0.00374  
+p[67]	 0.00346  
+p[68]	 0.00334  
+p[69]	 0.00319  
+p[70]	  0.0031  
+p[71]	 0.00298  
+p[72]	 0.00294  
+p[73]	 0.00283  
+p[74]	 0.00279  
+p[75]	 0.00175  
+p[76]	 0.00131  
+p[77]	 0.00109  
+p[78]	 0.00068  
+p[79]	 0.00181  
+p[80]	 0.00109  
+p[81]	 0.00222  
+p[82]	 0.00104  
+p[83]	 0.00204  
+p[84]	 0.00906  
+p[85]	 0.00878  
+p[86]	 0.00691  
+p[87]	 0.00414  
+p[88]	 0.00176  
+p[89]	 0.00138  
+p[90]	 0.00102  
+p[91]	 0.00108  
+p[92]	 0.00573  
+p[93]	 0.00558  
+p[94]	 0.00441  
+p[95]	 0.00317  
+p[96]	 0.00146  
+p[97]	 0.00101  
+p[98]	 0.00205  
+p[99]	 0.00113  
+p[100]	 0.00605  
+p[101]	  0.0058  
+p[102]	 0.00552  
+p[103]	 0.00523  
+p[104]	 0.00467  
+p[105]	 0.00456  
+p[106]	 0.00442  
+p[107]	 0.00274  
+p[108]	 0.00201  
+p[109]	 0.000986  
+p[110]	 0.00086  
+p[111]	 0.00303  
+p[112]	 0.00266  
+p[113]	 0.00182  
+p[114]	  0.0023  
+p[115]	 0.00216  
+p[116]	 0.00201  
+p[117]	 0.000573  
+p[118]	 0.00213  
+p[119]	 0.00163  
+p[120]	 0.00102  
+p[121]	 0.00346  
+p[122]	 0.00119  
+p[123]	 0.00378  
+p[124]	 0.00341  
+p[125]	 0.00255  
+p[126]	 0.00218  
+p[127]	 0.00183  
+p[128]	 0.00144  
+p[129]	 0.00078  
+p[130]	 0.00816  
+p[131]	 0.00124  
+p[132]	 0.00723  
+p[133]	 0.00616  
+p[134]	 0.00292  
+p[135]	 0.00167  
+p[136]	 0.000891  
+p[137]	 0.000717  
+p[138]	  0.0033  
+p[139]	 0.000745  
+p[140]	 0.00672  
+p[141]	 0.00565  
+p[142]	 0.00473  
+p[143]	 0.00355  
+p[144]	 0.00319  
+p[145]	 0.000814  
+p[146]	 0.00131  
+p[147]	 0.00118  
+
+Rates (substitutions per site per unit time)
+p[148]	  0.0139  
+
+	  PASSED  
+__________________
+Result codes:
+PASSED = OK
+FAILED(1) = Optimization routine returned error
+FAILED(2) = Solution's gradient was not 0
+__________________
+
+
+Obj->	-4214.381  
+[Printing tree 1]
+
+[CHRONOGRAM of tree Rtree]
+Tree is so large that it has been compressed horizontally and resolution may be lost: WINWIDTH=113 treeWidth=77
++----------------------------------------------------------------------------Nepenthes_pervillei
+|
+|                                                                    +-------Nepenthes_distillatoria
+|                +---------------------------------------------------+5
+|                |                                                   +-------Nepenthes_khasiana
+|                |
+|                |   +-------------------------------------------------------Nepenthes_danseri
+|                |   |
+|                |   |             +-----------------------------------------Nepenthes_vieillardii
+|                |   |             |
+|                |   |             |   +-------------------------------------Nepenthes_bicalcarata
+|                |   |             |   |
+|                |   |             |   |   +---------------------------------Nepenthes_ampullaria
+|                |   |             |   |   |
+|                |   |             |   |   |           +---------------------Nepenthes_x_hookeriana
+|                |   |             |   |+--+17   +-----+20
+|                |   |             |  ++14 |     |     |    +----------------Nepenthes_rafflesiana
+|                |   |             |  |||  |     |     +----+22
+|                |   |          +--+11|||  +-----+19        +----------------Nepenthes_hemsleyansa
+|                |   |          |  |  |||        |
+|                |   |          |  |  |||        |          +----------------Nepenthes_mirabilis
+|                |   |          |  |  |||        +----------+25
+|                |   |          |  |  |||                   |  +-------------Nepenthes_echinostoma
+|                |   |          |  |  |++16                 +--+27
+|+---------------+4  |          |  |  | |                      | +-----------Nepenthes_orbiculata
+||               |   |          |  |  | |                      +-+29
+||               |   |          |  |  | |                        |       +---Nepenthes_rowanae
+||               |   |          |  |  | |                        +-------+31
+||               |   |          |  |  | |                                +---Nepenthes_tenax
+||               |   |          |  +--+13
+||               |   |          |     | |   +--------------------------------Nepenthes_tomoriana
+||               |   |          |     | +---+34
+||               |   |          |     |     |   +----------------------------Nepenthes_treubiana
+||               |   |          |     |     +---+36
+||               |   |          |     |         |       +--------------------Nepenthes_neoguineensis
+||               |   |          |     |         +-------+38
+||               |   |          |     |                 |          +---------Nepenthes_lamii
+||               |   |          |     |                 +----------+40
+||               |   |          |     |                            |     +---Nepenthes_monticola
+||               |   |          |     |                            +-----+42
+||               |   |          |     |                                  +---Nepenthes_papuana
+||               |   |          |     |
+||               |   |          |     |                        +-------------Nepenthes_x_trichocarpa
+||               |   |          |     +------------------------+45
+||               |   |          |                              +-------------Nepenthes_gracilis
+||               +---+8         |
+||                   |          | +------------------------------------------Nepenthes_cf_angustifolia
+||                   |          | |
+||                   |          | |         +--------------------------------Nepenthes_mapuluensis
+||                   |          | |         |
+||                   |          | |         |+-------------------------------Nepenthes_albomarginata
+||                   |          | |         ||
+||                   |          | |         ||  +----------------------------Nepenthes_campanulata
+||                   |          | |         ||  |
+||                   |          | |         ||  |              +-------------Nepenthes_philippinensis
+||                   |          | |         ||  |              |
+||                   |          | |         ||  |        +-----+64  +--------Nepenthes_mantalingajanensis
+||                   |          | |         ||  |        |     |    |
+||                   |          | |         ||  |        |     +----+66+-----Nepenthes_palawanensis
+||                   |          | |         ||  |        |          |+-+69
+||                   |          | |         ||  |        |          || +-----Nepenthes_attenboroughii
+||                   |          | |         ||  |        |          ++68
+||                   |          | |         ||  |        |           | +-----Nepenthes_mira
+||                   |          | |         ||  |+-------+63         +-+72
+||                   |          | |         ||  ||       |             |+----Nepenthes_deaniana
+||                   |          | |     +---+54 ||       |             ++74
+||                   |          | |     |   ||  ||       |              +----Nepenthes_leonardoi
+||                   |          | |     |   ||  ||       |
+||                   |          | |     |   ||  ||       |     +-------------Nepenthes_alata
+||                   |          | |     |   ||  ||       |     |
+||                   |          | |     |   ||  ||       +-----+77  +--------Nepenthes_argentii
+||                   |          | |     |   ||  ||             |  +-+80
+||                   |          | |     |   ||  ||             |  | +--------Nepenthes_armin
+||                   |          | |     |   || ++59            +--+79
+||                   |          | |     |   || ||+62              |      +---Nepenthes_viridis
+||                   |          | |     |   || |||                +------+83
+||                   |          | |     |   || |||                       +---Nepenthes_graciliflora
+||                   |          | |     |   || |||
+||                   |          | |     |   || |||             +-------------Nepenthes_pantaronensis
++calib1              |          | |     |   || |||             |
+||                   |          | |     |   || |||             |       +-----Nepenthes_peltata
+||                   |          | |     |   || |||             |   +---+91
+||                   |          | |     |   ++56||             |   |   |+----Nepenthes_micramphora
+||                   |          | |     |    | |||             |   |   ++93
+||                   |          | |     |    | |||             |   |    |+---Nepenthes_hamiguitanensis
+||                   +----------+10     |    | ||+-------------+86++90  ++95
+||                              | |     |    | |||             |  ||     +---Nepenthes_justinae
+||                              | |     |    | |||             |  ||
+||                              | |     |    | |||             |  ||     +---Nepenthes_robcantleyi
+||                              | |     |    | |||             | ++89----+98
+||                              | |     |    | |||             | ||      +---Nepenthes_truncata
+||                              | |     |    | |||             | ||
+||                              | |     |    | |||             | ||    +-----Nepenthes_zygon
+||                              | |     |    | |||             +-+88---+101
+||                              | |     |    | |++61             |     +-----Nepenthes_mindanaoensis
+||                              | |     |    | | |               |
+||                              | |     |    | | |               |  +--------Nepenthes_copelandii
+||                              | |     |    | | |               |  |
+||                              | |     |    | | |               +--+104-----Nepenthes_talaandig
+||                              | |     |    | | |                  ||
+||                              | |     |    | | |                  || +-----Nepenthes_petiolata
+||                              | |     |    | | |                  ++10109
+||                              | |     |    | | |                   ||| +---Nepenthes_pulchra
+||                              | |     |    | | |                   ||+-+111
+||                              | |     |    | | |                   ++108---Nepenthes_sumagaya
+||                              | |     |    | | |                    |
+||                              | |     |    | | |                    |  +---Nepenthes_ceiliae
+||                              | |     |    | | |                    +--+114
+||                              | |     |    | | |                       +---Nepenthes_comuta
+||                              | |     |    | | |
+||                              | |     |    | | |           +---------------Nepenthes_rajah
+||                              | |     |    | | +-----------+118
+||                              | |     |    | | |           |        +------Nepenthes_edwardsiana
+||                              | |     |    | | |           +--------+120
+||                              | |     |    | | |                    |  +---Nepenthes_macrophylla
+||                              | |     |    +-+58117                 +--+122
+||                              | |     |      | |                       +---Nepenthes_villosa
+||                              | |     |      | |
+||                              | |     |      | |              +------------Nepenthes_burbidgeae
+||                              | |     |      | |              |
+||                              | |     |      | +--------------+125---------Nepenthes_boschiana
+||                              | |     |      |                |
+||                              | |     |      |                +127---------Nepenthes_faizaliana
+||                              | |     |      |                ||
+||                              | |     |      |                ++129--------Nepenthes_lowii
+||                              | |     |      |                 ||
+||                              | |     |      |                 |+----------Nepenthes_clipeata
+||                              | |     |      |                 +|131
+||                              | |     |      |                  +----------Nepenthes_ephippiata
+||                              | |     |      |                  |
+||                              | |     |      |                  |133-------Nepenthes_veitchii
+||                              | |     |      |                  ||
+||                              | |    ++53    |                  |+---------Nepenthes_platychila
+||                              | |    ||      |                  ||
+||                              | |    ||      |                  |+141 +----Nepenthes_eymae
+||                              | |    ||      |                  +135+-+144
+||                              | |    ||      |                  ||  | +----Nepenthes_minima
+||                              | |    ||      |                  |+--+143
+||                              | |    ||      |                  ||  | +----Nepenthes_maxima
+||                              | |    ||      |                  |+140-+147
+||                              | |    ||      |                  ||    |+---Nepenthes_cf_oblanceolata
+||                              | |    ||      |                  ||    ++149
+||                              | |    ||      |                  ++137  +---Nepenthes_klossii
+||                              | |    ||      |                   |
+||                              | |    ||      |                   |  +------Nepenthes_stenophylla
+||                              | |    ||      |                   |--+152
+||                              | |    ||      |                   |  | +----Nepenthes_glandulifera
+||                              | |    ||      |                   |  +-+154
+||                              | |    ||      |                   |    +----Nepenthes_chaniana
+||                              | |    ||      |                   |
+||                              | |    ||      |                   | +-------Nepenthes_zakriana
+||                              | |    ||      |                   +-+157
+||                              +-+48  ||      |                     |  +----Nepenthes_mollis
+||                                |    ||      |                     +--+159
+||                                |    ||      |                        +----Nepenthes_vogelii
+||                                |    ||      |
+||                                |    ||      |                     +-------Nepenthes_macrovulgaris
+||                                |    ||      +---------------------+162
+||                                |    ||                            +-------Nepenthes_reinwardtiana
+++3                               |    ||
+ |                                |    ||                             +------Nepenthes_sanguinea
+ |                                |    ||                      +------+169
+ |                                |    ||                      |      |+-----Nepenthes_macfarlanei
+ |                                |    ||                      |      ++171
+ |                                |    ||              +-------+168    +-----Nepenthes_ramispina
+ |                                |    ||              |       |
+ |                                |    ||              |       |        +----Nepenthes_alba
+ |                                |    ||         +----+167    +--------+174
+ |                                |    ||         |    |                +----Nepenthes_gracillima
+ |                                |    ||         |    |
+ |                                |    ||         |    |                +----Nepenthes_benstonei
+ |                                |    ||         |    +----------------+177
+ |                                |    ||        ++166                  +----Nepenthes_kongkandana
+ |                                |    ||        ||
+ |                                |    ||        ||        +-----------------Nepenthes_kampotiana
+ |                                |    ||        ||        |
+ |                                |    ||        ||        +-----------------Nepenthes_smilesii
+ |                                |    ||        |+--------|180
+ |                                |    ||        |         |           +-----Nepenthes_andamana
+ |                                |    ||        |         |      +----+186
+ |                                |    ||        |         +182   |    +-----Nepenthes_suratensis
+ |                                |    ||        |         |  +---+185
+ |                                |    ||        |         |  |   |      +---Nepenthes_kerrii
+ |                                |    ||        |         |  |   +------+189
+ |                                |    ||        |         +--+184       +---Nepenthes_thai
+ |                                |    ||        |            |
+ |                                |    ||        |            |      +-------Nepenthes_thorelii
+ |                                |    ||        |            +------+192
+ |                                |    ||        |                   |  +----Nepenthes_bokorensis
+ |                                |    ||        |                   +--+194
+ |                                |    ||        |                      +----Nepenthes_chang
+ |                                |    ||        |
+ |                                |    ||        |         +-----------------Nepenthes_eustachya
+ |                                |  +-+52       |         |
+ |                                |  | ||        |         |+----------------Nepenthes_gymnamphora
+ |                                |  | ||        |        ++199
+ |                                |  | ||        |        ||| +--------------Nepenthes_tobaica
+ |                                |  | ||        |        ||| |
+ |                                |  | ||        |        |++201-------------Nepenthes_xiphioides
+ |                                |  | |+--------+165     | | |
+ |                                |  | |         |        | | |       +------Nepenthes_singalana
+ |                                |  | |         |        | | +206 +--+209
+ |                                |  | |         |        | | |    |  |  +---Nepenthes_aristolochioides
+ |                                |  | |         |        | +-|203 |  +--+211
+ |                                |  | |         |        |   +----+208  +---Nepenthes_talagensis
+ |                                |  | |         |        |   |    |
+ |                                |  | |         |        |   |    |     +---Nepenthes_adrianii
+ |                                |  | |         |        |   |    +-----+214
+ |                                |  | |         |        |   |          +---Nepenthes_spathulata
+ |                                |  | |         |        |   |
+ |                                |  | |         |        |   +205    +------Nepenthes_inermis
+ |                                |  | |         |        |   |     +-+219
+ |                                |  | |         |        |   |     | +------Nepenthes_jacquelineae
+ |                                |  | |         |        |   |    ++218
+ |                                |  | |         |        +198|    ||+-------Nepenthes_dubia
+ |                                |  | |         |        |   |    |++222
+ |                                |  | |         |        |   |    | +-------Nepenthes_jamban
+ |                                |  | |         |        |   |    | +224
+ |                                |  | |         |        |   |    | |+------Nepenthes_lingulata
+ |                                |  | |         |        |   +----+217226
+ |                                |  | |         |        |        |  |   +--Nepenthes_flava
+ |                                |  | |         |        |        |  +---+228
+ |                                |  | |         |        |        |      +--Nepenthes_ovata
+ |                                |  | |         |        |        |
+ |                                |  | |         |        |        | +-------Nepenthes_tenuis
+ |                                |  | |         |        |        +-+231
+ |                                |  | |         +--------+197       | +-----Nepenthes_naga
+ |                                |  | |                  |          +-+233
+ |                                |  | |                  |            |+----Nepenthes_izumiae
+ |                                |  | |                  |            ++235
+ |                                |  | |                  |             +----Nepenthes_bongso
+ |                                | ++51                  |
+ |                                | || |                  |      +-----------Nepenthes_adnata
+ |                                | || |                  |------+238
+ |                                | || |                  |      |      +----Nepenthes_longifolia
+ |                                | || |                  |      +------+240
+ |                                | || |                  |             +----Nepenthes_beccariana
+ |                                | || |                  |
+ |                                | || |                  |     +------------Nepenthes_mikei
+ |                                | || |                  +-----+243
+ |                                | || |                        |+-----------Nepenthes_rhombicaulis
+ |                                | || |                        ++245
+ |                                | || |                         |  +--------Nepenthes_spectabilis
+ |                                | || |                         +--+247
+ |                                | || |                            |+-------Nepenthes_lavicola
+ |                                | || |                            ++249
+ |                                | || |                             |+------Nepenthes_rigidifolia
+ |                                | || |                             ++251
+ |                                | || |                              |+-----Nepenthes_angasanensis
+ |                                | || |                              ++253
+ |                                | || |                               | +---Nepenthes_diatas
+ |                                | || |                               +-+255
+ |                                | || |                                 +---Nepenthes_densiflora
+ |                                | || |
+ |                                | || |           +-------------------------Nepenthes_northiana
+ |                                | || +-----------+258
+ |                                | ||             |                    +----Nepenthes_hispida
+ |                                | ||             +--------------------+260
+ |                                +-+50                                 +----Nepenthes_hirsuta
+ |                                  ||
+ |                                  ||                                 +-----Nepenthes_barcelonae
+ |                                  ||                             +---+266
+ |                                  ||                             |   +-----Nepenthes_ventricosa
+ |                                  ||                   +---------+265
+ |                                  ||                   |         |     +---Nepenthes_burkii
+ |                                  ||                   |         +-----+269
+ |                                  ||                +--+264            +---Nepenthes_sibuyanensis
+ |                                  ||                |  |
+ |                                  ||                |  |               +---Nepenthes_biak
+ |                                  |+----------------+263---------------+272
+ |                                  |                 |                  +---Nepenthes_insignis
+ |                                  |                 |
+ |                                  |                 |           +----------Nepenthes_bellii
+ |                                  |                 +-----------+275
+ |                                  |                             |      +---Nepenthes_merrilliana
+ |                                  |                             +------+277
+ |                                  |                                    +---Nepenthes_surigaoensis
+ |                                  |
+ |                                  |                      +-----------------Nepenthes_tentaculata
+ |                                  |                      |
+ |                                  |                   +--+281--------------Nepenthes_undulatifolia
+ |                                  |                   |  |  |
+ |                                  |                   |  +--+283+----------Nepenthes_hamata
+ |                                  |                   |     |  ++286
+ |                                  |                   |     |  |+----------Nepenthes_nigra
+ |                                  +-------------------+280  +--+285
+ |                                                      |        |       +---Nepenthes_glabrata
+ |                                                      |        +-------+289
+ |                                                      |                +---Nepenthes_pitopangii
+ |                                                      |
+ |                                                      |               +----Nepenthes_murudensis
+ |                                                      +---------------+292
+ |                                                                      +----Nepenthes_muluensis
+ |
+ |                                                                      +----Nepenthes_masoalensis
+ +----------------------------------------------------------------------+295
+                                                                        +----Nepenthes_madagascariensis
+
+[Printing tree 1]
+
+[TREE DESCRIPTION of tree Rtree]
+
+tree Rtree = (Nepenthes_pervillei:25.701614,(((Nepenthes_distillatoria:2.085757,Nepenthes_khasiana:2.085757):17.861984,(Nepenthes_danseri:18.290394,((Nepenthes_vieillardii:13.588086,((Nepenthes_bicalcarata:12.428616,((Nepenthes_ampullaria:10.851832,((Nepenthes_x_hookeriana:6.765386,(Nepenthes_rafflesiana:5.402040,Nepenthes_hemsleyansa:5.402040):1.363346):2.176600,(Nepenthes_mirabilis:5.114673,(Nepenthes_echinostoma:4.162982,(Nepenthes_orbiculata:3.610233,(Nepenthes_rowanae:0.843165,Nepenthes_tenax:0.843165):2.767068):0.552749):0.951692):3.827313):1.909845):1.097198,(Nepenthes_tomoriana:10.566554,(Nepenthes_treubiana:9.351216,(Nepenthes_neoguineensis:6.755273,(Nepenthes_lamii:2.955600,(Nepenthes_monticola:0.909146,Nepenthes_papuana:0.909146):2.046454):3.799673):2.595943):1.215339):1.382476):0.479586):0.119443,(Nepenthes_x_trichocarpa:4.167653,Nepenthes_gracilis:4.167653):8.380406):1.040027):1.165573,(Nepenthes_cf_angustifolia:13.894263,(((((Nepenthes_mapuluensis:10.802704,(Nepenthes_albomarginata:10.200238,((Nepenthes_campanulata:9.345582,((((Nepenthes_philippinensis:4.336621,(Nepenthes_mantalingajanensis:2.669381,((Nepenthes_palawanensis:1.359190,Nepenthes_attenboroughii:1.359190):0.937413,(Nepenthes_mira:1.559365,(Nepenthes_deaniana:1.279572,Nepenthes_leonardoi:1.279572):0.279793):0.737238):0.372778):1.667240):1.944263,(Nepenthes_alata:4.254415,((Nepenthes_argentii:2.681318,Nepenthes_armin:2.681318):0.526807,(Nepenthes_viridis:0.925773,Nepenthes_graciliflora:0.925773):2.282352):1.046290):2.026469):2.728145,(Nepenthes_pantaronensis:4.137123,((((Nepenthes_peltata:1.520650,(Nepenthes_micramphora:1.225945,(Nepenthes_hamiguitanensis:0.762274,Nepenthes_justinae:0.762274):0.463671):0.294705):1.433086,(Nepenthes_robcantleyi:0.840437,Nepenthes_truncata:0.840437):2.113299):0.265366,(Nepenthes_zygon:1.490833,Nepenthes_mindanaoensis:1.490833):1.728269):0.218223,(Nepenthes_copelandii:2.473159,(Nepenthes_talaandig:2.225076,((Nepenthes_petiolata:1.550055,(Nepenthes_pulchra:0.806192,Nepenthes_sumagaya:0.806192):0.743863):0.356353,(Nepenthes_ceiliae:0.915260,Nepenthes_comuta:0.915260):0.991149):0.318668):0.248083):0.964166):0.699798):4.871906):0.112455,((Nepenthes_rajah:4.749376,(Nepenthes_edwardsiana:1.693411,(Nepenthes_macrophylla:0.745668,Nepenthes_villosa:0.745668):0.947743):3.055965):4.048369,(Nepenthes_burbidgeae:4.014313,(Nepenthes_boschiana:3.741258,(Nepenthes_faizaliana:3.455825,(Nepenthes_lowii:3.343079,(Nepenthes_clipeata:3.192716,(Nepenthes_ephippiata:3.096153,((Nepenthes_veitchii:2.941527,((Nepenthes_platychila:2.794440,((Nepenthes_eymae:1.310092,Nepenthes_minima:1.310092):0.438987,(Nepenthes_maxima:1.092866,(Nepenthes_cf_oblanceolata:0.680264,Nepenthes_klossii:0.680264):0.412602):0.656214):1.045361):0.035725,(Nepenthes_stenophylla:1.810208,(Nepenthes_glandulifera:1.092947,Nepenthes_chaniana:1.092947):0.717261):1.019957):0.111362):0.041291,(Nepenthes_zakriana:2.224976,(Nepenthes_mollis:1.043912,Nepenthes_vogelii:1.043912):1.181064):0.757842):0.113334):0.096563):0.150363):0.112747):0.285433):0.273054):4.783432):0.323738):0.224099):0.285334,(Nepenthes_macrovulgaris:2.043946,Nepenthes_reinwardtiana:2.043946):7.586970):0.569322):0.602467):1.206342,(((((Nepenthes_sanguinea:1.761883,(Nepenthes_macfarlanei:1.384844,Nepenthes_ramispina:1.384844):0.377039):2.375219,(Nepenthes_alba:1.015430,Nepenthes_gracillima:1.015430):3.121672):2.769971,(Nepenthes_benstonei:1.081072,Nepenthes_kongkandana:1.081072):5.826001):1.873545,(Nepenthes_kampotiana:5.727511,(Nepenthes_smilesii:5.584181,(((Nepenthes_andamana:1.459164,Nepenthes_suratensis:1.459164):1.709679,(Nepenthes_kerrii:1.005380,Nepenthes_thai:1.005380):2.163464):1.242521,(Nepenthes_thorelii:2.050229,(Nepenthes_bokorensis:1.126521,Nepenthes_chang:1.126521):0.923708):2.361136):1.172816):0.143330):3.053107):0.275090,(((Nepenthes_eustachya:5.515615,(Nepenthes_gymnamphora:5.233839,(Nepenthes_tobaica:4.670825,((Nepenthes_xiphioides:4.419983,((Nepenthes_singalana:2.007064,(Nepenthes_aristolochioides:0.985518,Nepenthes_talagensis:0.985518):1.021546):0.729219,(Nepenthes_adrianii:0.860165,Nepenthes_spathulata:0.860165):1.876118):1.683700):0.141208,(((Nepenthes_inermis:1.818604,Nepenthes_jacquelineae:1.818604):0.841551,(Nepenthes_dubia:2.304648,(Nepenthes_jamban:2.156837,(Nepenthes_lingulata:2.006415,(Nepenthes_flava:0.573356,Nepenthes_ovata:0.573356):1.433060):0.150422):0.147810):0.355507):0.369599,(Nepenthes_tenuis:2.131699,(Nepenthes_naga:1.631365,(Nepenthes_izumiae:1.016331,Nepenthes_bongso:1.016331):0.615034):0.500334):0.898055):1.531437):0.109634):0.563013):0.281777):0.282098,(Nepenthes_adnata:3.456225,(Nepenthes_longifolia:1.192212,Nepenthes_beccariana:1.192212):2.264013):2.341489):0.250396,(Nepenthes_mikei:3.784651,(Nepenthes_rhombicaulis:3.410458,(Nepenthes_spectabilis:2.553425,(Nepenthes_lavicola:2.181302,(Nepenthes_rigidifolia:1.834983,(Nepenthes_angasanensis:1.439073,(Nepenthes_diatas:0.779882,Nepenthes_densiflora:0.779882):0.659191):0.395910):0.346320):0.372123):0.857033):0.374193):2.263459):3.007599):2.953337):0.228206,(Nepenthes_northiana:8.159631,(Nepenthes_hispida:1.235541,Nepenthes_hirsuta:1.235541):6.924091):4.077621):0.710924,((((Nepenthes_barcelonae:1.669944,Nepenthes_ventricosa:1.669944):1.246603,(Nepenthes_burkii:0.891472,Nepenthes_sibuyanensis:0.891472):2.025075):3.239052,(Nepenthes_biak:0.717177,Nepenthes_insignis:0.717177):5.438422):1.077509,(Nepenthes_bellii:3.301560,(Nepenthes_merrilliana:0.745161,Nepenthes_surigaoensis:0.745161):2.556399):3.931548):5.715068):0.331364,((Nepenthes_tentaculata:5.651745,(Nepenthes_undulatifolia:4.725746,((Nepenthes_hamata:3.189050,Nepenthes_nigra:3.189050):0.358827,(Nepenthes_glabrata:0.814442,Nepenthes_pitopangii:0.814442):2.733435):1.177869):0.925999):1.068146,(Nepenthes_murudensis:1.307513,Nepenthes_muluensis:1.307513):5.412378):6.559648):0.614724):0.859396):3.536734):1.657347):5.092683,(Nepenthes_masoalensis:1.175367,Nepenthes_madagascariensis:1.175367):23.865057):0.661190)calib1;
+-----------------------------------------------------------------------------------------
+Estimated ages and substitution rates for tree Rtree
+
+Reconstruction method: Langley-Fitch (clock)
+Named internal nodes indicated by [*]
+Rates are for branches subtending indicated node
+Rates are in units of substitutions per site per unit time
+
+				  Constraints				Rates
+	Node	   Fix [Mod]	  Min	  Max	  Age		Estimated	Local
+-----------------------------------------------------------------------------------------
+ [*]  calib1	     * [0] 	   --      --	  25.70		
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	6.6144e-04
+     (3)	       [0] 	   --      --	  25.04		1.3943e-02	2.7224e-02
+     (4)	       [0] 	   --      --	  19.95		1.3943e-02	2.7883e-02
+     (5)	       [0] 	   --      --	   2.09		1.3943e-02	1.3996e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.6711e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.6711e-03
+     (8)	       [0] 	   --      --	  18.29		1.3943e-02	4.0426e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.2945e-04
+     (10)	       [0] 	   --      --	  14.75		1.3943e-02	5.3439e-02
+     (11)	       [0] 	   --      --	  13.59		1.3943e-02	2.3165e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.4156e-03
+     (13)	       [0] 	   --      --	  12.55		1.3943e-02	3.2691e-02
+     (14)	       [0] 	   --      --	  12.43		1.3943e-02	4.1861e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0356e-02
+     (16)	       [0] 	   --      --	  11.95		1.3943e-02	3.5447e-02
+     (17)	       [0] 	   --      --	  10.85		1.3943e-02	2.5520e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0089e-02
+     (19)	       [0] 	   --      --	   8.94		1.3943e-02	1.9373e-02
+     (20)	       [0] 	   --      --	   6.77		1.3943e-02	1.4242e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.5128e-03
+     (22)	       [0] 	   --      --	   5.40		1.3943e-02	2.5672e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9807e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9807e-02
+     (25)	       [0] 	   --      --	   5.11		1.3943e-02	1.9073e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9356e-02
+     (27)	       [0] 	   --      --	   4.16		1.3943e-02	1.3660e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.0836e-03
+     (29)	       [0] 	   --      --	   3.61		1.3943e-02	2.3519e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.1080e-02
+     (31)	       [0] 	   --      --	   0.84		1.3943e-02	2.6382e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0162e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0162e-02
+     (34)	       [0] 	   --      --	  10.57		1.3943e-02	2.3870e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6088e-03
+     (36)	       [0] 	   --      --	   9.35		1.3943e-02	3.6204e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.7804e-02
+     (38)	       [0] 	   --      --	   6.76		1.3943e-02	2.2343e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.1021e-02
+     (40)	       [0] 	   --      --	   2.96		1.3943e-02	1.5264e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.7518e-03
+     (42)	       [0] 	   --      --	   0.91		1.3943e-02	2.3455e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8699e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8699e-02
+     (45)	       [0] 	   --      --	   4.17		1.3943e-02	4.7730e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.0790e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.4637e-02
+     (48)	       [0] 	   --      --	  13.89		1.3943e-02	4.4217e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.2235e-03
+     (50)	       [0] 	   --      --	  13.28		1.3943e-02	5.6936e-02
+     (51)	       [0] 	   --      --	  12.95		1.3943e-02	4.5268e-02
+     (52)	       [0] 	   --      --	  12.24		1.3943e-02	1.4066e-02
+     (53)	       [0] 	   --      --	  12.01		1.3943e-02	2.6292e-02
+     (54)	       [0] 	   --      --	  10.80		1.3943e-02	1.0776e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.4811e-03
+     (56)	       [0] 	   --      --	  10.20		1.3943e-02	2.3238e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.1372e-02
+     (58)	       [0] 	   --      --	   9.63		1.3943e-02	1.5808e-02
+     (59)	       [0] 	   --      --	   9.35		1.3943e-02	2.8037e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8190e-03
+     (61)	       [0] 	   --      --	   9.12		1.3943e-02	4.0161e-02
+     (62)	       [0] 	   --      --	   9.01		1.3943e-02	3.5570e-02
+     (63)	       [0] 	   --      --	   6.28		1.3943e-02	2.5292e-02
+     (64)	       [0] 	   --      --	   4.34		1.3943e-02	6.1720e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.9201e-03
+     (66)	       [0] 	   --      --	   2.67		1.3943e-02	1.6194e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.9939e-03
+     (68)	       [0] 	   --      --	   2.30		1.3943e-02	2.4143e-02
+     (69)	       [0] 	   --      --	   1.36		1.3943e-02	9.6009e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.1772e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.1772e-02
+     (72)	       [0] 	   --      --	   1.56		1.3943e-02	2.8485e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0261e-02
+     (74)	       [0] 	   --      --	   1.28		1.3943e-02	3.2167e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.3286e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.2823e-02
+     (77)	       [0] 	   --      --	   4.25		1.3943e-02	3.3062e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.9958e-03
+     (79)	       [0] 	   --      --	   3.21		1.3943e-02	4.3009e-02
+     (80)	       [0] 	   --      --	   2.68		1.3943e-02	3.4168e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	6.3402e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.1770e-02
+     (83)	       [0] 	   --      --	   0.93		1.3943e-02	2.2784e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8363e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8363e-02
+     (86)	       [0] 	   --      --	   4.14		1.3943e-02	2.4221e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.8674e-03
+     (88)	       [0] 	   --      --	   3.44		1.3943e-02	3.4296e-02
+     (89)	       [0] 	   --      --	   3.22		1.3943e-02	2.7495e-02
+     (90)	       [0] 	   --      --	   2.95		1.3943e-02	3.3915e-02
+     (91)	       [0] 	   --      --	   1.52		1.3943e-02	2.3725e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0522e-02
+     (93)	       [0] 	   --      --	   1.23		1.3943e-02	2.7146e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.3051e-02
+     (95)	       [0] 	   --      --	   0.76		1.3943e-02	2.8037e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0990e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0990e-02
+     (98)	       [0] 	   --      --	   0.84		1.3943e-02	2.4133e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9038e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9038e-02
+     (101)	       [0] 	   --      --	   1.49		1.3943e-02	7.5220e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0732e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0732e-02
+     (104)	       [0] 	   --      --	   2.47		1.3943e-02	2.0743e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	6.4695e-03
+     (106)	       [0] 	   --      --	   2.23		1.3943e-02	2.8216e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.6402e-03
+     (108)	       [0] 	   --      --	   1.91		1.3943e-02	3.4519e-02
+     (109)	       [0] 	   --      --	   1.55		1.3943e-02	2.5256e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0967e-02
+     (111)	       [0] 	   --      --	   0.81		1.3943e-02	2.8231e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.1087e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.1087e-02
+     (114)	       [0] 	   --      --	   0.92		1.3943e-02	2.3205e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8574e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.8574e-02
+     (117)	       [0] 	   --      --	   8.80		1.3943e-02	1.8533e-02
+     (118)	       [0] 	   --      --	   4.75		1.3943e-02	1.6797e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.5794e-03
+     (120)	       [0] 	   --      --	   1.69		1.3943e-02	2.7160e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.4484e-03
+     (122)	       [0] 	   --      --	   0.75		1.3943e-02	3.1654e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.2798e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.2798e-02
+     (125)	       [0] 	   --      --	   4.01		1.3943e-02	1.5679e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.9857e-03
+     (127)	       [0] 	   --      --	   3.74		1.3943e-02	2.5636e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.5439e-03
+     (129)	       [0] 	   --      --	   3.46		1.3943e-02	3.5035e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.6299e-03
+     (131)	       [0] 	   --      --	   3.34		1.3943e-02	4.4347e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.0851e-03
+     (133)	       [0] 	   --      --	   3.19		1.3943e-02	5.3205e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.0114e-03
+     (135)	       [0] 	   --      --	   3.10		1.3943e-02	6.2136e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.4907e-03
+     (137)	       [0] 	   --      --	   2.98		1.3943e-02	7.0588e-02
+     (138)	       [0] 	   --      --	   2.94		1.3943e-02	7.2654e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.7793e-03
+     (140)	       [0] 	   --      --	   2.83		1.3943e-02	8.0818e-02
+     (141)	       [0] 	   --      --	   2.79		1.3943e-02	8.3975e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	6.0835e-03
+     (143)	       [0] 	   --      --	   1.75		1.3943e-02	9.1834e-02
+     (144)	       [0] 	   --      --	   1.31		1.3943e-02	3.8726e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.2136e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.0532e-02
+     (147)	       [0] 	   --      --	   1.09		1.3943e-02	6.7051e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.5555e-02
+     (149)	       [0] 	   --      --	   0.68		1.3943e-02	6.5438e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.4990e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.4391e-02
+     (152)	       [0] 	   --      --	   1.81		1.3943e-02	1.0785e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.3912e-03
+     (154)	       [0] 	   --      --	   1.09		1.3943e-02	1.5336e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.4639e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.4639e-02
+     (157)	       [0] 	   --      --	   2.22		1.3943e-02	1.1876e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.1911e-03
+     (159)	       [0] 	   --      --	   1.04		1.3943e-02	1.8627e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6285e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6285e-02
+     (162)	       [0] 	   --      --	   2.04		1.3943e-02	1.7135e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.8280e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.8280e-03
+     (165)	       [0] 	   --      --	   9.06		1.3943e-02	2.9458e-02
+     (166)	       [0] 	   --      --	   8.78		1.3943e-02	2.5446e-02
+     (167)	       [0] 	   --      --	   6.91		1.3943e-02	1.5479e-02
+     (168)	       [0] 	   --      --	   4.14		1.3943e-02	1.1913e-02
+     (169)	       [0] 	   --      --	   1.76		1.3943e-02	6.3152e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.6488e-03
+     (171)	       [0] 	   --      --	   1.38		1.3943e-02	1.0609e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.2276e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.2276e-02
+     (174)	       [0] 	   --      --	   1.02		1.3943e-02	1.9541e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6742e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6742e-02
+     (177)	       [0] 	   --      --	   1.08		1.3943e-02	1.7508e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.5725e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.5725e-02
+     (180)	       [0] 	   --      --	   5.73		1.3943e-02	2.3910e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.9681e-03
+     (182)	       [0] 	   --      --	   5.58		1.3943e-02	3.4884e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.6890e-02
+     (184)	       [0] 	   --      --	   4.41		1.3943e-02	1.1937e-02
+     (185)	       [0] 	   --      --	   3.17		1.3943e-02	1.5291e-02
+     (186)	       [0] 	   --      --	   1.46		1.3943e-02	9.3585e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.1651e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.1651e-02
+     (189)	       [0] 	   --      --	   1.01		1.3943e-02	1.9876e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6909e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6909e-02
+     (192)	       [0] 	   --      --	   2.05		1.3943e-02	1.0588e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	8.2918e-03
+     (194)	       [0] 	   --      --	   1.13		1.3943e-02	1.6239e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.5091e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.5091e-02
+     (197)	       [0] 	   --      --	   6.05		1.3943e-02	1.7955e-02
+     (198)	       [0] 	   --      --	   5.80		1.3943e-02	1.9968e-02
+     (199)	       [0] 	   --      --	   5.52		1.3943e-02	2.8359e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.2635e-03
+     (201)	       [0] 	   --      --	   5.23		1.3943e-02	3.9038e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.2481e-03
+     (203)	       [0] 	   --      --	   4.67		1.3943e-02	4.9732e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.7190e-02
+     (205)	       [0] 	   --      --	   4.56		1.3943e-02	3.6485e-02
+     (206)	       [0] 	   --      --	   4.42		1.3943e-02	3.5409e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.2625e-02
+     (208)	       [0] 	   --      --	   2.74		1.3943e-02	2.6727e-02
+     (209)	       [0] 	   --      --	   2.01		1.3943e-02	1.5085e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	8.4701e-03
+     (211)	       [0] 	   --      --	   0.99		1.3943e-02	2.0557e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.7250e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.7250e-02
+     (214)	       [0] 	   --      --	   0.86		1.3943e-02	2.5585e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9764e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9764e-02
+     (217)	       [0] 	   --      --	   3.03		1.3943e-02	1.5019e-02
+     (218)	       [0] 	   --      --	   2.66		1.3943e-02	1.8939e-02
+     (219)	       [0] 	   --      --	   1.82		1.3943e-02	4.7531e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.3478e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.3478e-03
+     (222)	       [0] 	   --      --	   2.30		1.3943e-02	2.8129e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	8.2442e-03
+     (224)	       [0] 	   --      --	   2.16		1.3943e-02	3.3827e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.8819e-03
+     (226)	       [0] 	   --      --	   2.01		1.3943e-02	3.9888e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	8.4728e-03
+     (228)	       [0] 	   --      --	   0.57		1.3943e-02	4.5357e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.9650e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.9650e-02
+     (231)	       [0] 	   --      --	   2.13		1.3943e-02	1.0022e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	7.9749e-03
+     (233)	       [0] 	   --      --	   1.63		1.3943e-02	1.5989e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0421e-02
+     (235)	       [0] 	   --      --	   1.02		1.3943e-02	1.9511e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6727e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.6727e-02
+     (238)	       [0] 	   --      --	   3.46		1.3943e-02	5.5520e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.9187e-03
+     (240)	       [0] 	   --      --	   1.19		1.3943e-02	1.4576e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.4259e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.4259e-02
+     (243)	       [0] 	   --      --	   3.78		1.3943e-02	1.1929e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.4918e-03
+     (245)	       [0] 	   --      --	   3.41		1.3943e-02	2.1379e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	4.9847e-03
+     (247)	       [0] 	   --      --	   2.55		1.3943e-02	3.0337e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	6.6577e-03
+     (249)	       [0] 	   --      --	   2.18		1.3943e-02	3.7622e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	8.2520e-03
+     (251)	       [0] 	   --      --	   1.83		1.3943e-02	4.3313e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	9.2644e-03
+     (253)	       [0] 	   --      --	   1.44		1.3943e-02	4.7991e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9457e-02
+     (255)	       [0] 	   --      --	   0.78		1.3943e-02	4.2476e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.8209e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.8209e-02
+     (258)	       [0] 	   --      --	   8.16		1.3943e-02	1.7167e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0834e-03
+     (260)	       [0] 	   --      --	   1.24		1.3943e-02	1.3576e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.3759e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.3759e-02
+     (263)	       [0] 	   --      --	   7.23		1.3943e-02	4.5144e-02
+     (264)	       [0] 	   --      --	   6.16		1.3943e-02	3.6195e-02
+     (265)	       [0] 	   --      --	   2.92		1.3943e-02	1.6672e-02
+     (266)	       [0] 	   --      --	   1.67		1.3943e-02	6.4174e-03
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0180e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.0180e-02
+     (269)	       [0] 	   --      --	   0.89		1.3943e-02	2.4197e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9070e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.9070e-02
+     (272)	       [0] 	   --      --	   0.72		1.3943e-02	3.3466e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.3704e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.3704e-02
+     (275)	       [0] 	   --      --	   3.30		1.3943e-02	2.2892e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	5.1491e-03
+     (277)	       [0] 	   --      --	   0.75		1.3943e-02	3.1685e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.2814e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.2814e-02
+     (280)	       [0] 	   --      --	   6.72		1.3943e-02	2.5611e-02
+     (281)	       [0] 	   --      --	   5.65		1.3943e-02	2.9022e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.0079e-03
+     (283)	       [0] 	   --      --	   4.73		1.3943e-02	3.9957e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	3.8089e-03
+     (285)	       [0] 	   --      --	   3.55		1.3943e-02	5.0090e-02
+     (286)	       [0] 	   --      --	   3.19		1.3943e-02	3.6229e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.5086e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.5086e-02
+     (289)	       [0] 	   --      --	   0.81		1.3943e-02	2.7804e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0873e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	2.0873e-02
+     (292)	       [0] 	   --      --	   1.31		1.3943e-02	1.0531e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.2237e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.2237e-02
+     (295)	       [0] 	   --      --	   1.18		1.3943e-02	1.3283e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.3613e-02
+      Nepenthe	     * [0] 	   --      --	   0.00		1.3943e-02	1.3613e-02
+-----------------------------------------------------------------------------------------
+
+Summary of rate variation (substitutions per site per unit time)
+  Mean    = 0.01394
+  Std Dev = 3.748e-08
+  Min     = 0.01394
+  Max     = 0.01394
+  Range   = 0
+  Ratio   =  1

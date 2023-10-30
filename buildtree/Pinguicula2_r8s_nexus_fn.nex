@@ -1,0 +1,42 @@
+#NEXUS
+[ Running r8s via Langley-Fitch, from R.             ]
+[  (using an R function by Nick Matzke, Feb. 2011)   ]
+[ To run:                                            ] 
+[ /Applications/r8s -v -f /Users/nmat471/HD/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex >> /Users/nmat471/HD/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex.log     ] 
+
+begin trees;
+[Note: This tree was output from R.]
+tree Rtree = (Utricularia_alpina:1.001085069,((Pinguicula_alpina:0.8515625,(Pinguicula_elongata:0.7734375,(((((((Pinguicula_mirandae:0.24609375,(Pinguicula_hemiepiphytica:0.171875,(Pinguicula_laueana:0.09765625,Pinguicula_moranensis:0.09765625):0.07421875):0.07421875):0.07421875,(Pinguicula_conzattiin:0.09765625,Pinguicula_medusina:0.09765625):0.22265625):0.078125,(Pinguicula_crassifolia:0.25,(Pinguicula_emarginata:0.171875,(Pinguicula_rectifolia:0.09765625,Pinguicula_zecheri:0.09765625):0.07421875):0.078125):0.1484375):0.07421875,(Pinguicula_acuminata:0.24609375,(Pinguicula_moctezumae:0.171875,(Pinguicula_colimensis:0.09765625,Pinguicula_oblongiloba:0.09765625):0.07421875):0.07421875):0.2265625):0.07421875,((Pinguicula_reticulata:0.32421875,(Pinguicula_gypsicola:0.24609375,(Pinguicula_agnata:0.171875,(Pinguicula_gigantea:0.09765625,Pinguicula_ibarrae:0.09765625):0.07421875):0.07421875):0.078125):0.0703125,(Pinguicula_lilacina:0.09765625,Pinguicula_sharpii:0.09765625):0.296875):0.15234375):0.078125,(Pinguicula_cyclosecta:0.32421875,((Pinguicula_ehlersiae:0.171875,(Pinguicula_dertosensis:0.09765625,Pinguicula_debbertiana:0.09765625):0.07421875):0.07421875,(Pinguicula_jaumavensis:0.09765625,Pinguicula_esseriana:0.09765625):0.1484375):0.078125):0.30078125):0.07421875,((((Pinguicula_jackiivar_parviflora:0.2469618056,(Pinguicula_filifolia:0.171875,(Pinguicula_cubensis:0.09765625,Pinguicula_albida:0.09765625):0.07421875):0.07508680556):0.07725694444,(Pinguicula_bissei:0.09765625,Pinguicula_benedicta:0.09765625):0.2265625):0.07421875,((Pinguicula_rotundiflora:0.09765625,Pinguicula_gracilis:0.09765625):0.07421875,(Pinguicula_nivalis:0.09765625,Pinguicula_immaculata:0.09765625):0.07421875):0.2265625):0.07421875,(Pinguicula_macrophylla:0.09765625,Pinguicula_potosiensis:0.09765625):0.375):0.2265625):0.07421875):0.078125):0.07421875,(((Pinguicula_corsica:0.625,(Pinguicula_vallisneriifolia:0.546875,(Pinguicula_longifolia_subsp_longifolia:0.4765625,(Pinguicula_nevadensis:0.3984375,(((Pinguicula_mundi:0.171875,(Pinguicula_fiorii:0.09765625,Pinguicula_vulgaris:0.09765625):0.07421875):0.078125,(Pinguicula_grandiflora:0.09765625,Pinguicula_bohemica:0.09765625):0.15234375):0.0703125,(Pinguicula_macroceras:0.09765625,Pinguicula_longifolia_subsp_caussensis:0.09765625):0.22265625):0.078125):0.078125):0.0703125):0.078125):0.07421875,(Pinguicula_poldini:0.171875,(Pinguicula_longifolia_subsp_reichenbachiana:0.09765625,Pinguicula_leptoceras:0.09765625):0.07421875):0.52734375):0.078125,(((Pinguicula_antarctica:0.39453125,((Pinguicula_pumila:0.24609375,((Pinguicula_ionantha:0.09765625,Pinguicula_planifolia:0.09765625):0.07421875,(Pinguicula_lutea:0.09765625,Pinguicula_primuliflora:0.09765625):0.07421875):0.07421875):0.078125,(Pinguicula_calyptrata:0.171875,(Pinguicula_involuta:0.09765625,Pinguicula_chuquisacensis:0.09765625):0.07421875):0.15234375):0.0703125):0.08203125,(Pinguicula_hirtiflora:0.09765625,Pinguicula_lusitanica:0.09765625):0.37890625):0.07421875,(Pinguicula_variegata:0.171875,(Pinguicula_ramosa:0.09765625,Pinguicula_villosa:0.09765625):0.07421875):0.37890625):0.2265625):0.1484375):0.07530381944);
+end;
+
+
+begin r8s;
+MRCA calib1 Pinguicula_alpina Pinguicula_vulgaris;
+blformat lengths=persite ultrametric=yes round=yes nsites=1000;
+collapse;
+[ lengths=persite means that the branch length is in						]
+[     changes per site not total number of changes							]
+[ ultrametric=no means that the input tree is not ultrametric				]
+
+[ Input some age constraints; a point for Clade1, a ]
+[ fixage taxon=Clade1 age=150 sets the age of node Clade1 to 150			]
+fixage taxon=calib1 age=15.839350182;
+
+[ constrain taxon=node2 min_age=200 max_age=300 							]
+[    forces node two to be between 200 and 300. These times are 			]
+[    measured backwards from the present, so that min_age=200 means			]
+[    that this divergence happened at least 200 (million?) years ago.		]
+[    I believe the units are relative, depending on what you input.			]
+[ constrain taxon=rt min_age=3.5 max_age=1.0; ]
+
+[ divtime method=LF starts the fitting algorithm using the Langley-Fitch	]
+[    method which deduces node times using maximum likelihood of the 		]
+[    branch lengths assuming a constant rate of substitution				]
+
+divtime method=LF;
+describe plot=chronogram;
+describe plot=chrono_description;
+showage;
+q;
+end;
+

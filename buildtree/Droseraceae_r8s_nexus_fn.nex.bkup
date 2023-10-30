@@ -1,0 +1,42 @@
+#NEXUS
+[ Running r8s via Langley-Fitch, from R.             ]
+[  (using an R function by Nick Matzke, Feb. 2011)   ]
+[ To run:                                            ] 
+[ /Applications/r8s -v -f /Users/nmat471/HD/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex >> /Users/nmat471/HD/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex.log     ] 
+
+begin trees;
+[Note: This tree was output from R.]
+tree Rtree = ((Drosera_regia:36.68297693,(Drosera_arcturi:35.20162255,((Drosera_glanduligera:28.71569256,((Drosera_binata_var_dichotoma:20.868518,(Drosera_gigantea:14.90306387,(((Drosera_peltata:7.015852707,Drosera_auriculata:7.015852707):2.922672157,(Drosera_menziesii:5.614571536,Drosera_macrantha_ssp_planchonii:5.614571536):4.323953329):2.402196294,(Drosera_rosulata:6.335230424,(Drosera_stolonifera:4.253326969,(Drosera_platypoda:3.012192217,(Drosera_prostratoscaposa:2.011277095,Drosera_aberrans:2.011277095):1.000915122):1.241134752):2.081903455):6.005490734):2.562342713):5.965454129):4.203843514,((Drosera_dichrosepala:13.66192912,(Drosera_meristocaulis:12.26064795,(Drosera_roseana:9.85845165,((Drosera_helodes:7.095925912,(Drosera_scorpioides:5.814754555,(Drosera_sewelliae:2.651862768,(Drosera_leucoblasta:1.130471782,Drosera_barbigera:1.130471782):1.521390986):3.162891787):1.281171357):1.281171357,(Drosera_pulchella:5.734681345,((Drosera_allantostigma:2.771972578,(Drosera_nitidula:1.690984246,Drosera_omissa:1.690984246):1.080988332):2.161976664,(Drosera_pygmaea:1.330654807,Drosera_occidentalis:1.330654807):3.603294441):0.8007320979):2.642415923):1.481354381):2.402196294):1.401281171):6.806222832,(Drosera_paradoxa:10.09867128,(Drosera_caduca:8.096841039,(Drosera_petiolaris:5.934864375,(Drosera_lanata:3.93303413,(Drosera_ordensis:2.171423515,(Drosera_dilatatopetiolaris:1.090435182,Drosera_falconeri:1.090435182):1.080988332):1.761610615):2.001830245):2.161976664):2.001830245):10.36948067):4.604209563):3.643331046):2.442232899,(((Drosera_indica:14.66284423,(((Drosera_spathulata:9.65826862,(Drosera_neocaledonica:8.377097264,(Drosera_brevifolia:7.015852697,((Drosera_felix:4.733766218,(Drosera_kaieteurensis:3.732851096,Drosera_hirtella:3.732851096):1.000915122):1.521390986,((((Drosera_biflora:1.050398568,(Drosera_esmeraldae:0.6500325188,Drosera_capillaris:0.6500325188):0.400366049):1.441317776,(Drosera_tracyi:1.050398568,Drosera_filiformis:1.050398568):1.441317776):1.040951727,(Drosera_rotundifolia:1.570874431,Drosera_tokaiensis:1.570874431):1.96179364):1.040951727,((Drosera_communis:1.090435173,Drosera_intermedia:1.090435173):0.8407687028,(Drosera_linearis:1.090435173,Drosera_anglica:1.090435173):0.8407687028):2.642415923):1.681537406):0.760695493):1.361244566):1.281171357):0.9608785175,(Drosera_slackii:9.177829362,(((Drosera_collinsiae:5.81475455,(Drosera_peleacea:3.973070725,(Drosera_aliciae:0.8902521482,Drosera_capensis:0.8902521482):3.082818577):1.841683825):1.96179364,((Drosera_montana_var_schwackei:5.054059057,(Drosera_graomogolensis:4.533583194,(Drosera_villosa:3.89299751,(Drosera_montana_var_tomentosa:1.410728002,Drosera_tomentosa:1.410728002):2.482269504):0.6405856783):0.5204758636):0.6005490734,(Drosera_graminifolia:1.650947641,Drosera_chrysolepis:1.650947641):4.00366049):2.121940059):1.080988332,(Drosera_dilesiana:6.295193794,(Drosera_natalensis:4.973985838,((Drosera_alba:3.73285106,(Drosera_cistiflora:2.731935938,(Drosera_pauciflora:1.971240445,Drosera_trinervia:1.971240445):0.760695493):1.000915122):0.4804392588,((Drosera_hilaris:3.012192172,(Drosera_venusta:2.091350259,Drosera_cuneifolia:2.091350259):0.9208419126):0.6005490734,(Drosera_burkeana:2.331569889,(Drosera_nidiformis:1.170508347,Drosera_madagascariensis:1.170508347):1.161061542):1.281171357):0.6005490734):0.760695493):1.321207962):2.562342713):0.3202928392):1.441317776):2.04186685,(Drosera_stenopetala:5.774717945,Drosera_uniflora:5.774717945):6.886296042):2.001830245):2.562342713,(Drosera_hamiltonii:14.26247818,(Drosera_prolifera:8.777463313,(Drosera_schizandra:2.29153332,Drosera_adelae:2.29153332):6.485929993):5.485014871):2.962708762):7.246625486,(Drosera_burmannii:1.130471778,Drosera_sessilifolia:1.130471778):23.34134065):6.686113018):4.043697094):1.481354381):6.045527339,(Aldrovanda_vesiculosa:30.39722997,Dionaea_muscipula:30.39722997):12.33127431);
+end;
+
+
+begin r8s;
+MRCA calib1 Dionaea_muscipula Drosera_rotundifolia;
+blformat lengths=persite ultrametric=yes round=yes nsites=1000;
+collapse;
+[ lengths=persite means that the branch length is in						]
+[     changes per site not total number of changes							]
+[ ultrametric=no means that the input tree is not ultrametric				]
+
+[ Input some age constraints; a point for Clade1, a ]
+[ fixage taxon=Clade1 age=150 sets the age of node Clade1 to 150			]
+fixage taxon=calib1 age=63.040034;
+
+[ constrain taxon=node2 min_age=200 max_age=300 							]
+[    forces node two to be between 200 and 300. These times are 			]
+[    measured backwards from the present, so that min_age=200 means			]
+[    that this divergence happened at least 200 (million?) years ago.		]
+[    I believe the units are relative, depending on what you input.			]
+[ constrain taxon=rt min_age=3.5 max_age=1.0; ]
+
+[ divtime method=LF starts the fitting algorithm using the Langley-Fitch	]
+[    method which deduces node times using maximum likelihood of the 		]
+[    branch lengths assuming a constant rate of substitution				]
+
+divtime method=LF;
+describe plot=chronogram;
+describe plot=chrono_description;
+showage;
+q;
+end;
+

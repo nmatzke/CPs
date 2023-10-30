@@ -186,6 +186,11 @@ title("Sarracenia")
 get_treeheight(Sarracenia_tr)
 
 
+
+
+Sarraceniaceae_tr
+
+
 dev.off()
 cmdstr = paste0("open ", pdffn)
 system(cmdstr)
@@ -215,7 +220,7 @@ genera2[["Drosophyllaceae"]] = c("Drosera",
 "Dionaea",
 "Aldrovanda",
 "Drosophyllum")
-tree2[["Drosophyllaceae"]] = GBOTB.extended.WP
+tree2[["Drosophyllaceae"]] = Droseraceae_tr
 
 genera2[["Dioncophyllaceae"]] = c("Nepenthes",
 "Triphyophyllum")
@@ -235,6 +240,9 @@ tree2[["Nepenthes"]] = Nepenthes_tr
 
 genera2[["Sarracenia"]] = c("Sarracenia")
 tree2[["Sarracenia"]] = Sarracenia_tr
+
+genera2[["Sarraceniacae"]] = c("Sarracenia", "Heliamphora", "Darlingtonia", "Actinidia", "Roridula")
+tree2[["Sarraceniacae"]] = Sarracenia_tr
 
 genera2[["Heliamphora"]] = c("Heliamphora")
 tree2[["Heliamphora"]] = Heliamphora_tr
@@ -324,7 +332,7 @@ for (i in 1:length(genera2))
 		
 		plot(subtree)
 		axisPhylo()
-		title(genera[i])
+		title(names(genera2)[i])
 
 		
 		} else {
@@ -354,5 +362,468 @@ get_treeheight(Sarracenia_tr)
 
 
 
- 
+
+# Manual modifications to tree:
+
+# Droseraceae
+masa_time_bp = 42.72850428
+gbotb = 63.040034
+
+Droseraceae_tr
+
+# DrosoNep / Drosophyllaceae
+masa_time_bp = 51.2285
+gbotb = 82.989449
+
+# Nepenthes
+masa_time_bp = NA
+gbotb = 25.701614
+Nepenthes_tr
+
+
+
+
+
+
+
+
+
+#######################################################
+# Play with drop.tip
+#######################################################
+x=drop.tip(Pinguicula1_tr, tip=c("Pinguicula_caerulea", "Pinguicula_grandiflora", "Pinguicula_lusitanica"), trim.internal=FALSE, subtree=TRUE)
+plot(x)
+x$tip.label
+
+
+
+
+
+
+
+
+#######################################################
+# Time-scale the Nepenthes tree, and add to the main tree
+#######################################################
+# Requirements:
+# * source() the file below 
+# * have r8s installed somewhere like /Applications/r8s
+#
+source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
+
+
+calibration_node_tip_specifiers = c("Nepenthes_pervillei", "Nepenthes_madagascariensis")
+calibration_age = 25.701614
+r8s_nexus_fn = "Nepenthes_r8s_nexus_fn.nex"
+r8s_logfile_fn = "Nepenthes_r8s_nexus_fn.log"
+run_r8s_1calib(tr=Nepenthes_tr, calibration_node_tip_specifiers=calibration_node_tip_specifiers, r8s_method="LF", addl_cmd="", calibration_age=calibration_age, nsites=1000, tmpwd=getwd(), r8s_nexus_fn=r8s_nexus_fn, r8s_logfile_fn=r8s_logfile_fn, r8s_path="/Applications/r8s")
+
+Nepenthes_tr_dated = extract_tree_from_r8slog(logfn=r8s_logfile_fn, delimiter=" = ", printall=TRUE)
+Nepenthes_tr_rates = extract_rates_from_r8slog(logfn=r8s_logfile_fn)
+
+pdffn = "Nepenthes_tr_dated.pdf"
+pdf(file=pdffn, width=12, height=12)
+
+plot(Nepenthes_tr_dated, cex=0.5)
+axisPhylo()
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+get_treeheight(Nepenthes_tr_dated)
+
+# Add to main tree
+gbotb_tr = GBOTB.extended.WP
+length(gbotb_tr$tip.label)
+
+
+TF = grepl(pattern="Nepenthes", x=gbotb_tr$tip.label)
+sum(TF)
+tips_to_drop = gbotb_tr$tip.label[TF]
+gbotb_tr2 = drop.tip(phy=gbotb_tr, tip=tips_to_drop, trim.internal=FALSE, subtree=TRUE)
+length(gbotb_tr2$tip.label)
+TF = grepl(pattern="\\[", x=gbotb_tr2$tip.label)
+tipnum = (1:length(gbotb_tr2$tip.label))[TF]
+newtip = gbotb_tr2$tip.label[TF]
+newtip
+
+# New tip is "[97_tips]"
+gbotb_tr3 = bind.tree(x=gbotb_tr2, y=Nepenthes_tr_dated, where=tipnum)
+length(gbotb_tr3$tip.label)
+
+is.ultrametric(gbotb_tr)
+is.ultrametric(gbotb_tr2)
+is.ultrametric(gbotb_tr3)
+
+
+
+
+
+
+
+
+#######################################################
+# Time-scale the Droseraceae tree, and add to the main tree
+#######################################################
+# Just do linear scaling, as it's ultrametric
+source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
+
+# Subset to remove Nepenthes
+TF = grepl(pattern="Nepenthes", x=Droseraceae_tr$tip.label)
+sum(TF)
+tips_to_drop = Droseraceae_tr$tip.label[TF]
+Droseraceae_tr2 = drop.tip(phy=Droseraceae_tr, tip=tips_to_drop, trim.internal=TRUE, subtree=FALSE)
+length(Droseraceae_tr$tip.label)
+length(Droseraceae_tr2$tip.label)
+is.ultrametric(Droseraceae_tr)
+is.ultrametric(Droseraceae_tr2)
+get_treeheight(Droseraceae_tr)
+get_treeheight(Droseraceae_tr2)
+
+# Branch length multiplier
+calibration_age = 63.040034
+multiplier = calibration_age / get_treeheight(Droseraceae_tr2)
+
+Droseraceae_tr3 = Droseraceae_tr2
+Droseraceae_tr3$edge.length = Droseraceae_tr2$edge.length * multiplier
+
+
+# Add to main tree
+gbotb_tr = gbotb_tr3
+length(gbotb_tr$tip.label)
+
+
+TF1 = grepl(pattern="Drosera", x=gbotb_tr$tip.label)
+TF2 = grepl(pattern="Dionaea", x=gbotb_tr$tip.label)
+TF3 = grepl(pattern="Aldrovanda", x=gbotb_tr$tip.label)
+TF = (TF1 + TF2 + TF3) > 0
+sum(TF)
+tips_to_drop = gbotb_tr$tip.label[TF]
+gbotb_tr2 = drop.tip(phy=gbotb_tr, tip=tips_to_drop, trim.internal=FALSE, subtree=TRUE)
+length(gbotb_tr2$tip.label)
+TF = grepl(pattern="\\[", x=gbotb_tr2$tip.label)
+tipnum = (1:length(gbotb_tr2$tip.label))[TF]
+newtip = gbotb_tr2$tip.label[TF]
+newtip
+
+# New tip is "[69_tips]"
+gbotb_tr3 = bind.tree(x=gbotb_tr2, y=Droseraceae_tr3, where=tipnum)
+length(gbotb_tr3$tip.label)
+
+is.ultrametric(gbotb_tr)
+is.ultrametric(gbotb_tr2)
+is.ultrametric(gbotb_tr3)
+
+
+
+
+
+
+
+
+#######################################################
+# Time-scale the Sarracenia tree, and add to the main tree
+#######################################################
+# Just do linear scaling, as it's ultrametric
+source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
+
+# Subset to remove Roridula, Actinidia
+TF1 = grepl(pattern="Roridula", x=Sarracenia_tr$tip.label)
+TF2 = grepl(pattern="Actinidia", x=Sarracenia_tr$tip.label)
+TF3 = grepl(pattern="Clethra", x=Sarracenia_tr$tip.label)
+TF4 = grepl(pattern="Cyrilla", x=Sarracenia_tr$tip.label)
+TF = (TF1 + TF2 + TF3 + TF4) > 0
+sum(TF)
+tips_to_drop = Sarracenia_tr$tip.label[TF]
+Sarracenia_tr2 = drop.tip(phy=Sarracenia_tr, tip=tips_to_drop, trim.internal=TRUE, subtree=FALSE)
+length(Sarracenia_tr$tip.label)
+length(Sarracenia_tr2$tip.label)
+is.ultrametric(Sarracenia_tr)
+is.ultrametric(Sarracenia_tr2)
+get_treeheight(Sarracenia_tr)
+get_treeheight(Sarracenia_tr2)
+
+# Branch length multiplier
+calibration_age = 41.25056
+multiplier = calibration_age / get_treeheight(Sarracenia_tr2)
+
+Sarracenia_tr3 = Sarracenia_tr2
+Sarracenia_tr3$edge.length = Sarracenia_tr2$edge.length * multiplier
+
+
+# Add to main tree
+gbotb_tr = gbotb_tr3
+length(gbotb_tr$tip.label)
+
+
+TF1 = grepl(pattern="Sarracenia", x=gbotb_tr$tip.label)
+TF2 = grepl(pattern="Heliamphora", x=gbotb_tr$tip.label)
+TF3 = grepl(pattern="Darlingtonia", x=gbotb_tr$tip.label)
+TF = (TF1 + TF2 + TF3) > 0
+sum(TF)
+tips_to_drop = gbotb_tr$tip.label[TF]
+gbotb_tr2 = drop.tip(phy=gbotb_tr, tip=tips_to_drop, trim.internal=FALSE, subtree=TRUE)
+length(gbotb_tr2$tip.label)
+TF = grepl(pattern="\\[", x=gbotb_tr2$tip.label)
+tipnum = (1:length(gbotb_tr2$tip.label))[TF]
+newtip = gbotb_tr2$tip.label[TF]
+newtip
+
+# New tip is "[15_tips]"
+gbotb_tr3 = bind.tree(x=gbotb_tr2, y=Sarracenia_tr3, where=tipnum)
+length(gbotb_tr3$tip.label)
+
+length(gbotb_tr$tip.label)
+length(gbotb_tr2$tip.label)
+length(gbotb_tr3$tip.label)
+
+
+is.ultrametric(gbotb_tr)
+is.ultrametric(gbotb_tr2)
+is.ultrametric(gbotb_tr3)
+
+
+
+#######################################################
+# Manually add Roridula_dentata as sister to Roridula_gorgonias at ~11 ma
+#######################################################
+Sarracenia_trtable = prt(Sarracenia_tr)
+Sarracenia_trtable[2,]
+Sarracenia_trtable$edge.length[2]
+tip_branch_length = 10.52966
+
+fake_trtxt = "(Roridula_dentata:10.52966,Roridula_dentata2:10.52966);"
+faketr = read.tree(file="", text=fake_trtxt)
+faketr
+plot(faketr)
+axisPhylo()
+
+TF = grepl(pattern="Roridula_gorgonias", x=gbotb_tr3$tip.label)
+tipnum = (1:length(gbotb_tr3$tip.label))[TF]
+tipnum
+
+gbotb_tr4 = bind.tree(x=gbotb_tr3, y=faketr, where=tipnum, position=tip_branch_length)
+
+# Drop the extra fake tip
+TF = grepl(pattern="Roridula_dentata2", x=gbotb_tr4$tip.label)
+tips_to_drop = (1:length(gbotb_tr4$tip.label))[TF]
+tips_to_drop
+
+gbotb_tr5 = drop.tip(phy=gbotb_tr4, tip=tips_to_drop, trim.internal=TRUE, subtree=FALSE)
+
+length(gbotb_tr3$tip.label)
+length(gbotb_tr4$tip.label)
+length(gbotb_tr5$tip.label)
+
+is.ultrametric(gbotb_tr3)
+is.ultrametric(gbotb_tr4)
+is.ultrametric(gbotb_tr5)
+
+
+
+#######################################################
+# Double-check addition of Roridula_dentata
+#######################################################
+TF1 = grepl(pattern="Roridula", x=gbotb_tr5$tip.label)
+TF2 = grepl(pattern="Actinidia", x=gbotb_tr5$tip.label)
+TF3 = grepl(pattern="Clematoclethra", x=gbotb_tr5$tip.label)
+#TF4 = grepl(pattern="Cyrilla", x=gbotb_tr5$tip.label)
+TF4 = grepl(pattern="Saurauia", x=gbotb_tr5$tip.label)
+TF5 = grepl(pattern="Sarracenia", x=gbotb_tr5$tip.label)
+TF6 = grepl(pattern="Heliamphora", x=gbotb_tr5$tip.label)
+TF7 = grepl(pattern="Darlingtonia", x=gbotb_tr5$tip.label)
+
+TF = (TF1 + TF2 + TF3 + TF4 + TF5 + TF6 + TF7) > 0
+sum(TF)
+tips_to_keep = gbotb_tr5$tip.label[TF]
+node_to_keep = getMRCA(phy=gbotb_tr5, tip=tips_to_keep)
+Sarraceniaceae_gbotb_tr5 = extract.clade(phy=gbotb_tr5, node=node_to_keep)
+plot(Sarraceniaceae_gbotb_tr5)
+axisPhylo()
+
+
+
+
+
+#######################################################
+# Time-scale the Heliamphora tree, and add to the main tree
+#######################################################
+# Just do linear scaling, as it's ultrametric
+source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
+
+# Subset to remove Nepenthes
+TF1 = grepl(pattern="Roridula", x=Heliamphora_tr$tip.label)
+TF2 = grepl(pattern="Actinidia", x=Heliamphora_tr$tip.label)
+TF3 = grepl(pattern="Darlingtonia", x=Heliamphora_tr$tip.label)
+TF4 = grepl(pattern="Sarracenia", x=Heliamphora_tr$tip.label)
+TF = (TF1 + TF2 + TF3 + TF4) > 0
+sum(TF)
+tips_to_drop = Heliamphora_tr$tip.label[TF]
+Heliamphora_tr2 = drop.tip(phy=Heliamphora_tr, tip=tips_to_drop, trim.internal=TRUE, subtree=FALSE)
+length(Heliamphora_tr$tip.label)
+length(Heliamphora_tr2$tip.label)
+is.ultrametric(Heliamphora_tr)
+is.ultrametric(Heliamphora_tr2)
+get_treeheight(Heliamphora_tr)
+get_treeheight(Heliamphora_tr2)
+
+# Branch length multiplier
+calibration_age = 17.975096561  # We are just adding a bigger sister clade
+                                # to Sarracenia, not fitting into a megatree clade
+multiplier = calibration_age / get_treeheight(Heliamphora_tr2)
+
+Heliamphora_tr3 = Heliamphora_tr2
+Heliamphora_tr3$edge.length = Heliamphora_tr2$edge.length * multiplier
+
+
+# Add to main tree
+gbotb_tr6 = gbotb_tr5
+length(gbotb_tr6$tip.label)
+
+# Drop Heliamphora from main tree
+TF = grepl(pattern="Heliamphora", x=gbotb_tr6$tip.label)
+sum(TF)
+tips_to_drop = gbotb_tr6$tip.label[TF]
+gbotb_tr7 = drop.tip(phy=gbotb_tr6, tip=tips_to_drop, trim.internal=TRUE, subtree=FALSE)
+
+# Add as sister to Sarracenia
+
+# Get height of Sarracenia
+TF = grepl(pattern="Sarracenia", x=gbotb_tr7$tip.label)
+tips_to_keep = gbotb_tr7$tip.label[TF]
+node_to_keep = getMRCA(phy=gbotb_tr7, tip=tips_to_keep)
+Sarraceniaceae_gbotb_tr7 = extract.clade(phy=gbotb_tr7, node=node_to_keep)
+height_of_Sarracenia = get_treeheight(Sarraceniaceae_gbotb_tr7)
+height_of_Sarracenia
+
+# Get height of Sarracenia + Heliamphora
+TF1 = grepl(pattern="Sarracenia", x=gbotb_tr6$tip.label)
+TF2 = grepl(pattern="Heliamphora", x=gbotb_tr6$tip.label)
+gbotb_tr6$tip.label[TF2]
+TF = (TF1 + TF2) > 0
+tips_to_keep = gbotb_tr6$tip.label[TF]
+node_to_keep = getMRCA(phy=gbotb_tr6, tip=tips_to_keep)
+both_gbotb_tr6 = extract.clade(phy=gbotb_tr6, node=node_to_keep)
+height_of_both = get_treeheight(both_gbotb_tr6)
+height_of_both
+
+
+
+plot(Sarraceniaceae_gbotb_tr7)
+axisPhylo()
+
+crown_age_Heliamphora = get_treeheight(Heliamphora_tr3)
+crown_age_Sarracenia = get_treeheight(Sarraceniaceae_gbotb_tr7)
+crown_age_both = get_treeheight(both_gbotb_tr6)
+crown_age_Heliamphora
+crown_age_Sarracenia
+crown_age_both
+
+# Add a root to Heliamphora
+Heliamphora_tr3$root.edge = crown_age_both - crown_age_Heliamphora
+Heliamphora_tr3$root.edge
+
+# Distance below Sarracenia crown to side branch
+distance_below_Sarracenia_crown = crown_age_both - crown_age_Sarracenia
+distance_below_Sarracenia_crown
+
+# New Heliamphora clade will be sister to Sarracenia at: node_to_keep=95286
+TF = grepl(pattern="Sarracenia", x=gbotb_tr7$tip.label)
+tips_to_keep = gbotb_tr7$tip.label[TF]
+node_to_keep = getMRCA(phy=gbotb_tr7, tip=tips_to_keep)
+Sarraceniaceae_gbotb_tr7 = extract.clade(phy=gbotb_tr7, node=node_to_keep)
+gbotb_tr8 = bind.tree(x=gbotb_tr7, y=Heliamphora_tr3, where=node_to_keep, position=distance_below_Sarracenia_crown)
+
+length(gbotb_tr6$tip.label)
+length(gbotb_tr7$tip.label)
+length(gbotb_tr8$tip.label)
+
+is.ultrametric(gbotb_tr6)
+is.ultrametric(gbotb_tr7)
+is.ultrametric(gbotb_tr8)
+
+
+
+
+#######################################################
+# Double-check addition of Heliamphora
+#######################################################
+TF1 = grepl(pattern="Roridula", x=gbotb_tr8$tip.label)
+TF2 = grepl(pattern="Actinidia", x=gbotb_tr8$tip.label)
+TF3 = grepl(pattern="Clematoclethra", x=gbotb_tr8$tip.label)
+#TF4 = grepl(pattern="Cyrilla", x=gbotb_tr8$tip.label)
+TF4 = grepl(pattern="Saurauia", x=gbotb_tr8$tip.label)
+TF5 = grepl(pattern="Sarracenia", x=gbotb_tr8$tip.label)
+TF6 = grepl(pattern="Heliamphora", x=gbotb_tr8$tip.label)
+TF7 = grepl(pattern="Darlingtonia", x=gbotb_tr8$tip.label)
+
+TF = (TF1 + TF2 + TF3 + TF4 + TF5 + TF6 + TF7) > 0
+sum(TF)
+tips_to_keep = gbotb_tr8$tip.label[TF]
+node_to_keep = getMRCA(phy=gbotb_tr8, tip=tips_to_keep)
+Sarraceniaceae_gbotb_tr8 = extract.clade(phy=gbotb_tr8, node=node_to_keep)
+plot(Sarraceniaceae_gbotb_tr8)
+axisPhylo()
+
+
+
+
+
+#######################################################
+# What's left?  Lentibulariaceae
+#######################################################
+
+# Time-scale (very approximately) the Pinguicula2 cladogram via the dated Pinguicula1
+# Requirements:
+# * source() the file below 
+# * have r8s installed somewhere like /Applications/r8s
+#
+source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
+
+
+# Get height of Pinguicula from megatree
+# The megatree topology seems to match Pinguicula2 better than Pinguicula1
+TF = grepl(pattern="Pinguicula", x=gbotb_tr8$tip.label)
+tips_to_keep = gbotb_tr8$tip.label[TF]
+node_to_keep = getMRCA(phy=gbotb_tr8, tip=tips_to_keep)
+Pinguicula_gbotb_tr8 = extract.clade(phy=gbotb_tr8, node=node_to_keep)
+height_of_Pinguicula = get_treeheight(Pinguicula_gbotb_tr8)
+height_of_Pinguicula
+
+Pinguicula_gbotb_tr8$tip.label[Pinguicula_gbotb_tr8$tip.label %in% Pinguicula2_tr$tip.label == FALSE]
+
+Pinguicula_gbotb_tr8_drop1 = drop.tip(Pinguicula_gbotb_tr8, tip="Pinguicula_caerulea")
+Pinguicula_gbotb_tr8_drop2 = drop.tip(Pinguicula_gbotb_tr8_drop1, tip="Pinguicula_caussensis")
+
+trtable = prt(Pinguicula_gbotb_tr8_drop2)
+internal_nodes = (length(Pinguicula_gbotb_tr8_drop2$tip.label)+1):(length(Pinguicula_gbotb_tr8_drop2$tip.label)+Pinguicula_gbotb_tr8_drop2$Nnode)
+internal_nodes
+trtable$tipnames[internal_nodes]
+trtable$time_bp[internal_nodes]
+
+
+
+calibration_node_tip_specifiers = c("Pinguicula_alpina", "Pinguicula_vulgaris")
+calibration_age = 15.839350182
+r8s_nexus_fn = "Pinguicula2_r8s_nexus_fn.nex"
+r8s_logfile_fn = "Pinguicula2_r8s_nexus_fn.log"
+run_r8s_1calib(tr=Pinguicula2_tr, calibration_node_tip_specifiers=calibration_node_tip_specifiers, r8s_method="LF", addl_cmd="", calibration_age=calibration_age, nsites=1000, tmpwd=getwd(), r8s_nexus_fn=r8s_nexus_fn, r8s_logfile_fn=r8s_logfile_fn, r8s_path="/Applications/r8s")
+
+# Manually edit r8s NEXUS file for 11 calibrations
+r8s_nexus_fn = "Pinguicula2_r8s_nexus_fn_v2.nex"
+r8s_logfile_fn = "Pinguicula2_r8s_nexus_fn_v2.nex.log"
+
+file.remove(r8s_logfile_fn)
+Pinguicula2_tr_dated = extract_tree_from_r8slog(logfn=r8s_logfile_fn, delimiter=" = ", printall=TRUE)
+Pinguicula2_tr_rates = extract_rates_from_r8slog(logfn=r8s_logfile_fn)
+
+plot(Pinguicula2_tr_dated)
+axisPhylo()
+
+# Manually edit this NEXUS file to include all timepoints
+# Drop this:
+# "Pinguicula_caerulea"
+
 
