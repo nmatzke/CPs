@@ -1,0 +1,12 @@
+tipnames
+Pinguicula_gypsicola
+Pinguicula_gracilis
+Pinguicula_agnata
+Pinguicula_ehlersiae
+Pinguicula_villosa
+Pinguicula_moranensis
+Pinguicula_filifolia
+Pinguicula_vulgaris
+Pinguicula_grandiflora
+Pinguicula_caerulea
+Pinguicula_lusitanica

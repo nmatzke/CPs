@@ -11,7 +11,7 @@
 # have saved the source):
 #===================================================
 library(BioGeoBEARS)
-sourcedir = '/Users/masa/Downloads/setup_TreeRogue/'
+sourcedir = '/Users/masa/Downloads/setup_TreeRogue_CP/'
 source3 = '_genericR_v2.R'
 source(paste(sourcedir, source3, sep=""))
 #===================================================
@@ -37,8 +37,8 @@ plot(tr)
 tr2B = tr
 plot(tr2B, cex=0.7)
 
-title("Nepenthaceae phylogeny from Murphy et al (2020), Fig. 4")
-trfn = "Murphy_2020_Fig4_Nepenthaceae_digitized_v1.newick"
+title("Pinguicula phylogeny from Shimai et al (2021), S1 Fig. 1")
+trfn = "Shimai_et_al_2021_S1_Fig1_Pinguicula_digitized_v1.newick"
 write.tree(tr2B, file=trfn)
 
 pdffn = "tr2B.pdf"
