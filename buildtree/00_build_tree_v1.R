@@ -4,6 +4,9 @@ library(ape)
 library(BioGeoBEARS)
 library(V.PhyloMaker2)
 
+wd = "/GitHub/CPs/buildtree/"
+setwd(wd)
+
 #?at.node
 
 
@@ -61,6 +64,10 @@ genera = c("Brocchinia_reducta",
 "Byblis",
 "Cephalotus")
 
+pdffn = "GBOTB.extended.WP_subtrees.pdf"
+pdf(file=pdffn, width=12, height=12)
+
+
 num_species = NULL
 root_age = NULL
 node_ages = NULL
@@ -75,6 +82,12 @@ for (i in 1:length(genera))
 		{
 		subtree = extract.clade(phy=tr, node_to_keep)
 		subtr_age = get_max_height_tree(subtree)
+		
+		plot(subtree)
+		axisPhylo()
+		title(genera[i])
+
+		
 		} else {
 		subtr_age = 0.0
 		}
@@ -87,10 +100,21 @@ for (i in 1:length(genera))
 	node_ages = rbind(node_ages, tmptable)
 	}
 
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
 sdf = as.data.frame(cbind(genera, root_age, num_species), stringsAsFactors=FALSE)
 sdf
 
 node_ages
+
+
+pdffn = "Masafumi_trees.pdf"
+pdf(file=pdffn, width=12, height=12)
+
 
 
 #######################################################
@@ -138,6 +162,7 @@ get_treeheight(Utricularia_tr)
 
 Nepenthes_trfn = "/GitHub/CPs/rawtrees/Digitized_trees/Nepenthaceae/Murphy_2020_Fig4_Nepenthaceae_digitized_v1.newick"
 Nepenthes_tr = read.tree(Nepenthes_trfn)
+Nepenthes_tr$tip.label = gsub(pattern="N.", replacement="Nepenthes_", x=Nepenthes_tr$tip.label)
 plot(Nepenthes_tr)
 axisPhylo()
 title("Nepenthes")
@@ -161,10 +186,15 @@ title("Sarracenia")
 get_treeheight(Sarracenia_tr)
 
 
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
 
 
 
-
+#######################################################
+# Query the digitized trees
+#######################################################
 
 genera2 = list()
 tree2 = list()
@@ -221,6 +251,11 @@ tree2[["Utricularia"]] = Utricularia_tr
 genera2[["Byblis"]] = c("Byblis")
 tree2[["Byblis"]] = GBOTB.extended.WP
 
+
+pdffn = "Masafumi_subtrees2.pdf"
+pdf(file=pdffn, width=12, height=12)
+
+
 names2 = NULL
 root_age2 = NULL
 num_species2 = NULL
@@ -231,24 +266,79 @@ for (i in 1:length(genera2))
 	TF = rep(FALSE, times=length(tree2[[i]]$tip.label))
 	for (j in 1:length(genera2[[i]]))
 		{
-		tmpTF = grepl(pattern=genera[[i]][j], x=tree2[[i]]$tip.label)
+		tmpTF = grepl(pattern=genera2[[i]][j], x=tree2[[i]]$tip.label)
 		TF = TF + tmpTF
 		}
 	num_species2 = c(num_species2, sum(TF))
 	
-	tips_to_keep = tree2[[i]]$tip.label[TF]
+	tips_to_keep = tree2[[i]]$tip.label[TF == 1]
 	node_to_keep = getMRCA(phy=tree2[[i]], tip=tips_to_keep)
 	if (sum(TF) > 1)
 		{
 		subtree = extract.clade(phy=tree2[[i]], node_to_keep)
 		subtr_age = get_max_height_tree(subtree)
+
+		plot(subtree)
+		axisPhylo()
+		title(names(genera2)[i])
+
 		} else {
 		subtr_age = 0.0
 		}
 	root_age2 = c(root_age2, subtr_age)
 	}
 
-sdf2 = as.data.frame(cbind(names2, root_age2, num_species2), stringsAsFactors=FALSE)
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+#######################################################
+# Query the master tree
+#######################################################
+
+pdffn = "GBOTB.extended.WP_subtrees2.pdf"
+pdf(file=pdffn, width=12, height=12)
+
+names2 = NULL
+root_age3 = NULL
+num_species3 = NULL
+for (i in 1:length(genera2))
+	{
+	names2 = c(names2, names(genera2)[i])
+
+	TF = rep(FALSE, times=length(GBOTB.extended.WP$tip.label))
+	for (j in 1:length(genera2[[i]]))
+		{
+		tmpTF = grepl(pattern=genera2[[i]][j], x=GBOTB.extended.WP$tip.label)
+		TF = TF + tmpTF
+		}
+	num_species3 = c(num_species3, sum(TF))
+	
+	tips_to_keep = GBOTB.extended.WP$tip.label[TF == 1]
+	node_to_keep = getMRCA(phy=GBOTB.extended.WP, tip=tips_to_keep)
+	if (sum(TF) > 1)
+		{
+		subtree = extract.clade(phy=GBOTB.extended.WP, node_to_keep)
+		subtr_age = get_max_height_tree(subtree)
+		
+		plot(subtree)
+		axisPhylo()
+		title(genera[i])
+
+		
+		} else {
+		subtr_age = 0.0
+		}
+	root_age3 = c(root_age3, subtr_age)
+	}
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+sdf2 = as.data.frame(cbind(names2, root_age2, root_age3, num_species2, num_species3), stringsAsFactors=FALSE)
 sdf2
 
 
