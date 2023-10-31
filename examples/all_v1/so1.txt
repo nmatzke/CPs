@@ -1,0 +1,152 @@
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin
+[1] 2648
+                   species state
+1        Pogogyne_clareana     0
+2  Monardella_odoratissima     0
+3      Poliomintha_palmeri     0
+4          Hedeoma_costata     0
+5  Bystropogon_canariensis     0
+6 Obtegomeria_caerulescens     0
+[1] 2648    2
+       Pogogyne_clareana  Monardella_odoratissima      Poliomintha_palmeri          Hedeoma_costata  Bystropogon_canariensis Obtegomeria_caerulescens 
+                       1                        1                        1                        1                        1                        1 
+   1    2    3    4    5    6    7    8    9   10   11 
+2215   17  128    2    1    6   15  137   46    1   80 
+      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11]
+ [1,]    0    2    2    0    0    0    0    2    0     0     0
+ [2,]    1    0    3    0    0    6    0    0    0     0     0
+ [3,]    1    3    0    4    0    0    6    0    0     0     0
+ [4,]    1    0    0    0    5    0    0    0    0     0     0
+ [5,]    1    0    0    0    0    0    0    0    0     0     0
+ [6,]    1    6    0    0    0    0    3    6    0     0     0
+ [7,]    1    0    6    0    0    3    0    0    6     0     0
+ [8,]    1    0    0    0    0    6    0    0    3     0     0
+ [9,]    1    0    0    0    0    0    6    3    0     4     0
+[10,]    1    0    0    0    0    0    0    0    0     0     5
+[11,]    1    0    0    0    0    0    0    0    0     0     0
+      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11]
+ [1,]    0    1    1    1    1    1    1    1    1     1     1
+ [2,]    1    0    1    1    1    1    1    1    1     1     1
+ [3,]    1    1    0    1    1    1    1    1    1     1     1
+ [4,]    1    1    1    0    1    1    1    1    1     1     1
+ [5,]    1    1    1    1    0    1    1    1    1     1     1
+ [6,]    1    1    1    1    1    0    1    1    1     1     1
+ [7,]    1    1    1    1    1    1    0    1    1     1     1
+ [8,]    1    1    1    1    1    1    1    0    1     1     1
+ [9,]    1    1    1    1    1    1    1    1    0     1     1
+[10,]    1    1    1    1    1    1    1    1    1     0     1
+[11,]    1    1    1    1    1    1    1    1    1     1     0
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	Loading ~/.Rprofile...
+[1] "153"
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+Currently viewed PATH:
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1]
+Sys.getenv("R_MAX_NUM_DLLS"):	 "153"
+[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	Loading ~/.Rprofile...
+[1] "153"
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Loading ~/.Rprofile...
+
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+Currently viewed PATH:
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
