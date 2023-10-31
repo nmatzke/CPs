@@ -4,6 +4,9 @@ library(ape)
 library(BioGeoBEARS)
 library(V.PhyloMaker2)
 
+source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
+source("/GitHub/bioinfRhints/R/_R_tree_functions_v2.R")
+
 wd = "/GitHub/CPs/buildtree/"
 setwd(wd)
 
@@ -185,10 +188,6 @@ axisPhylo()
 title("Sarracenia")
 get_treeheight(Sarracenia_tr)
 
-
-
-
-Sarraceniaceae_tr
 
 
 dev.off()
@@ -409,8 +408,6 @@ x$tip.label
 # * source() the file below 
 # * have r8s installed somewhere like /Applications/r8s
 #
-source("/GitHub/bioinfRhints/R/r8s_functions_v2.R")
-
 
 calibration_node_tip_specifiers = c("Nepenthes_pervillei", "Nepenthes_madagascariensis")
 calibration_age = 25.701614
@@ -882,4 +879,522 @@ Utricularia_tr1 = drop.tip(Utricularia_tr, "Outgroup")
 
 plot(Genlisea_tr1)
 plot(Utricularia_tr1)
+
+
+
+
+
+#######################################################
+# Time-scale the Genlisea tree, and add to the main tree
+#######################################################
+# Requirements:
+# * source() the file below 
+# * have r8s installed somewhere like /Applications/r8s
+#
+
+calibration_node_tip_specifiers = c("Genlisea_lobata", "Genlisea_roraimensis")
+calibration_age = 26.396475
+r8s_nexus_fn = "Genlisea_r8s_nexus_fn.nex"
+r8s_logfile_fn = "Genlisea_r8s_nexus_fn.log"
+run_r8s_1calib(tr=Genlisea_tr1, calibration_node_tip_specifiers=calibration_node_tip_specifiers, r8s_method="LF", addl_cmd="", calibration_age=calibration_age, nsites=1000, tmpwd=getwd(), r8s_nexus_fn=r8s_nexus_fn, r8s_logfile_fn=r8s_logfile_fn, r8s_path="/Applications/r8s")
+
+Genlisea_tr_dated = extract_tree_from_r8slog(logfn=r8s_logfile_fn, delimiter=" = ", printall=TRUE)
+Genlisea_tr_rates = extract_rates_from_r8slog(logfn=r8s_logfile_fn)
+
+pdffn = "Genlisea_tr_dated.pdf"
+pdf(file=pdffn, width=12, height=12)
+
+plot(Genlisea_tr_dated, cex=0.5)
+axisPhylo()
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+get_treeheight(Genlisea_tr_dated)
+
+# Add to main tree
+TF = grepl(pattern="Genlisea", x=gbotb_tr10$tip.label)
+sum(TF)
+tips_to_drop = gbotb_tr10$tip.label[TF]
+gbotb_tr11 = drop.tip(phy=gbotb_tr10, tip=tips_to_drop, trim.internal=FALSE, subtree=TRUE)
+length(gbotb_tr11$tip.label)
+TF = grepl(pattern="\\[", x=gbotb_tr11$tip.label)
+tipnum = (1:length(gbotb_tr11$tip.label))[TF]
+newtip = gbotb_tr11$tip.label[TF]
+newtip
+
+# New tip is "[15_tips]"
+gbotb_tr12 = bind.tree(x=gbotb_tr11, y=Genlisea_tr_dated, where=tipnum)
+length(gbotb_tr10$tip.label)
+length(gbotb_tr11$tip.label)
+length(gbotb_tr12$tip.label)
+
+is.ultrametric(gbotb_tr10)
+is.ultrametric(gbotb_tr11)
+is.ultrametric(gbotb_tr12)
+
+
+
+
+#######################################################
+# Add the Utricularia tree to the main tree
+#######################################################
+plot(Utricularia_tr1)
+axisPhylo()
+
+# Branch length multiplier
+calibration_age = 29.853656
+multiplier = calibration_age / get_tr_height(Utricularia_tr1)
+Utricularia_tr2 = Utricularia_tr1
+Utricularia_tr2$edge.length = Utricularia_tr1$edge.length * multiplier
+get_tr_height(Utricularia_tr2)
+
+# Add to main tree
+TF = grepl(pattern="Utricularia", x=gbotb_tr12$tip.label)
+sum(TF)
+tips_to_drop = gbotb_tr12$tip.label[TF]
+gbotb_tr13 = drop.tip(phy=gbotb_tr12, tip=tips_to_drop, trim.internal=FALSE, subtree=TRUE)
+length(gbotb_tr13$tip.label)
+TF = grepl(pattern="\\[", x=gbotb_tr13$tip.label)
+tipnum = (1:length(gbotb_tr13$tip.label))[TF]
+newtip = gbotb_tr13$tip.label[TF]
+newtip
+
+# New tip is [57_tips]
+gbotb_tr14 = bind.tree(x=gbotb_tr13, y=Utricularia_tr2, where=tipnum)
+length(gbotb_tr12$tip.label)
+length(gbotb_tr13$tip.label)
+length(gbotb_tr14$tip.label)
+
+is.ultrametric(gbotb_tr12)
+is.ultrametric(gbotb_tr13)
+is.ultrametric(gbotb_tr14)
+
+
+#######################################################
+# Remarkable lack of overlap!
+#######################################################
+sort(tips_to_drop)
+sort(Utricularia_tr1$tip.label)
+
+length(tips_to_drop)
+length(Utricularia_tr1$tip.label)
+
+length(unique(c(tips_to_drop, Utricularia_tr1$tip.label)))
+
+57 + 58
+# 115
+
+
+out_trfn = "gbotb_tr14.newick"
+write.tree(gbotb_tr14, file=out_trfn)
+out_trfn = "gbotb_wCPs_merged_v14.newick"
+write.tree(gbotb_tr14, file=out_trfn)
+
+length(gbotb_tr14$tip.label)
+# 72728 tips
+
+#######################################################
+# NOTES
+#######################################################
+
+# These Pinguicula were dropped in the switch from the big tree to 
+# the cladogram tree:
+Pinguicula_caerulea
+Pinguicula_caussensis
+
+
+gbotb_tr14$tip.label[grepl(pattern="Byblis", x=gbotb_tr14$tip.label)]
+# Need characters for there:
+Byblis_gigantea
+Byblis_lamellata
+Byblis_liniflora
+
+gbotb_tr14$tip.label[grepl(pattern="Roridula", x=gbotb_tr14$tip.label)]
+Roridula_gorgonias
+Roridula_dentata
+
+The original big tree had 57 Utricularia
+The digitized dated tree had 58 Utricularia
+
+However, only 4 of these overlapped!  Merging the two trees would create 
+111 Utricularia.
+
+Given that there are hundreds of Utricularia species, perhaps this is not 
+surprising; but, look for additional Utricularia phylogenies, or consider
+making your own from the genetic data in the future.
+
+
+
+Genlisea_bigtree = gbotb_tr$tip.label[grepl(pattern="Genlisea", x=gbotb_tr$tip.label)]
+Genlisea_molecular = gbotb_tr14$tip.label[grepl(pattern="Genlisea", x=gbotb_tr14$tip.label)]
+
+Genlisea_bigtree[Genlisea_bigtree %in% Genlisea_molecular == FALSE]
+
+# This was dropped in the switch to the new tree:
+Genlisea_pygmaea
+
+# Carnivorous bromeliads:
+sum(grepl(pattern="Brocchinia_hechtioides", x=gbotb_tr14$tip.label))
+sum(grepl(pattern="Brocchinia_reducta", x=gbotb_tr14$tip.label))
+sum(grepl(pattern="Catopsis_berteroniana", x=gbotb_tr14$tip.label))
+
+
+
+
+#######################################################
+# Trim the huge tree to just have the 2 or 3 sister 
+# groups to each carnivorous clade
+#######################################################
+# Droseraceae / Nepentheaceae clade:
+outgroup_tips = NULL
+
+
+tip_genera = c("Drosera",
+"Dionaea",
+"Aldrovanda",
+"Drosophyllum",
+"Nepenthes",
+"Triphyophyllum")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+length(tips_to_ID_node)
+CPnode
+
+parent_node1 = get_parent(nodenum=CPnode, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 775 already
+length(outgroup_tips2)
+length(outgroup_tips3)
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+
+tip_genera = c("Roridula",
+"Actinidia",
+"Clematoclethra",
+"Saurauia",
+"Sarracenia",
+"Heliamphora",
+"Darlingtonia")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+length(tips_to_ID_node)
+CPnode
+
+parent_node1 = get_parent(nodenum=CPnode, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 1606
+length(outgroup_tips2)
+length(outgroup_tips3)
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+
+
+
+
+tip_genera = c("Pinguicula",
+"Genlisea",
+"Utricularia")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+length(tips_to_ID_node)
+CPnode
+
+parent_node1 = get_parent(nodenum=CPnode, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 550
+length(outgroup_tips2) # 560
+length(outgroup_tips3) # 706
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+
+tip_genera = c("Cephalotus")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+#CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+
+tipnode_TF = grepl(pattern="Cephalotus", x=gbotb_tr14$tip.label)
+nodenum = (1:length(gbotb_tr14$tip.label))[tipnode_TF]
+nodenum
+
+parent_node1 = get_parent(nodenum=nodenum, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 6
+length(outgroup_tips2) # 172
+length(outgroup_tips3) # 273
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+
+
+tip_genera = c("Byblis")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+length(tips_to_ID_node)
+CPnode
+
+parent_node1 = get_parent(nodenum=CPnode, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 4
+length(outgroup_tips2) # 2777
+length(outgroup_tips3) # 3065
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+
+
+tip_genera = c("Brocchinia")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+length(tips_to_ID_node)
+CPnode
+
+parent_node1 = get_parent(nodenum=CPnode, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 789
+length(outgroup_tips2) # 813
+length(outgroup_tips3) # 4297
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+
+
+
+
+tip_genera = c("Catopsis")
+
+TF = rep(FALSE, times=length(gbotb_tr14$tip.label))
+for (i in 1:length(tip_genera))
+	{
+	tmpTF = grepl(pattern=tip_genera[i], x=gbotb_tr14$tip.label)
+	TF = TF + tmpTF
+	}
+TF = TF > 0
+tips_to_ID_node = gbotb_tr14$tip.label[TF]
+CPnode = getMRCA(phy=gbotb_tr14, tip=tips_to_ID_node)
+length(tips_to_ID_node)
+CPnode
+
+parent_node1 = get_parent(nodenum=CPnode, t=gbotb_tr14)
+parent_node2 = get_parent(nodenum=parent_node1, t=gbotb_tr14)
+parent_node3 = get_parent(nodenum=parent_node2, t=gbotb_tr14)
+
+parent_node1
+parent_node2
+parent_node3
+
+outgroup_tips1 = get_daughter_tipnums(nodenum=parent_node1, tr=gbotb_tr14)
+outgroup_tips2 = get_daughter_tipnums(nodenum=parent_node2, tr=gbotb_tr14)
+outgroup_tips3 = get_daughter_tipnums(nodenum=parent_node3, tr=gbotb_tr14)
+
+length(outgroup_tips1) # 789
+length(outgroup_tips2) # 813
+length(outgroup_tips3) # 4297
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
+
+
+uniq_outgroup_tips = unique(outgroup_tips)
+length(outgroup_tips)
+length(uniq_outgroup_tips)
+
+
+
+#######################################################
+# For each non-carnivorous genus, remove all but 1
+#######################################################
+
+CP_genera = c("Drosera",
+"Dionaea",
+"Aldrovanda",
+"Drosophyllum",
+"Nepenthes",
+"Triphyophyllum",
+"Habropetalum",
+"Ancistrocladus",
+"Roridula",
+"Actinidia",
+"Clematoclethra",
+"Saurauia",
+"Sarracenia",
+"Heliamphora",
+"Darlingtonia",
+"Pinguicula",
+"Genlisea",
+"Utricularia",
+"Cephalotus",
+"Byblis",
+"Brocchinia",
+"Catopsis")
+
+uniq_outgroup_tipnames = gbotb_tr14$tip.label[uniq_outgroup_tips]
+uniq_outgroup_tipnames_reduced = uniq_outgroup_tipnames
+for (i in 1:length(CP_genera))
+	{
+	TF = grepl(CP_genera[i], x=uniq_outgroup_tipnames_reduced)
+	uniq_outgroup_tipnames_reduced = uniq_outgroup_tipnames_reduced[TF==FALSE]
+	}
+length(uniq_outgroup_tipnames)
+length(uniq_outgroup_tipnames_reduced)
+
+
+# Get the unique genera
+list_of_genera = rep("", times=length(uniq_outgroup_tipnames_reduced))
+for (i in 1:length(uniq_outgroup_tipnames_reduced))
+	{
+	genus = strsplit(uniq_outgroup_tipnames_reduced[i], split="_")[[1]][1]
+	list_of_genera[i] = genus
+	}
+
+uniq_list_of_genera = unique(list_of_genera)
+length(list_of_genera)
+length(uniq_list_of_genera)
+
+
+tips_to_keep = rep("", times=length(uniq_list_of_genera))
+for (i in 1:length(uniq_list_of_genera))
+	{
+	genus_hits_TF = grepl(pattern=uniq_list_of_genera[i], x=uniq_outgroup_tipnames_reduced)
+	genus_hits = uniq_outgroup_tipnames_reduced[genus_hits_TF]
+	tips_to_keep[i] = genus_hits[1]
+	}
+
+tips_to_keep
+length(tips_to_keep)
+
+tips_to_drop_TF = (uniq_outgroup_tipnames_reduced %in% tips_to_keep) == FALSE
+tips_to_drop = uniq_outgroup_tipnames_reduced[tips_to_drop_TF]
+
+
+tips_to_drop2 = gbotb_tr14$tip.label
+
+for (i in 1:length(CP_genera))
+	{
+	TF = grepl(CP_genera[i], x=tips_to_drop2)
+	tips_to_drop2 = tips_to_drop2[TF==FALSE]
+	}
+
+tips_to_drop3 = tips_to_drop2[(tips_to_drop2 %in% tips_to_keep) == FALSE]
+
+gbotb_tr14_wSister_genera = drop.tip(phy=gbotb_tr14, tip=tips_to_drop3)
+
+length(gbotb_tr14_wSister_genera$tip.label)
+
+
+plot(gbotb_tr14_wSister_genera, tip.label=FALSE)
+axisPhylo()
+
+
+
 
