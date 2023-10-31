@@ -1308,6 +1308,7 @@ outgroup_tips = c(outgroup_tips, outgroup_tips3)
 uniq_outgroup_tips = unique(outgroup_tips)
 length(outgroup_tips)
 length(uniq_outgroup_tips)
+outgroup_tips = c(outgroup_tips, outgroup_tips3)
 
 
 
@@ -1392,12 +1393,253 @@ tips_to_drop3 = tips_to_drop2[(tips_to_drop2 %in% tips_to_keep) == FALSE]
 
 gbotb_tr14_wSister_genera = drop.tip(phy=gbotb_tr14, tip=tips_to_drop3)
 
+gbotb_tr14_wSister_genera2 = read.tree(file="", text=write.tree(gbotb_tr14_wSister_genera, file=""))
+
+gbotb_tr14_wSister_genera3 = ladderize(phy=gbotb_tr14_wSister_genera2, right=TRUE)
+gbotb_tr14_wSister_genera4 = read.tree(file="", text=write.tree(gbotb_tr14_wSister_genera3, file=""))
+
+
+length(gbotb_tr14_wSister_genera4$tip.label)
+head(gbotb_tr14_wSister_genera4$tip.label)
+tail(gbotb_tr14_wSister_genera4$tip.label)
+
+
+
+#######################################################
+# Make a HUGE pdf with the tree in it
+#######################################################
+pdffn = "gbotb_tr14_wSister_genera.pdf"
+pdf(file=pdffn, width=20, height=200)
+
+plot.phylo(x=gbotb_tr14_wSister_genera4, show.tip.label=TRUE, cex=0.6)
+axisPhylo()
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+
+
+out_trfn = "gbotb_tr14_72728_tips.newick"
+write.tree(gbotb_tr14, file=out_trfn)
+length(gbotb_tr14$tip.label)
+# 72728 species
+
+out_trfn = "gbotb_tr14_wSister_genera_2648_tips.newick"
+write.tree(gbotb_tr14_wSister_genera4, file=out_trfn)
 length(gbotb_tr14_wSister_genera$tip.label)
+# 2648 species
+
+outfn = "gbotb_tr14_wSister_genera_2648_tipnames.txt"
+writeLines(text=gbotb_tr14_wSister_genera4$tip.label, con=outfn, sep="\n")
 
 
-#plot(gbotb_tr14_wSister_genera, tip.label=FALSE)
-#axisPhylo()
+head(gbotb_tr14_wSister_genera$tip.label)
+tail(gbotb_tr14_wSister_genera$tip.label)
 
 
 
 
+
+
+
+
+#######################################################
+# Process the character data
+#######################################################
+
+library(openxlsx)
+xlsfn = "/GitHub/CPs/chardata/2023-10-30_CP_data_v2.xlsx"
+xls = openxlsx::read.xlsx(xlsfn)
+head(xls)
+
+species = xls$Species
+species = gsub(pattern="N.", replacement="Nepenthes_", x=species)
+sum(is.na(species))
+
+states = xls$Char.State
+sort(unique(states))
+
+TF = species %in% gbotb_tr14_wSister_genera$tip.label
+sum(TF)
+length(species)
+species[TF == FALSE]
+
+# Find tip species with no state
+CP_genera_carnivorous = c("Drosera",
+"Dionaea",
+"Aldrovanda",
+"Drosophyllum",
+"Nepenthes",
+"Triphyophyllum",
+"Roridula",
+"Sarracenia",
+"Heliamphora",
+"Darlingtonia",
+"Pinguicula",
+"Genlisea",
+"Utricularia",
+"Cephalotus",
+"Byblis",
+"Brocchinia",
+"Catopsis")
+
+CP_genera_noncarnivorous = c("Habropetalum",
+"Ancistrocladus",
+"Actinidia",
+"Clematoclethra",
+"Saurauia",
+"Clethra")
+
+
+# Notes: Typos or other issues: Excel species not found in big merged tree:
+
+[1] "Nepenthes_ bicalcarata"             "Nepenthes_burkei"                  
+ [3] "Nepenthes_talangensis"              "Heliamphora_minor var. pilosa"     
+ [5] "Heliamphora_heterodoxa"             "Heliamphora_sp_Akopán"             
+ [7] "Sarracenia alabamensis_ssp_wherryi" "Heliamphora_minor"                 
+ [9] "Heliamphora_heterodoxa"             "Actinidia_deliciosa"               
+[11] "Clethra_alnifolia"                  "Nepenthes_penthes_miiabilis"       
+[13] "Nepenthes_penthes_distillatoria"    "Utricularia_alpina"                
+[15] "Utricularia_sp_Nepenthes_wra"      
+
+
+# Typo in tree:
+# Sarracenia_alabamensism_ssp_alabamensis
+
+gbotb_tr14_wSister_genera$tip.label = gsub(pattern="Sarracenia_alabamensism_ssp_alabamensis", replacement="Sarracenia_alabamensis_ssp_alabamensis", x=gbotb_tr14_wSister_genera$tip.label)
+
+gbotb_tr14_wSister_genera$tip.label = gsub(pattern="Heliamphora_heterdoxa", replacement="Heliamphora_heterodoxa", x=gbotb_tr14_wSister_genera$tip.label)
+
+gbotb_tr14_wSister_genera$tip.label = gsub(pattern="Nepenthes_burkii", replacement="Nepenthes_burkei", x=gbotb_tr14_wSister_genera$tip.label)
+
+
+gbotb_tr14_wSister_genera$tip.label[grepl(pattern="pilosa", x=gbotb_tr14_wSister_genera$tip.label)]
+gbotb_tr14_wSister_genera$tip.label[grepl(pattern="alabamensis", x=gbotb_tr14_wSister_genera$tip.label)]
+gbotb_tr14_wSister_genera$tip.label[grepl(pattern="Akopán", x=gbotb_tr14_wSister_genera$tip.label)]
+gbotb_tr14_wSister_genera$tip.label[grepl(pattern="Akopan", x=gbotb_tr14_wSister_genera$tip.label)]
+gbotb_tr14_wSister_genera$tip.label[grepl(pattern="ngensis", x=gbotb_tr14_wSister_genera$tip.label)]
+
+sort(gbotb_tr14_wSister_genera$tip.label[grepl(pattern="Heliamphora", x=gbotb_tr14_wSister_genera$tip.label)])
+
+
+sort(gbotb_tr14_wSister_genera$tip.label[grepl(pattern="Nepenthes", x=gbotb_tr14_wSister_genera$tip.label)])
+
+
+
+
+
+xlsfn = "/GitHub/CPs/chardata/2023-10-30_CP_data_v2.xlsx"
+xls = openxlsx::read.xlsx(xlsfn)
+head(xls)
+
+species = xls$Species
+species = gsub(pattern="N.", replacement="Nepenthes_", x=species)
+sum(is.na(species))
+
+states = xls$Char.State
+sort(unique(states))
+
+TF = species %in% gbotb_tr14_wSister_genera$tip.label
+sum(TF)
+length(species)
+species[TF == FALSE]
+
+# Manual edits to matrix:
+[1] "Nepenthes_talangensis"           "Heliamphora_minor"              
+[3] "Actinidia_deliciosa"             "Clethra_alnifolia"              
+[5] "Nepenthes_penthes_mirabilis"     "Nepenthes_penthes_distillatoria"
+[7] "Utricularia_alpina"              "Utricularia_sp_Nepenthes_wra"   
+>
+
+
+length(states)
+length(species)
+
+# OK, find first match of species to tree
+matches = match(x=species, table=gbotb_tr14_wSister_genera$tip.label)
+TF = is.na(matches) == FALSE
+species_that_match = species[TF]
+matches_to_tree_tipnum = matches[TF]
+chardata_that_match = states[TF]
+
+states_for_tree = rep("0", times=length(gbotb_tr14_wSister_genera$tip.label))
+states_for_tree[matches_to_tree_tipnum] = chardata_that_match
+
+for (i in 1:length(CP_genera_carnivorous))
+	{
+	genus = CP_genera_carnivorous[i]
+	TF = grepl(pattern=genus, x=gbotb_tr14_wSister_genera$tip.label)
+	species_in_genus = gbotb_tr14_wSister_genera$tip.label[TF]
+	states_in_genus = states_for_tree[TF]
+	
+	wrongZeroTF = states_in_genus == "0"
+	print(species_in_genus[wrongZeroTF])
+	}
+
+# Aerial pitcher - 7
+TF = gbotb_tr14_wSister_genera$tip.label == "Brocchinia_reducta"
+states_for_tree[TF] = "7"
+TF = gbotb_tr14_wSister_genera$tip.label == "Nepenthes_talagensis"
+states_for_tree[TF] = "7"
+
+# Ground pitcher - 8
+TF = gbotb_tr14_wSister_genera$tip.label == "Cephalotus_follicularis"
+states_for_tree[TF] = "8"
+
+
+
+# Aerial sticky - 1
+TF = gbotb_tr14_wSister_genera$tip.label == "Drosophyllum_lusitanicum"
+states_for_tree[TF] = "1"
+TF = gbotb_tr14_wSister_genera$tip.label == "Triphyophyllum_peltatum"
+states_for_tree[TF] = "1"
+TF = gbotb_tr14_wSister_genera$tip.label == "Byblis_gigantea"
+states_for_tree[TF] = "1"
+TF = gbotb_tr14_wSister_genera$tip.label == "Byblis_lamellata"
+states_for_tree[TF] = "1"
+TF = gbotb_tr14_wSister_genera$tip.label == "Byblis_liniflora"
+states_for_tree[TF] = "1"
+
+
+
+# Aquatic pitcher - 10
+TF = gbotb_tr14_wSister_genera$tip.label == "Utricularia_sp_Nowra"
+states_for_tree[TF] = "10"
+TF = gbotb_tr14_wSister_genera$tip.label == "Utricularia_beaugleholei_ssp_A"
+states_for_tree[TF] = "10"
+TF = gbotb_tr14_wSister_genera$tip.label == "Utricularia_beagleholei_ssp_A"
+states_for_tree[TF] = "10"
+
+gbotb_tr14_wSister_genera$tip.label[is.na(states_for_tree)]
+states_for_tree[is.na(states_for_tree)]  
+
+TF = gbotb_tr14_wSister_genera$tip.label == "Cyrilla_racemiflora"
+states_for_tree[TF] = "0"
+TF = gbotb_tr14_wSister_genera$tip.label == "Actinidia_arguta" 
+states_for_tree[TF] = "0"
+
+
+summary(as.factor(states_for_tree))
+
+out_trfn = "gbotb_tr14_wSister_genera_edited.newick"
+write.tree(gbotb_tr14_wSister_genera, file=out_trfn)
+
+outdf = as.data.frame(cbind(gbotb_tr14_wSister_genera$tip.label, states_for_tree), stringsAsFactors=FALSE)
+names(outdf) = c("species", "state")
+head(outdf)
+tail(outdf)
+
+outfn = "gbotb_tr14_wSister_genera_edited_states.txt"
+write.table(outdf, file=outfn, sep="\t", quote=FALSE)
+moref(outfn)
+
+
+
+
+
+
+# 2618  Utricularia_beaugleholei	10
+# 2619	Utricularia_beaugleholei_ssp_A	10
+# 2620	Utricularia_beaugleholei_ssp_A	10
