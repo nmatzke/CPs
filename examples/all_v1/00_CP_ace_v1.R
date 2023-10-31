@@ -34,7 +34,7 @@ summary(as.factor(states))
 # ER = equal rates
 
 
-
+# See "rates matrix" Excel spreadsheet for how this works!
 Matzke_2002_model = matrix(data=c(0,2,2,0,0,0,0,2,0,0,0,
 1,0,3,0,0,6,0,0,0,0,0,
 1,3,0,4,0,0,6,0,0,0,0,
@@ -55,8 +55,10 @@ diag(equal_rates_model) = 0
 equal_rates_model
 
 
-# resER = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL); save(resER, file="resER_noParallel.Rdata")
+resER = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL); save(resER, file="resER_noParallel.Rdata")
 
+resER
+# Log-likelihood: -581.909837
 
 resER = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL, ncores=11)
 save(resER, file="resER.Rdata")
