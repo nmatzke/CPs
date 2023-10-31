@@ -1,0 +1,42 @@
+#NEXUS
+[ Running r8s via Langley-Fitch, from R.             ]
+[  (using an R function by Nick Matzke, Feb. 2011)   ]
+[ To run:                                            ] 
+[ /Applications/r8s -v -f /Users/nickm/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex > /Users/nickm/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex.log     ] 
+
+begin trees;
+[Note: This tree was output from R.]
+tree Rtree = ((Genlisea_uncinata:0.1577681001,(Genlisea_aff_violence_giant:0.04608631847,(Genlisea_sp_Itacambira:0.02916515754,(Genlisea_violacea:0.05138945976,Genlisea_lobata:0.03524829723):0.01549116386):0.01685828062):0.03851877965):0.1982375823,((((Genlisea_barthlottii:0.04096947245,Genlisea_stapfii:0.04491083827):0.01154312849,(Genlisea_hispidula:0.08091892742,(Genlisea_subviridis:0.0310596493,Genlisea_africana:0.01940545583):0.003944502775):0.02928879859):0.04458072373,(Genlisea_subglabra:0.04118473505,(Genlisea_glandulosissima:0.06429077459,Genlisea_margaretae:0.03512527792):0.1270860435):0.08637634448):0.06815236014,((Genlisea_aurea:0.1294542996,(Genlisea_glabra:0.04318887876,(Genlisea_filiformis:0.07346539271,((Genlisea_aff_filiformis:0.04801935798,Genlisea_repens:0.04064752528):0.01214084465,(Genlisea_roraimensis:0.03178069565,Genlisea_sp_Gran_Sabana:0.04673349105):0.02210913941):0.01046215244):0.03641122963):0.01403573207):0.0604307999,(Genlisea_guianensis:0.03010129692,Genlisea_spanariapoana:0.07109996279):0.08577015007):0.2225369346):0.2232717157);
+end;
+
+
+begin r8s;
+MRCA calib1 Genlisea_lobata Genlisea_roraimensis;
+blformat lengths=persite ultrametric=no round=yes nsites=1000;
+collapse;
+[ lengths=persite means that the branch length is in						]
+[     changes per site not total number of changes							]
+[ ultrametric=no means that the input tree is not ultrametric				]
+
+[ Input some age constraints; a point for Clade1, a ]
+[ fixage taxon=Clade1 age=150 sets the age of node Clade1 to 150			]
+fixage taxon=calib1 age=26.396475;
+
+[ constrain taxon=node2 min_age=200 max_age=300 							]
+[    forces node two to be between 200 and 300. These times are 			]
+[    measured backwards from the present, so that min_age=200 means			]
+[    that this divergence happened at least 200 (million?) years ago.		]
+[    I believe the units are relative, depending on what you input.			]
+[ constrain taxon=rt min_age=3.5 max_age=1.0; ]
+
+[ divtime method=LF starts the fitting algorithm using the Langley-Fitch	]
+[    method which deduces node times using maximum likelihood of the 		]
+[    branch lengths assuming a constant rate of substitution				]
+
+divtime method=LF;
+describe plot=chronogram;
+describe plot=chrono_description;
+showage;
+q;
+end;
+

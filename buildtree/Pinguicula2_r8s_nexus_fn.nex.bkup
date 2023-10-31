@@ -2,7 +2,7 @@
 [ Running r8s via Langley-Fitch, from R.             ]
 [  (using an R function by Nick Matzke, Feb. 2011)   ]
 [ To run:                                            ] 
-[ /Applications/r8s -v -f /Users/nmat471/HD/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex > /Users/nmat471/HD/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex.log     ] 
+[ /Applications/r8s -v -f /Users/nickm/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex > /Users/nickm/GitHub/CPs/buildtree/tmp_r8s_nexus_fn.nex.log     ] 
 
 begin trees;
 [Note: This tree was output from R.]

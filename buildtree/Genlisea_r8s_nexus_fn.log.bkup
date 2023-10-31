@@ -1,0 +1,242 @@
+r8s version 1.81 (May 23 2016)
+Reading tree Rtree
+Defining clade name: calib1
+Executing blformat command...
+Branch lengths assumed to be in units of numbers of substitutions per site
+Number of sites in sequences set to 1000
+All branch lengths multipled by the 1000 sites in the sequence
+Branch lengths rounded to nearest integer
+(This may not be a good idea when using CALIBRATE on ultrametric user supplied input trees. Use ROUND=NO then)
+0 zero-length branches collapsed
+Fixing age of calib1 at 26.396475
+ (The age of this node will no longer be estimated.)
+ (This command overides any previous age constraints for this node.)
+ (The total number of fixed ages is now 1)
+
+
+----------------------------------------
+
+
+LINEAGE RATE/TIME ANALYSIS FOR TREE Rtree
+
+Method = Langley and Fitch
+Optimization via Truncated-Newton (TN) method with bound constraints
+
+----------------------------------------
+Substitution Model
+	Rates are equal across sites
+Global/Local Search Parameters
+	Number of searches from random starts = 1
+	Number of restarts after each search = 1
+	Local perturbation on restarts = 0.01
+	Local fractional tolerance after restarts = 0.01
+Optimization parameters set automatically by TN routine
+Length of tree input =  2516
+Number of taxa  =  22
+Number of sites in sequences =  1000
+
+----------------------------------------
+Starting optimization (random starting point 1)
+...Checking the starting point...(for some barrier constant)...
+...Passed...now optimizing...
+...Initial solution=329.533922
+......starting perturbation 1
+......solution for perturbation 1=329.533922...best=329.533922
+*** Using analytical formula for gradient in check gradient step ***
+...checking gradient of the solution...
+
+	Norm for free parameters in gradient (0.000000) should be less than cutoff (0.716500)
+	Checking active constraints for node times only (activeEpsilon=0.001000 and window [actEps*rootage]=0.026396)
+	Param	Estimate	Gradient	Active*	Taxon
+	[1]	8.493132	-0.000000	0	
+	[2]	4.156035	0.000000	0	
+	[3]	2.980379	0.000000	0	
+	[4]	2.275021	0.000000	0	
+	[5]	16.265984	0.000000	0	
+	[6]	10.500646	0.000000	0	
+	[7]	4.827104	-0.000000	0	
+	[8]	3.426105	-0.000000	0	
+	[9]	3.003468	0.000000	0	
+	[10]	2.272147	0.000000	0	
+	[11]	6.284783	-0.000000	0	
+	[12]	2.108734	0.000000	0	
+	[13]	7.930843	-0.000000	0	
+	[14]	5.616282	0.000000	0	
+	[15]	4.897964	-0.000000	0	
+	[16]	3.576712	0.000000	0	
+	[17]	3.148871	0.000000	0	
+	[18]	2.513183	-0.000000	0	
+	[19]	2.102848	-0.000000	0	
+	[20]	2.979044	-0.000000	0	
+
+	Gradients for rate parameters (if any)
+	Param	Estimate	Gradient
+	[21]	16.536070	-0.000000
+------------------------------------------------------------------------------
+*Key
+	+1 = maximum age constraint is reached (gradient may not be 0)
+	-1 = minimum age constraint is reached (gradient may not be 0)
+	 0 = no constraint present or constraint not reached (gradient should be 0)
+
+	 (note that small gradient values (< |0.000072|) are not examined with respect to active constraints to avoid spurious roundoff issues)
+
+*** Gradient check passed ***
+
+Using optimization from starting point 1 as best estimate
+Test of molecular clock on soln. 1 (best): Chi squared = 420.989115 (df=21)
+
+
+Parameter estimates:
+
+	       1  
+
+Times
+p[ 1]	 0.00849  
+p[ 2]	 0.00416  
+p[ 3]	 0.00298  
+p[ 4]	 0.00228  
+p[ 5]	  0.0163  
+p[ 6]	  0.0105  
+p[ 7]	 0.00483  
+p[ 8]	 0.00343  
+p[ 9]	   0.003  
+p[10]	 0.00227  
+p[11]	 0.00628  
+p[12]	 0.00211  
+p[13]	 0.00793  
+p[14]	 0.00562  
+p[15]	  0.0049  
+p[16]	 0.00358  
+p[17]	 0.00315  
+p[18]	 0.00251  
+p[19]	  0.0021  
+p[20]	 0.00298  
+
+Rates (substitutions per site per unit time)
+p[21]	  0.0165  
+
+	  PASSED  
+__________________
+Result codes:
+PASSED = OK
+FAILED(1) = Optimization routine returned error
+FAILED(2) = Solution's gradient was not 0
+__________________
+
+
+Obj->	-329.534  
+[Printing tree 1]
+
+[CHRONOGRAM of tree Rtree]
+                             +--------------Genlisea_uncinata
++----------------------------+2
+|                            |      +-------Genlisea_aff_violence_giant
+|                            +------+4
+|                                   | +-----Genlisea_sp_Itacambira
+|                                   +-+6
+|                                     |+----Genlisea_violacea
+|                                     ++8
+|                                      +----Genlisea_lobata
+|
+|                                    +------Genlisea_barthlottii
+|                                  +-+14
+|                                  | +------Genlisea_stapfii
++calib1                  +---------+13
+|                        |         |  +-----Genlisea_hispidula
+|                        |         +--+17
+|                        |            |+----Genlisea_subviridis
+|               +--------+12          ++19
+|               |        |             +----Genlisea_africana
+|               |        |
+|               |        |      +-----------Genlisea_subglabra
+|               |        +------+22
+|               |               |      +----Genlisea_glandulosissima
+|               |               +------+24
+|               |                      +----Genlisea_margaretae
++---------------+11
+                |                +----------Genlisea_aurea
+                |                |
+                |             +--+28--------Genlisea_glabra
+                |             |  | |
+                |             |  +-+30------Genlisea_filiformis
+                |             |    | |
+                |             |    +-+32----Genlisea_aff_filiformis
+                |             |      ++35
+                +-------------+27    |+-----Genlisea_repens
+                              |      +34
+                              |      | +----Genlisea_roraimensis
+                              |      +-+38
+                              |        +----Genlisea_sp_Gran_Sabana
+                              |
+                              |       +-----Genlisea_guianensis
+                              +-------+41
+                                      +-----Genlisea_spanariapoana
+
+[Printing tree 1]
+
+[TREE DESCRIPTION of tree Rtree]
+
+tree Rtree = ((Genlisea_uncinata:8.493132,(Genlisea_aff_violence_giant:4.156035,(Genlisea_sp_Itacambira:2.980379,(Genlisea_violacea:2.275021,Genlisea_lobata:2.275021):0.705358):1.175656):4.337097):17.903343,((((Genlisea_barthlottii:3.426105,Genlisea_stapfii:3.426105):1.400998,(Genlisea_hispidula:3.003468,(Genlisea_subviridis:2.272147,Genlisea_africana:2.272147):0.731322):1.823635):5.673543,(Genlisea_subglabra:6.284783,(Genlisea_glandulosissima:2.108734,Genlisea_margaretae:2.108734):4.176049):4.215863):5.765337,((Genlisea_aurea:5.616282,(Genlisea_glabra:4.897964,(Genlisea_filiformis:3.576712,((Genlisea_aff_filiformis:2.513183,Genlisea_repens:2.513183):0.635688,(Genlisea_roraimensis:2.102848,Genlisea_sp_Gran_Sabana:2.102848):1.046023):0.427841):1.321252):0.718318):2.314561,(Genlisea_guianensis:2.979044,Genlisea_spanariapoana:2.979044):4.951799):8.335141):10.130491)calib1;
+-----------------------------------------------------------------------------------------
+Estimated ages and substitution rates for tree Rtree
+
+Reconstruction method: Langley-Fitch (clock)
+Named internal nodes indicated by [*]
+Rates are for branches subtending indicated node
+Rates are in units of substitutions per site per unit time
+
+				  Constraints				Rates
+	Node	   Fix [Mod]	  Min	  Max	  Age		Estimated	Local
+-----------------------------------------------------------------------------------------
+ [*]  calib1	     * [0] 	   --      --	  26.40		
+     (2)	       [0] 	   --      --	   8.49		1.6536e-02	1.1059e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.8603e-02
+     (4)	       [0] 	   --      --	   4.16		1.6536e-02	8.9922e-03
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.1068e-02
+     (6)	       [0] 	   --      --	   2.98		1.6536e-02	1.4460e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	9.7303e-03
+     (8)	       [0] 	   --      --	   2.28		1.6536e-02	2.1266e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	2.2417e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.5384e-02
+     (11)	       [0] 	   --      --	  16.27		1.6536e-02	2.2013e-02
+     (12)	       [0] 	   --      --	  10.50		1.6536e-02	1.1795e-02
+     (13)	       [0] 	   --      --	   4.83		1.6536e-02	7.9316e-03
+     (14)	       [0] 	   --      --	   3.43		1.6536e-02	8.5653e-03
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.1967e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.3134e-02
+     (17)	       [0] 	   --      --	   3.00		1.6536e-02	1.5902e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	2.6969e-02
+     (19)	       [0] 	   --      --	   2.27		1.6536e-02	5.4696e-03
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.3643e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	8.3621e-03
+     (22)	       [0] 	   --      --	   6.28		1.6536e-02	2.0399e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	6.5237e-03
+     (24)	       [0] 	   --      --	   2.11		1.6536e-02	3.0412e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	3.0350e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.6598e-02
+     (27)	       [0] 	   --      --	   7.93		1.6536e-02	2.6754e-02
+     (28)	       [0] 	   --      --	   5.62		1.6536e-02	2.5923e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	2.2969e-02
+     (30)	       [0] 	   --      --	   4.90		1.6536e-02	1.9490e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	8.7792e-03
+     (32)	       [0] 	   --      --	   3.58		1.6536e-02	2.7247e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	2.0410e-02
+     (34)	       [0] 	   --      --	   3.15		1.6536e-02	2.3373e-02
+     (35)	       [0] 	   --      --	   2.51		1.6536e-02	1.8877e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.9099e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.6314e-02
+     (38)	       [0] 	   --      --	   2.10		1.6536e-02	2.1032e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.5217e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	2.2351e-02
+     (41)	       [0] 	   --      --	   2.98		1.6536e-02	1.7367e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	1.0070e-02
+      Genlisea	     * [0] 	   --      --	   0.00		1.6536e-02	2.3833e-02
+-----------------------------------------------------------------------------------------
+
+Summary of rate variation (substitutions per site per unit time)
+  Mean    = 0.01654
+  Std Dev = 1.284e-10
+  Min     = 0.01654
+  Max     = 0.01654
+  Range   = 0
+  Ratio   =  1

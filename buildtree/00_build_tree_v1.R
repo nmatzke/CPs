@@ -1311,6 +1311,9 @@ length(uniq_outgroup_tips)
 
 
 
+
+
+
 #######################################################
 # For each non-carnivorous genus, remove all but 1
 #######################################################
@@ -1392,8 +1395,8 @@ gbotb_tr14_wSister_genera = drop.tip(phy=gbotb_tr14, tip=tips_to_drop3)
 length(gbotb_tr14_wSister_genera$tip.label)
 
 
-plot(gbotb_tr14_wSister_genera, tip.label=FALSE)
-axisPhylo()
+#plot(gbotb_tr14_wSister_genera, tip.label=FALSE)
+#axisPhylo()
 
 
 
