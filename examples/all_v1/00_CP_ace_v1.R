@@ -55,13 +55,18 @@ diag(equal_rates_model) = 0
 equal_rates_model
 
 
-resER = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL); save(resER, file="resER_noParallel.Rdata")
+# resERresER_noParallel = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL)
+# save(resER_noParallel, file="resER_noParallel.Rdata")
 
-resER
+#resER
 # Log-likelihood: -581.909837
 
-resER = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL, ncores=11)
-save(resER, file="resER.Rdata")
+#resER = fitMk.parallel(tree=tr, x=states, model="ER", fixedQ=NULL, ncores=11)
+#save(resER, file="resER.Rdata")
 
 resM02 = fitMk.parallel(tree=tr, x=states, model=Matzke_2002_model, fixedQ=NULL, ncores=11)
-save(resER, file="resM02.Rdata")
+save(resM02, file="resM02.Rdata")
+
+# loads to resM02
+load(file="resM02.Rdata")
+resM02

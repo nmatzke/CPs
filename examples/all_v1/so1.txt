@@ -42,29 +42,18 @@ Currently viewed PATH:
 [11,]    1    1    1    1    1    1    1    1    1     1     0
 
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-Loading ~/.Rprofile...
 
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 Loading ~/.Rprofile...
-Loading ~/.Rprofile...
 
+Sys.getenv("R_MAX_NUM_DLLS"):	
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-
-Sys.getenv("R_MAX_NUM_DLLS"):	Loading ~/.Rprofile...
 [1] "153"
 Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
+Loading ~/.Rprofile...
 Loading ~/.Rprofile...
 
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
@@ -72,33 +61,8 @@ Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 Loading ~/.Rprofile...
 Loading ~/.Rprofile...
-Loading ~/.Rprofile...
-Currently viewed PATH:
-Currently viewed PATH:
-Currently viewed PATH:
-Currently viewed PATH:
-Currently viewed PATH:
-Currently viewed PATH:
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-Currently viewed PATH:
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-Currently viewed PATH:
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-Currently viewed PATH:
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-Currently viewed PATH:
-Currently viewed PATH:
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
-/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
 
-Sys.getenv("R_MAX_NUM_DLLS"):	[1]
-Sys.getenv("R_MAX_NUM_DLLS"):	 "153"
-[1] "153"
+Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 
 Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 
@@ -108,25 +72,6 @@ Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 Loading ~/.Rprofile...
 Loading ~/.Rprofile...
 Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-Loading ~/.Rprofile...
-Loading ~/.Rprofile...
-Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-
-Sys.getenv("R_MAX_NUM_DLLS"):	Loading ~/.Rprofile...
-[1] "153"
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
-Loading ~/.Rprofile...
-Loading ~/.Rprofile...
-
-Sys.getenv("R_MAX_NUM_DLLS"):	[1] "153"
 Loading ~/.Rprofile...
 Currently viewed PATH:
 Currently viewed PATH:
