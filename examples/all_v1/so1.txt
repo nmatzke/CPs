@@ -95,3 +95,30 @@ Currently viewed PATH:
 /usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
 /usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
 /usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/Users/nickm/miniconda2/bin:/opt/local/bin:/opt/local/sbin:/Users/nickm/.rvm/gems/ruby-2.3.0/bin:/Users/nickm/.rvm/gems/ruby-2.3.0@global/bin:/Users/nickm/.rvm/rubies/ruby-2.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Users/nickm/.local/bin:/usr/local/gcc-7.1/bin:/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/RevBayes:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/BayesTraits/:/Applications/Brownie/:/GIS/MRTSwath/bin:/Users/nickm/.rvm/bin:/usr/texbin:/usr/texbin
+Object of class "fitMk".
+
+Fitted (or set) value of Q:
+           1         2         3         4         5         6         7         8         9        10        11
+1  -0.000219  0.000073  0.000073  0.000000  0.000000  0.000000  0.000000  0.000073  0.000000  0.000000  0.000000
+2   0.000543 -0.040582  0.032745  0.000000  0.000000  0.007293  0.000000  0.000000  0.000000  0.000000  0.000000
+3   0.000543  0.032745 -0.043576  0.002994  0.000000  0.000000  0.007293  0.000000  0.000000  0.000000  0.000000
+4   0.000543  0.000000  0.000000 -0.056674  0.056131  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+5   0.000543  0.000000  0.000000  0.000000 -0.000543  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+6   0.000543  0.007293  0.000000  0.000000  0.000000 -0.047875  0.032745  0.007293  0.000000  0.000000  0.000000
+7   0.000543  0.000000  0.007293  0.000000  0.000000  0.032745 -0.047875  0.000000  0.007293  0.000000  0.000000
+8   0.000543  0.000000  0.000000  0.000000  0.000000  0.007293  0.000000 -0.040582  0.032745  0.000000  0.000000
+9   0.000543  0.000000  0.000000  0.000000  0.000000  0.000000  0.007293  0.032745 -0.043576  0.002994  0.000000
+10  0.000543  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.056674  0.056131
+11  0.000543  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.000543
+
+Fitted (or set) value of pi:
+       1        2        3        4        5        6        7        8        9       10       11 
+0.090909 0.090909 0.090909 0.090909 0.090909 0.090909 0.090909 0.090909 0.090909 0.090909 0.090909 
+due to treating the root prior as (a) given.
+
+Log-likelihood: -346.699795 
+
+Optimization method used was "optimParallel"
+
+R thinks it has found the ML solution.
+
