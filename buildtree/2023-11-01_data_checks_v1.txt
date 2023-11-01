@@ -1,0 +1,77 @@
+2023-11-01_data_checks_v1.txt
+
+Taxa to check if they are in the Excel spreadsheet:
+
+Byblis_gigantea
+Byblis_lamellata
+Byblis_liniflora
+
+Roridula_gorgonias
+Roridula_dentata
+
+
+
+Brocchinia_hechtioides
+Brocchinia_reducta
+Catopsis_berteroniana
+
+
+# These were dropped in the switch to the new trees, but put them in the Excel spreadsheet please:
+Genlisea_pygmaea
+Pinguicula_caerulea
+Pinguicula_caussensis
+
+
+# Check these for typos in trees AND in Excel spreadsheet
+# (also, all spaces must be "_")
+# ("." characters deleted)
+# "N.whatever" should be "Nepenthes_whatever"
+
+# Also replace any special characters, e.g. "á"
+
+# Possible typos etc.:
+
+Nepenthes_ bicalcarata -> remove space
+Nepenthes_burkei or Nepenthes_burkii ???
+Nepenthes_talangensis
+Heliamphora_minor var. pilosa     
+Heliamphora_heterdoxa -> heterodoxa
+Heliamphora_sp_Akopán             
+Sarracenia alabamensis_ssp_wherryi
+Sarracenia_alabamensism_ssp_alabamensis -> alabamensism -> alabamensis
+
+Heliamphora_minor
+Heliamphora_heterodoxa
+Actinidia_deliciosa               
+Clethra_alnifolia
+Nepenthes_penthes_miiabilis -> mirabilis      
+Nepenthes_penthes_distillatoria
+Utricularia_alpina                
+Utricularia_sp_Nepenthes_wra      
+
+Utricularia_sp_Nowra
+
+Utricularia_beaugleholei_ssp_A
+Utricularia_beaugleholei_ssp_A
+-> (probably beagleholei; also it appears twice, maybe ssp_A and ssp_B?)
+
+
+
+
+
+Note on Utricularia
+
+The original big tree had 57 Utricularia
+The digitized dated tree had 58 Utricularia
+
+However, only 4 of these overlapped!  Merging the two trees would create 
+111 Utricularia.
+
+Given that there are hundreds of Utricularia species, perhaps this is not 
+surprising; but, look for additional Utricularia phylogenies, or consider
+making your own from the genetic data in the future.
+
+
+
+
+
