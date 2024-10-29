@@ -60,11 +60,8 @@ if (runslow == TRUE)
 	trtable = BioGeoBEARS::prt(tr)
 	save(trtable, file="gbotb_tr14_wSister_genera_edited2_minusMonocots_trtable.Rdata")
 	
-	# Run time:
-	ML_7abprCTE = ape::ace(x=states, phy=tr, type="discrete", method="ML", model=seven_rates_abpr_complex_trap_evolution_model, marginal=FALSE, use.expm = TRUE, use.eigen=FALSE)
-
-# ML_7abprCTE = phytools::fitMK(tree=tr, x=states, model=seven_rates_abpr_complex_trap_evolution_model, pi="equal")
-
+	# Run time for ML: FAILED (with these settings; make.simmap works though)
+	# ML_7abprCTE = ape::ace(x=states, phy=tr, type="discrete", method="ML", model=seven_rates_abpr_complex_trap_evolution_model, marginal=FALSE, use.expm = TRUE, use.eigen=FALSE)
 
 	
 	# ~1 hour to run
@@ -79,7 +76,6 @@ if (runslow == TRUE)
 	} else {
 	# Loads to: trtable
 	load(file="gbotb_tr14_wSister_genera_edited2_minusMonocots_trtable.Rdata")
-
 
 	# Loads to: stochastic_maps_7abprCTE
 	load(file="stochastic_maps_7abprCTE.Rdata")	
