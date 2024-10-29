@@ -2,7 +2,7 @@ library(ape)
 library(maps)
 library(phytools)
 
-#setwd("")
+setwd("/GitHub/CPs/examples/CP_ace_pie/")
 
 trfn = "gbotb_tr14_wSister_genera_edited2_minusMonocots.newick"
 states_fn = "gbotb_tr14_wSister_genera_edited_states_noMonocots_v2.txt"
@@ -56,14 +56,27 @@ seven_rates_abpr_complex_trap_evolution_model
 ##################
 ###7abprCTE map###
 ##################
-set.seed(34321)
-stochastic_maps_7abprCTE = make.simmap(tree=tr, x=states, model=seven_rates_abpr_complex_trap_evolution_model, nsim=100)
+
+runslow = TRUE
+if (runslow == TRUE)
+	{
+	set.seed(34321)
+	stochastic_maps_7abprCTE = make.simmap(tree=tr, x=states, model=seven_rates_abpr_complex_trap_evolution_model, nsim=100)
+	# Save the full stochastic maps
+	save(stochastic_maps_7abprCTE, file="stochastic_maps_7abprCTE.Rdata")
+	} else {
+	# Loads to: stochastic_maps_7abprCTE
+	load(file="stochastic7abprCTE.Rdata")	
+	} # END runslow
+
+stochastic_maps_7abprCTE
+
+# Make and save a summary 
 summary_stochastic_maps_7abprCTE = summary(stochastic_maps_7abprCTE)
+save(summary_stochastic_maps_7abprCTE, file="summary_stochastic_maps_7abprCTE.Rdata")
+load(file="summary_stochastic_maps_7abprCTE.Rdata")	
 
 
-save(summary_stochastic_maps_7abprCTE, file="stochastic7abprCTE.Rdata")
-load(file="stochastic7abprCTE.Rdata")
-summary_stochastic_maps_7abprCTE
 
 names(summary_stochastic_maps_7abprCTE)
 
