@@ -151,7 +151,7 @@ ancnode_of_lca_Lentibulariaceae
 tr$edge[edgeTF,]
 
 
-# Nepentheaceae-Droseraceae (to see the transtion from non-carnivorous to sticky traps)
+# Nepentheaceae-Droseraceae (to see the transition from non-carnivorous to sticky traps)
 lca_of_NeDro = getMRCA(phy=tr, tip = c("Drosera_lanata", "Nepenthes_gracilis"))
 lca_of_NeDro
 
@@ -326,4 +326,270 @@ dev.off()
 system("open plot_ACE_7abprCTE_v2.pdf")
 
 
+
+#######################################################
+# Version 3 graphic:
+# Ladderize tree
+# Extract key clades, with ancestral states
+# plot those in reasonable fashion
+# ??
+#######################################################
+library(BioGeoBEARS)   # for prt()
+
+# Ladderizing a tree just makes it look nicer
+ltr = ladderize(tr, right=FALSE)
+# Make sure the nodes are relabeled correctly be re-loading tree from Newick
+ltr = read.tree(file="", text=write.tree(ltr, file=""))
+
+plot(tr, show.tip.label=FALSE, main="original pruned tree focusing on CPs")
+plot(ltr, show.tip.label=FALSE, main="ladderized-leftwards tree")
+
+# Make tree tables to convert the nodes
+trtable = prt(tr)
+ltrtable = prt(ltr)
+
+# Key thing about trtables:
+# the row number = the node number
+# row 52 encodes the information for node #52 in the tr (according to the APE node numbering in R)
+
+# Table to convert between node numbers
+matchnodes_trNode_to_ltrNode = match(x=ltrtable$tipnames, table=trtable$tipnames)
+matchnodes_trNode_to_ltrNode
+
+matchnodes_ltrNode_to_trNode = match(x=trtable$tipnames, table=ltrtable$tipnames)
+matchnodes_ltrNode_to_trNode
+
+# Conversion table
+convert_tr_to_ltr = cbind(1:length(matchnodes_convert_trNode_to_ltrNode),matchnodes_ltrNode_to_trNode)
+convert_tr_to_ltr_df = as.data.frame(convert_tr_to_ltr, stringsAsFactors=FALSE)
+names(convert_tr_to_ltr_df) = c("trNode","ltrNode")
+head(convert_tr_to_ltr_df)
+tail(convert_tr_to_ltr_df)
+
+# Sort on ltr nodes to convert the other way
+convert_ltr_to_tr_df = convert_tr_to_ltr_df[order(convert_tr_to_ltr_df$ltrNode),]
+head(convert_ltr_to_tr_df)
+tail(convert_ltr_to_tr_df)
+
+
+# Check if it did what you thought (converting tr nodes to ltr nodes)
+head(trtable[convert_ltr_to_tr_df$trNode,])
+head(ltrtable)
+
+tail(trtable[convert_ltr_to_tr_df$trNode,])
+tail(ltrtable)
+
+# This works, meaning:
+# * The rows/nodes of trtable can be converted to the equivalent positions in ltr and ltrtable, using
+#   matchnodes_convert_trNode_to_ltrNode
+
+# The three big clades are:
+ancnode_of_lca_Lentibulariaceae
+ancnode_of_lca_NeDro
+ancnode_of_lca_Sarrac
+
+# Let's extract each one as a separate tree, with separate Ancestral States numbers
+ancnode_of_lca_Lentibulariaceae # 2114
+
+# This says, for the first node, place in the matchnodes_convert_trNode_to_ltrNode[1] position
+# trtable[matchnodes_convert_trNode_to_ltrNode]
+
+# So this node, should go in the matchnodes_convert_trNode_to_ltrNode[ancnode_of_lca_Lentibulariaceae] position to match ltrtable
+ancnode_of_lca_Lentibulariaceae
+
+ancnode_of_lca_Lentibulariaceae_in_ltr = convert_tr_to_ltr_df$ltrNode[ancnode_of_lca_Lentibulariaceae]
+
+# Double-check, yes this looks correct
+ltrtable[ancnode_of_lca_Lentibulariaceae_in_ltr, ]
+
+# Get the Lenti subtree
+lenti_subtree = extract.clade(phy=ltr, node=ancnode_of_lca_Lentibulariaceae_in_ltr)
+lenti_subtree = read.tree(file="", text=write.tree(lenti_subtree, file=""))
+sort(lenti_subtree$tip.label)
+
+
+# OK, clades have been extracted to subtrees
+
+# Let's subset the ancestral state results
+ancnode_of_lca_Lentibulariaceae
+
+# descendent node numbers in tr
+ancnode_of_lca_Lentibulariaceae_daughters = BioGeoBEARS::get_daughter_nodes(nodenum=ancnode_of_lca_Lentibulariaceae, tr=tr, nodes=NULL)
+ancnode_of_lca_Lentibulariaceae_daughters
+
+# Ancstates in APE node order
+ancstates2
+dim(ancstates2)
+
+# extract ancstates2 for Lentibulariaceae
+# put in order of lenti_subtree
+
+ancstates2_for_lenti_tr = ancstates2[ancnode_of_lca_Lentibulariaceae_daughters,]
+dim(ancstates2_for_lenti_tr)
+
+# Get the taxa lists descending from every node
+nodes_to_keep_labels = trtable$tipnames[ancnode_of_lca_Lentibulariaceae_daughters]
+nodes_to_keep_labels
+
+# match to subtree
+lenti_subtree_table = prt(lenti_subtree)
+get_subtree_tipnames_in_lenti_order = match(lenti_subtree_table$tipnames, table=nodes_to_keep_labels)
+ancstates2_for_lenti_subtree_ltr_order = ancstates2_for_lenti_tr[get_subtree_tipnames_in_lenti_order,]
+ancstates2_for_lenti_subtree_ltr_order
+dim(ancstates2_for_lenti_subtree_ltr_order)
+
+# Test plot
+
+pdffn = "ancstates2_for_lenti_subtree_ltr_order.pdf"
+pdf(file=pdffn, width=20, height=35)
+
+plot(lenti_subtree)
+cols = c("white","lightblue","blue", "yellow","orange",
+         "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
+
+# get the internal node numbers
+tipnode_nums = 1:length(lenti_subtree$tip.label)
+internal_nodenums = (length(lenti_subtree$tip.label)+1):(length(lenti_subtree$tip.label)+lenti_subtree$Nnode)
+
+nodelabels(node=internal_nodenums, pie=ancstates2_for_lenti_subtree_ltr_order[internal_nodenums,], piecol=cols, cex=0.5)
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+
+
+
+
+#######################################################
+# For Sarracenia
+#######################################################
+ancnode_of_lca_Sarraceniaceae_in_ltr = convert_tr_to_ltr_df$ltrNode[ancnode_of_lca_Sarrac]
+
+# Double-check, yes this looks correct
+ltrtable[ancnode_of_lca_Sarraceniaceae_in_ltr, ]
+
+# Get the sarra subtree
+sarra_subtree = extract.clade(phy=ltr, node=ancnode_of_lca_Sarraceniaceae_in_ltr)
+sarra_subtree = read.tree(file="", text=write.tree(sarra_subtree, file=""))
+sort(sarra_subtree$tip.label)
+
+
+# OK, clades have been extracted to subtrees
+
+# Let's subset the ancestral state results
+ancnode_of_lca_Sarraceniaceae
+
+# descendent node numbers in tr
+ancnode_of_lca_Sarraceniaceae_daughters = BioGeoBEARS::get_daughter_nodes(nodenum=ancnode_of_lca_Sarrac, tr=tr, nodes=NULL)
+ancnode_of_lca_Sarraceniaceae_daughters
+
+# Ancstates in APE node order
+ancstates2
+dim(ancstates2)
+
+# extract ancstates2 for Sarraceniaceae
+# put in order of sarra_subtree
+
+ancstates2_for_sarra_tr = ancstates2[ancnode_of_lca_Sarraceniaceae_daughters,]
+dim(ancstates2_for_sarra_tr)
+
+# Get the taxa lists descending from every node
+nodes_to_keep_labels = trtable$tipnames[ancnode_of_lca_Sarraceniaceae_daughters]
+nodes_to_keep_labels
+
+# match to subtree
+sarra_subtree_table = prt(sarra_subtree)
+get_subtree_tipnames_in_sarra_order = match(sarra_subtree_table$tipnames, table=nodes_to_keep_labels)
+ancstates2_for_sarra_subtree_ltr_order = ancstates2_for_sarra_tr[get_subtree_tipnames_in_sarra_order,]
+ancstates2_for_sarra_subtree_ltr_order
+dim(ancstates2_for_sarra_subtree_ltr_order)
+
+# Test plot
+
+pdffn = "ancstates2_for_sarra_subtree_ltr_order.pdf"
+pdf(file=pdffn, width=12, height=25)
+
+plot(sarra_subtree)
+cols = c("white","lightblue","blue", "yellow","orange",
+         "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
+
+# get the internal node numbers
+tipnode_nums = 1:length(sarra_subtree$tip.label)
+internal_nodenums = (length(sarra_subtree$tip.label)+1):(length(sarra_subtree$tip.label)+sarra_subtree$Nnode)
+
+nodelabels(node=internal_nodenums, pie=ancstates2_for_sarra_subtree_ltr_order[internal_nodenums,], piecol=cols, cex=0.5)
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
+
+
+
+
+
+
+#######################################################
+# For Nepenthenales
+#######################################################
+ancnode_of_lca_Nepenthenales_in_ltr = convert_tr_to_ltr_df$ltrNode[ancnode_of_lca_NeDro]
+
+# Double-check, yes this looks correct
+ltrtable[ancnode_of_lca_Nepenthenales_in_ltr, ]
+
+# Get the NeDro subtree
+NeDro_subtree = extract.clade(phy=ltr, node=ancnode_of_lca_Nepenthenales_in_ltr)
+NeDro_subtree = read.tree(file="", text=write.tree(NeDro_subtree, file=""))
+sort(NeDro_subtree$tip.label)
+
+# OK, clades have been extracted to subtrees
+
+# Let's subset the ancestral state results
+ancnode_of_lca_Nepenthales
+
+# descendent node numbers in tr
+ancnode_of_lca_Nepenthales_daughters = BioGeoBEARS::get_daughter_nodes(nodenum=ancnode_of_lca_NeDro, tr=tr, nodes=NULL)
+ancnode_of_lca_Nepenthales_daughters
+
+# Ancstates in APE node order
+ancstates2
+dim(ancstates2)
+
+# extract ancstates2 for Nepenthales
+# put in order of NeDro_subtree
+
+ancstates2_for_NeDro_tr = ancstates2[ancnode_of_lca_Nepenthales_daughters,]
+dim(ancstates2_for_NeDro_tr)
+
+# Get the taxa lists descending from every node
+nodes_to_keep_labels = trtable$tipnames[ancnode_of_lca_Nepenthales_daughters]
+nodes_to_keep_labels
+
+# match to subtree
+NeDro_subtree_table = prt(NeDro_subtree)
+get_subtree_tipnames_in_NeDro_order = match(NeDro_subtree_table$tipnames, table=nodes_to_keep_labels)
+ancstates2_for_NeDro_subtree_ltr_order = ancstates2_for_NeDro_tr[get_subtree_tipnames_in_NeDro_order,]
+ancstates2_for_NeDro_subtree_ltr_order
+dim(ancstates2_for_NeDro_subtree_ltr_order)
+
+# Test plot
+
+pdffn = "ancstates2_for_NeDro_subtree_ltr_order.pdf"
+pdf(file=pdffn, width=25, height=55)
+
+plot(NeDro_subtree)
+cols = c("white","lightblue","blue", "yellow","orange",
+         "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
+
+# get the internal node numbers
+tipnode_nums = 1:length(NeDro_subtree$tip.label)
+internal_nodenums = (length(NeDro_subtree$tip.label)+1):(length(NeDro_subtree$tip.label)+NeDro_subtree$Nnode)
+
+nodelabels(node=internal_nodenums, pie=ancstates2_for_NeDro_subtree_ltr_order[internal_nodenums,], piecol=cols, cex=0.5)
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
 
