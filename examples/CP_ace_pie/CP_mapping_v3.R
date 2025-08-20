@@ -439,7 +439,6 @@ ancstates2_for_lenti_subtree_ltr_order
 dim(ancstates2_for_lenti_subtree_ltr_order)
 
 # Test plot
-
 pdffn = "ancstates2_for_lenti_subtree_ltr_order.pdf"
 pdf(file=pdffn, width=20, height=35)
 
@@ -456,6 +455,117 @@ nodelabels(node=internal_nodenums, pie=ancstates2_for_lenti_subtree_ltr_order[in
 dev.off()
 cmdstr = paste0("open ", pdffn)
 system(cmdstr)
+
+
+# Plot of CP group, with sister group reduced to 1 tip
+# What is the ancestral node number of the sister group?
+
+# 2 methods:
+# a. root node is number_of_tips+1 (in APE)
+rootnode = length(lenti_subtree$tip.label)+1
+rootnode
+
+# b. We can see this in the tree table
+lenti_subtree_table = prt(lenti_subtree)
+lenti_subtree_table[(rootnode-3):(rootnode+3),]
+
+lenti_subtree_table$daughter_nds[rootnode]
+
+# c. special function
+lenti_subtree_nodes = BioGeoBEARS::get_daughter_nodes(nodenum=rootnode, tr=lenti_subtree, nodes=NULL)
+lenti_subtree_nodes[1:2]
+
+# d. Manual method, use the tree's edge matrix
+lenti_subtree$edge[lenti_subtree$edge[,1] == rootnode,]
+
+
+# DETOUR: what's in an APE tree?
+names(lenti_subtree)
+# "edge"        "edge.length" "Nnode"       "node.label"  "tip.label"  
+
+head(lenti_subtree$edge)
+tail(lenti_subtree$edge)
+lenti_subtree$edge[lenti_subtree$edge[,1]==rootnode,]
+
+# Next goal: reduce non-CP sister clade to 1 tip giving the number of genera
+ancnode_of_nonCPs = lenti_subtree_table$daughter_nds[rootnode][[1]][1]
+ancnode_of_nonCPs
+
+ancnode_of_nonCPs_tree = extract.clade(phy=lenti_subtree, node=ancnode_of_nonCPs)
+ancnode_of_nonCPs_tree
+
+# How many genera?
+nonCP_tipnames = ancnode_of_nonCPs_tree$tip.label
+tmp_get_first_word <- function(tmpstr, split)
+	{
+	return(strsplit(x=tmpstr, split=split)[[1]][1])
+	}
+genus_names = sapply(FUN=tmp_get_first_word, X=nonCP_tipnames, split="_")
+genus_names
+
+# Check if there are duplicate genera
+rev(sort(table(genus_names)))
+
+# Calc. number of genera
+num_genera = length(unique(genus_names))
+num_genera
+
+# Reduce nonCP part of the tree to 1 tip
+lenti_subtree_w1_nonCP = drop.tip(phy=lenti_subtree, tip=ancnode_of_nonCPs_tree$tip.label[-1])
+lenti_subtree_w1_nonCP = read.tree(file="", text=write.tree(lenti_subtree_w1_nonCP, file=""))
+
+# Get the list of nodes we cut, used that to cut down the ancstates2_for_lenti_subtree_ltr_order
+nonCP_daughter_nodes_that_we_cut = BioGeoBEARS::get_daughter_nodes(nodenum=ancnode_of_nonCPs, tr=lenti_subtree, nodes=NULL)
+
+# Subtract nodes that we DIDN'T actually cut: the root node and the one non-CP tip that we kept
+nonCP_daughter_nodes_that_we_cut = nonCP_daughter_nodes_that_we_cut[nonCP_daughter_nodes_that_we_cut != 1]
+nonCP_daughter_nodes_that_we_cut = nonCP_daughter_nodes_that_we_cut[nonCP_daughter_nodes_that_we_cut != rootnode]
+
+# table_tipnames_we_dropped
+table_tipnames_we_dropped = lenti_subtree_table$tipnames[nonCP_daughter_nodes_that_we_cut]
+table_tipnames_we_kept_TF = (lenti_subtree_table$tipnames %in% table_tipnames_we_dropped) == FALSE
+table_tipnames_we_kept = lenti_subtree_table$tipnames[table_tipnames_we_kept_TF]
+
+# List of tipnames kept for lenti_subtree_w1_nonCP
+tipnames_to_keep = prt(lenti_subtree_w1_nonCP)$tipnames
+
+# Subset the ancestral states table, which has tipnames from lenti_subtree, to new subset
+rows_to_keep1 = match(x=tipnames_to_keep, table=lenti_subtree_table$tipnames)
+rows_to_keep2 = match(x=table_tipnames_we_kept, table=lenti_subtree_table$tipnames)
+
+length(rows_to_keep1)
+length(rows_to_keep2)
+
+# OK, subset the ancestral states from ancstates2_for_lenti_subtree_ltr_order
+#     to match lenti_subtree_w1_nonCP
+lenti_subtree_w1_nonCP_ancstates = ancstates2_for_lenti_subtree_ltr_order[rows_to_keep2,]
+
+# Replace the name of the 1 non-CP with "91 genera"
+TF = lenti_subtree_w1_nonCP$tip.label == "Thomandersia_hensii"
+sum(TF)
+
+lenti_subtree_w1_nonCP$tip.label[TF] = paste0(num_genera, "_genera")
+plot(lenti_subtree_w1_nonCP)
+
+
+# Make PDF of Lentibulariaceae subtree with just 1 branch nonCP sister group
+pdffn = "lenti_subtree_w1_nonCP_ancstates.pdf"
+pdf(file=pdffn, width=12, height=20)
+
+plot(lenti_subtree_w1_nonCP)
+cols = c("white","lightblue","blue", "yellow","orange",
+         "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
+
+# get the internal node numbers
+tipnode_nums = 1:length(lenti_subtree_w1_nonCP$tip.label)
+internal_nodenums = (length(lenti_subtree_w1_nonCP$tip.label)+1):(length(lenti_subtree_w1_nonCP$tip.label)+lenti_subtree_w1_nonCP$Nnode)
+
+nodelabels(node=internal_nodenums, pie=lenti_subtree_w1_nonCP_ancstates[internal_nodenums,], piecol=cols, cex=0.5)
+
+dev.off()
+cmdstr = paste0("open ", pdffn)
+system(cmdstr)
+
 
 
 
