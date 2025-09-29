@@ -417,7 +417,7 @@ pdffn = "ancstates2_for_lenti_subtree_ltr_order.pdf"
 pdf(file=pdffn, width=20, height=35)
 
 plot(lenti_subtree)
-title("Example: 7abprCTE, ladderized, subset to Lentibulariaceae")
+title("Ancestral Trap State Estimation in Lentibulariaceae under the best-fitting model (PH-7R-AAI)")
 
 cols = c("white","lightblue","blue", "yellow","orange",
          "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
@@ -443,7 +443,7 @@ pdf(file=pdffn, width=12, height=20)
 
 lenti_subtree_w1CP$tip.label[lenti_subtree_w1CP$tip.label == "Thomandersia_hensii"] = paste0(num_nonCP_genera, "_genera")
 plot(lenti_subtree_w1CP)
-title("Example: 7abprCTE, ladderized, subset to Lentibulariaceae\nwith 1 tip for 91 non-CP genera")
+title("Ancestral State Estimation in Lentibulariaceae with 1 tip for 91 non-CP genera, under the best-fitting model (PH-7R-AAI)")
 cols = c("white","lightblue","blue", "yellow","orange",
          "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
 
@@ -456,4 +456,196 @@ nodelabels(node=internal_nodenums, pie=lenti_subtree_w1CP_ancstates2[internal_no
 dev.off()
 cmdstr = paste0("open ", pdffn)
 system(cmdstr)
+
+
+#State Distribution Plot (new)
+# look at Lentibulariaceae ancestral branch stochastic maps
+dev.off()
+edgenum
+
+list_of_maps_for_Lentibulariaceae_ancestral_branch = list()
+for (i in 1:length(stochastic_maps_7abprCTE))
+{
+  list_of_maps_for_Lentibulariaceae_ancestral_branch[[i]] = stochastic_maps_7abprCTE[[i]]$maps[edgenum][[1]]
+}
+list_of_maps_for_Lentibulariaceae_ancestral_branch
+
+# number of steps in each of the 100 stochastic maps on this branch
+sapply(X=list_of_maps_for_Lentibulariaceae_ancestral_branch, FUN=length)
+
+# let's get percentages of each state at several timepoints along a branch/edge
+branchlength = tr$edge.length[edgenum]
+branchlength
+
+# make a list of fractions along the branch
+fractions_of_branch2 = seq(from=0, to=1, by=0.01)
+
+# for a mapped branch, get the CUMULATIVE time when a change occurs
+cumsum(list_of_maps_for_Lentibulariaceae_ancestral_branch[[1]])
+
+# table of states for each timepoint along branch
+tmpmat = matrix(data=NA, nrow=length(stochastic_maps_7abprCTE), ncol=length(fractions_of_branch2))
+dim(tmpmat)
+
+# fill out the table
+for (i in 1:nrow(tmpmat))
+{
+  for (j in 1:ncol(tmpmat))
+  {
+    fraction_time = fractions_of_branch2[j]
+    time_on_branch = branchlength * fraction_time
+    time_on_branch
+    cumulative_times_mapped = cumsum(list_of_maps_for_Lentibulariaceae_ancestral_branch[[i]])
+    
+    # which time bin are we in:
+    # time_on_branch = 10.5
+    lessTF = time_on_branch <= cumulative_times_mapped
+    lessTF
+    
+    # if all FALSE, state is the last state
+    if (all(lessTF==FALSE))
+    {
+      lessTF[length(lessTF)] = TRUE
+    }
+    state_residences = 1:length(cumulative_times_mapped)
+    state_residences
+    state_residences[lessTF]
+    the_state_at_the_time = min(state_residences[lessTF])
+    the_state_at_the_time
+    
+    tmpmat[i,j] = names(cumulative_times_mapped)[the_state_at_the_time]
+  }
+}
+tmpmat
+
+# Get list of unique states in stochastic maps
+uniq_states = sort(unique(c(tmpmat)))
+uniq_states
+
+# Get percentages of each, for each timepoint
+percentages_by_timepoint = matrix(data=NA, ncol=length(fractions_of_branch2), nrow=length(uniq_states))
+percentages_by_timepoint
+
+for (i in 1:nrow(percentages_by_timepoint))
+{
+  for (j in 1:ncol(percentages_by_timepoint))
+  {
+    TF = tmpmat[,j] == uniq_states[i]
+    percentages_by_timepoint[i,j] = sum(TF)
+  }
+}
+
+percentages_by_timepoint
+
+# Barplot showing percentages of each state at 100 timepoints along the branch
+# below Lentibulariaceae
+statecols = c("darkgreen","green3","grey50","lightgrey","orange","yellow2","grey90")
+barplot(percentages_by_timepoint[4:1,], col=statecols,border=NA, space=0)
+
+# Density plots for each state
+timepoints = fractions_of_branch2*branchlength
+plot(x=timepoints, y=1:101, main="State Distribution Over Time Along the Lentibulariaceae Ancestral Branch", xlab="Time along branch (units of length)", ylab="Percentage of each state", pch=".", col="white")
+for (i in 1:nrow(percentages_by_timepoint))
+{
+  lines(x=timepoints,y=percentages_by_timepoint[i,], lwd = 3, col=rev(statecols)[i])
+}
+
+names(stochastic_maps_7abprCTE[[1]])
+
+
+
+
+
+#State Distribution Over time on the branch ancestral to the common ancestor of Genlisea+Utricularia
+dev.off()
+edgenum_2
+
+list_of_maps_for_Lentibulariaceae_ancestral_branch = list()
+for (i in 1:length(stochastic_maps_7abprCTE))
+{
+  list_of_maps_for_Lentibulariaceae_ancestral_branch[[i]] = stochastic_maps_7abprCTE[[i]]$maps[edgenum_2][[1]]
+}
+list_of_maps_for_Lentibulariaceae_ancestral_branch
+
+# Number of steps in each of the 100 stochastic maps on this branch
+sapply(X=list_of_maps_for_Lentibulariaceae_ancestral_branch, FUN=length)
+
+# Let's get percentages of each state at several timepoints along a branch/edge
+branchlength = tr$edge.length[edgenum_2]
+branchlength
+
+# Make a list of fractions along the branch
+fractions_of_branch2 = seq(from=0, to=1, by=0.01)
+
+# For a mapped branch, get the CUMULATIVE time when a change occurs
+cumsum(list_of_maps_for_Lentibulariaceae_ancestral_branch[[1]])
+
+# Table of states for each timepoint along branch
+tmpmat = matrix(data=NA, nrow=length(stochastic_maps_7abprCTE), ncol=length(fractions_of_branch2))
+dim(tmpmat)
+
+# Fill out the table
+for (i in 1:nrow(tmpmat))
+{
+  for (j in 1:ncol(tmpmat))
+  {
+    fraction_time = fractions_of_branch2[j]
+    time_on_branch = branchlength * fraction_time
+    time_on_branch
+    cumulative_times_mapped = cumsum(list_of_maps_for_Lentibulariaceae_ancestral_branch[[i]])
+    
+    # Which time bin are we in:
+    #time_on_branch = 10.5
+    lessTF = time_on_branch <= cumulative_times_mapped
+    lessTF
+    
+    # If all FALSE, state is the last state
+    if (all(lessTF==FALSE))
+    {
+      lessTF[length(lessTF)] = TRUE
+    }
+    state_residences = 1:length(cumulative_times_mapped)
+    state_residences
+    state_residences[lessTF]
+    the_state_at_the_time = min(state_residences[lessTF])
+    the_state_at_the_time
+    
+    tmpmat[i,j] = names(cumulative_times_mapped)[the_state_at_the_time]
+  }
+}
+tmpmat
+
+# Get list of unique states in stochastic maps
+uniq_states = sort(unique(c(tmpmat)))
+uniq_states
+
+# Get percentages of each, for each timepoint
+percentages_by_timepoint = matrix(data=NA, ncol=length(fractions_of_branch2), nrow=length(uniq_states))
+percentages_by_timepoint
+
+for (i in 1:nrow(percentages_by_timepoint))
+{
+  for (j in 1:ncol(percentages_by_timepoint))
+  {
+    TF = tmpmat[,j] == uniq_states[i]
+    percentages_by_timepoint[i,j] = sum(TF)
+  }
+}
+
+percentages_by_timepoint
+
+# Barplot showing percentages of each state at 100 timepoints along the branch
+# below Lentibulariaceae
+statecols = c("darkgreen","green3","grey50","orange","lightblue")
+barplot(percentages_by_timepoint[4:1,], col=statecols,border=NA, space=0)
+
+# Density plots for each state
+timepoints = fractions_of_branch2*branchlength
+plot(x=timepoints, y=1:101, main="State Distribution Over Time Along the Lentibulariaceae Ancestral Branch (Transitional-Pitcher-Eel)", xlab="Time along branch (units of length)", ylab="Percentage of each state", pch=".", col="white")
+for (i in 1:nrow(percentages_by_timepoint))
+{
+  lines(x=timepoints,y=percentages_by_timepoint[i,], lwd = 3, col=rev(statecols)[i])
+}
+
+names(stochastic_maps_7abprCTE[[1]])
 
