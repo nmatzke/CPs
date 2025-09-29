@@ -1,0 +1,7 @@
+tipnodes = 1:length(tmptr$tip.label)
+internal_nodes = (length(tmptr$tip.label)+1):(length(tmptr$tip.label)+tmptr$Nnode)
+plot(tmptr, label.offset=0.3)
+axisPhylo()
+mtext(text="millions of years ago (Ma)", side=1, line=2)
+nodelabels(text=tipnodes1, node=tipnodes1, bg="yellow")
+nodelabels(text=internal_nodes1, node=internal_nodes1, bg="green3")
