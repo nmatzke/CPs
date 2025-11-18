@@ -544,12 +544,13 @@ barplot(percentages_by_timepoint[4:1,], col=statecols,border=NA, space=0)
 
 # Density plots for each state
 timepoints = fractions_of_branch2*branchlength
-plot(x=timepoints, y=1:101, main="State Distribution Over Time Along the Lentibulariaceae Ancestral Branch", xlab="Time along branch (units of length)", ylab="Percentage of each state", pch=".", col="white")
+plot(x=timepoints, y=1:101, main="State Distribution Over Time Along the Lentibulariaceae Ancestral Branch", xlab="Time along branch (units of length)", ylab="", pch=".", col="white", cex.lab="1.3", cex.axis="1.3", cex.main="1.4")
 for (i in 1:nrow(percentages_by_timepoint))
 {
-  lines(x=timepoints,y=percentages_by_timepoint[i,], lwd = 3, col=rev(statecols)[i])
+  lines(x=timepoints,y=percentages_by_timepoint[i,], lwd = 4, col=rev(statecols)[i])
 }
 
+mtext("Percentage of each state", side=2, line=2.7, cex=1.3)
 names(stochastic_maps_7abprCTE[[1]])
 
 
@@ -641,11 +642,11 @@ barplot(percentages_by_timepoint[4:1,], col=statecols,border=NA, space=0)
 
 # Density plots for each state
 timepoints = fractions_of_branch2*branchlength
-plot(x=timepoints, y=1:101, main="State Distribution Over Time Along the Lentibulariaceae Ancestral Branch (Transitional-Pitcher-Eel)", xlab="Time along branch (units of length)", ylab="Percentage of each state", pch=".", col="white")
+plot(x=timepoints, y=1:101, main="State Distribution Over Time Along Genlisea + Utricularia Ancestral Branch", xlab="Time along branch (units of length)", ylab="", pch=".", col="white", cex.lab="1.3", cex.axis="1.3", cex.main="1.4")
 for (i in 1:nrow(percentages_by_timepoint))
 {
-  lines(x=timepoints,y=percentages_by_timepoint[i,], lwd = 3, col=rev(statecols)[i])
+  lines(x=timepoints,y=percentages_by_timepoint[i,], lwd = 4, col=rev(statecols)[i])
 }
-
+mtext("Percentage of each state", side=2, line=2.7, cex=1.3)
 names(stochastic_maps_7abprCTE[[1]])
 
