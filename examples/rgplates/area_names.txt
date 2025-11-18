@@ -1,0 +1,16 @@
+
+Areas:
+
+A AU C CAR I M N NE NZ O P S)
+A=Africa, 
+AU=Australia,
+C=Chile, 
+CAR=Caribbean, 
+I=India, 
+M=Madagascar, 
+N=Neotropical*some on separate plates for sure, 
+NE=Nearctic, 
+NZ=New Zealand, 
+O=Oceania/Philippines, 
+P=Palearctic, 
+S=Southeast Asia 
