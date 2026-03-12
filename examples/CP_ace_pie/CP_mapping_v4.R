@@ -443,7 +443,7 @@ pdf(file=pdffn, width=20, height=40)
 
 lenti_subtree_w1CP$tip.label[lenti_subtree_w1CP$tip.label == "Thomandersia_hensii"] = paste0(num_nonCP_genera, "_genera")
 plot(lenti_subtree_w1CP, cex = 1.5)
-title("Ancestral State Estimation in Lentibulariaceae with 1 tip for 91 non-CP genera, under the best-fitting model (PH-7R-AAI)")
+title("Ancestral State Estimation in Lentibulariaceae with 1 tip for 91 non-CP genera, under the best-fitting model (PH-7R-AAI)", cex.main = 2)
 cols = c("white","lightblue","blue", "yellow","orange",
          "orange3","red","lightgrey", "darkgrey", "green3", "darkgreen")
 
