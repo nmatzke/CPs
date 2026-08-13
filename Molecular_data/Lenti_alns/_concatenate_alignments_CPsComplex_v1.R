@@ -98,7 +98,7 @@ seqnames3_minus_last_minus_lastSeqID  = get_strings_without_seqID_suffix(strings
 sort(seqnames3_minus_last_minus_lastSeqID)
 rev(sort(table(seqnames3_minus_last_minus_lastSeqID)))
 
-# Combine to master list of OTUs
+# Combine to master list of OTUs (Operational Taxonomic Unit) (species but also guessed species, subspecies, molecular samples that no one has named yet, etc.)
 keys = c(seqnames1_minus_last_minus_lastSeqID, seqnames2_minus_last_minus_lastSeqID, seqnames3_minus_last_minus_lastSeqID)
 head(rev(sort(table(keys))))
 
@@ -107,7 +107,9 @@ rev(sort(table(keys)))
 length(keys) # 475 sequences
 
 # Let's remove the _R_
-keys = sort(unique(keys))
+keys = sort(unique(keys)) # alphabetical
+keys = keys[rev(order(nchar(keys)))]
+nchar(keys)
 length(keys) # 301 unique keys
 
 
@@ -143,6 +145,15 @@ for (j in 1:length(list_of_seqstrings))
 			{
 			tmp = strings[TF]
 			tmpname = lastSeqIDs[TF]
+			
+			# If you get 1 and only 1 hit, remove from the list of thing to search next time
+			# (this works if we work from the longest key to the shortest key, meaning we find
+			#  Pinguicula_vulgaris_whatever before we find Pinguicula_vulgaris)
+			# reduce seqnames
+			hitnum_to_remove = (1:length(TF))[TF]
+			seqnames = seqnames[-1*hitnum_to_remove]
+			lastSeqIDs = lastSeqIDs[-1*hitnum_to_remove]
+			strings = strings[-1*hitnum_to_remove]
 			}
 		if (sum(TF) > 1)
 			{
@@ -181,54 +192,3 @@ final_seqs = apply(X=final_seqs_df, MARGIN=1, FUN=paste0, collapse="")
 final_seqs
 
 zz = write.table(x=final_seqs, file="merged_3genes.fasta", append=FALSE, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
-
-
-#######################################################
-# Now, we have accumulated:
-# sequence strings in: merged_list_of_seqstrings
-# the IDs of these sequences in: merged_list_of_seqnames
-# 
-# We already have the species names in: 
-# keys
-#
-# Let's assemble the "supermatrix" alignment of 3 genes
-#######################################################
-final_aln = rep("", times=length(keys))
-final_names = 
-
-
-
-
-# Horizontally concatenate the AAs and 3dis
-outfn = "merged.fasta"
-aa3di_alignment = hcat_fastas(fasta_fn1=fasta_fn1, fasta_fn2=fasta_fn2, outfn=outfn, type="AA")
-# automatically writes alignment to output filename "outfn"
-
-# number of sequences
-length(aa3di_alignment)
-
-# length of the first merged sequence
-both_length = length(aa3di_alignment[[1]])
-both_length
-
-moref(outfn)
-
-
-# [1] 1090
-
-both_fn = paste0("aa3di_numcols_EQ_", both_length, ".txt")
-writeLines(text=as.character(both_length), con=both_fn)
-
-
-
-
-#######################################################
-# Let's be evil and pretend some sequences are missing
-#######################################################
-fasta_fn1 = "aln_aa_trim20.fasta"
-fasta_fn2 = "aln_3di_trim20_minus2seqs.fasta"
-outfn = "merged_minus2seqs.fasta"
-aa3di_alignment = hcat_fastas(fasta_fn1=fasta_fn1, fasta_fn2=fasta_fn2, outfn=outfn, type="AA")
-# BREAKS - so this function requires a match for every sequence in fn1
-# (this could be changed, but not right now)
-
