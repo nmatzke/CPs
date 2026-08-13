@@ -32,9 +32,9 @@ setwd(wd)
 list.files()
 
 # Load the 3 alignments (for viewing)
-fasta_fn1 = "Lentibulariacea_rps16_aln_v1.fasta"
-fasta_fn2 = "Lentibulariacea_rbcL_aln_v1.fasta"
-fasta_fn3 = "Lentibulariacea_matK_aln_v1.fasta"
+fasta_fn1 = "Lentibulariacea_matK_aln_v1.fasta"
+fasta_fn2 = "Lentibulariacea_rps16_aln_v1.fasta"
+fasta_fn3 = "Lentibulariacea_rbcL_aln_v1.fasta"
 
 aln1 = read_FASTA_safe(fasta_fn1, type="DNA")
 aln2 = read_FASTA_safe(fasta_fn2, type="DNA")
