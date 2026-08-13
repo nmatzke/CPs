@@ -311,18 +311,8 @@ Utricularia_wightiana|MH292773.1|NA|NA                         -----------------
 END;
 
 BEGIN ASSUMPTIONS;
-EXSET * UNTITLED  = ;
-END;
-
-BEGIN CODONS;
-CODONPOSSET * CodonPositions =
- N:,
- matK: 1-3138\1,
- rps16: 3139-4517\1,
- rbcL: 4518-5955\1;
-CODESET  * UNTITLED = Universal: all ;
-END;
-
-BEGIN SETS;
+    CHARSET matK = 1-3138\3;
+    CHARSET rps16 = 3139-4517\3;
+    CHARSET rbcL = 4518-5955\3;
 END;
 
